@@ -480,48 +480,83 @@
     "relativePath": "model\\primitives.fbx"
   },
   "c62fbf4b-4888-4fd4-bd91-8f596c0206ff": {
-    "asset": 1591669309098,
+    "asset": 1592211543626,
     "meta": 1591669309099,
-    "relativePath": "resource"
+    "relativePath": "resources"
   },
   "44ad0fce-72a8-4de3-a2ee-b2bdca31be53": {
     "asset": 1591669496431,
     "meta": 1591669499804,
-    "relativePath": "resource\\cell.png"
+    "relativePath": "resources\\cell.png"
   },
   "520fdf51-1446-47f8-b6c8-942dd25f9955": {
     "asset": 1591669577869,
     "meta": 1591669582658,
-    "relativePath": "resource\\background.png"
+    "relativePath": "resources\\background.png"
   },
   "e38ae4d9-d7dd-4e40-a07b-e06c2b86c156": {
-    "asset": 1591669609763,
+    "asset": 1591753906457,
     "meta": 1591669609766,
     "relativePath": "scripts"
   },
+  "923d5e91-d427-4907-b38c-6911ae5240a8": {
+    "asset": 1592228019961,
+    "meta": 1592228019971,
+    "relativePath": "scene.fire"
+  },
+  "7981a93b-4450-4497-b90f-debae54455e1": {
+    "asset": 1592210205781,
+    "meta": 1592210252453,
+    "relativePath": "resources\\抽卡格.png"
+  },
+  "e262d6bf-4901-4dcd-8f7c-05e5233d05df": {
+    "asset": 1592211135115,
+    "meta": 1592211135120,
+    "relativePath": "resources\\cell.prefab"
+  },
+  "ff4725fa-e4dc-4edd-b38e-a582bbbd7fbe": {
+    "asset": 1592211494923,
+    "meta": 1592211521861,
+    "relativePath": "resources\\事件格.png"
+  },
+  "936bca9e-a0d6-45d3-97d1-73abe653ff09": {
+    "asset": 1592275263034,
+    "meta": 1592275279334,
+    "relativePath": "resources\\奥利给.jpg"
+  },
+  "beaab015-ec76-42da-93da-cdb279852945": {
+    "asset": 1592275248170,
+    "meta": 1592275279338,
+    "relativePath": "resources\\恶魔.jpg"
+  },
+  "7b091af9-9107-4367-9021-1471b3f50403": {
+    "asset": 1592275218198,
+    "meta": 1592275279354,
+    "relativePath": "resources\\视野.jpg"
+  },
+  "9cec98c7-c1cc-4b78-b340-f3b9dd43db53": {
+    "asset": 1592275235093,
+    "meta": 1592275279358,
+    "relativePath": "resources\\监狱.jpg"
+  },
+  "10a6b9b8-f095-43a2-a4d0-694da73f3509": {
+    "asset": 1592275200728,
+    "meta": 1592275279373,
+    "relativePath": "resources\\天使.jpg"
+  },
+  "36fa40e4-bd6c-4405-8f86-781ee98cf308": {
+    "asset": 1592275181503,
+    "meta": 1592275279374,
+    "relativePath": "resources\\陷阱.jpg"
+  },
   "a088b971-a3d2-4399-ae2e-93f200e14488": {
-    "asset": 1591669619040,
-    "meta": 1591669625208,
+    "asset": 1592277159001,
+    "meta": 1592277162240,
     "relativePath": "scripts\\Cell.js"
   },
-  "a14c7cfc-4db8-405f-9f8a-629cfec841f8": {
-    "asset": 1591669640704,
-    "meta": 1591669640709,
-    "relativePath": "resource\\cell.prefab"
-  },
   "e8bc5df1-0d97-4f08-a2eb-7ff61ab727a3": {
-    "asset": 1591684865064,
-    "meta": 1591684875302,
+    "asset": 1592292877557,
+    "meta": 1592292883712,
     "relativePath": "scripts\\GetMap.js"
-  },
-  "d659f3b8-4aee-463c-9bc7-6e605a5b49f2": {
-    "asset": 1591684871291,
-    "meta": 1591684875305,
-    "relativePath": "resource\\新建文本文档.txt"
-  },
-  "923d5e91-d427-4907-b38c-6911ae5240a8": {
-    "asset": 1591701384196,
-    "meta": 1591701384205,
-    "relativePath": "scene.fire"
   }
 }

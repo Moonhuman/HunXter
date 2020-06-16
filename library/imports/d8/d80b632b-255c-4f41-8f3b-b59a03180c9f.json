@@ -1,0 +1,28 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "奥利给",
+    "texture": "936bca9e-a0d6-45d3-97d1-73abe653ff09",
+    "atlas": "",
+    "rect": [
+      0,
+      0,
+      355,
+      508
+    ],
+    "offset": [
+      0,
+      0
+    ],
+    "originalSize": [
+      355,
+      508
+    ],
+    "capInsets": [
+      0,
+      0,
+      0,
+      0
+    ]
+  }
+}
