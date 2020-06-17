@@ -7,8 +7,8 @@
       "windowType": "dockable",
       "x": 0,
       "y": 0,
-      "width": 1536,
-      "height": 824,
+      "width": 1920,
+      "height": 1040,
       "layout": {
         "children": [
           {
@@ -18,9 +18,9 @@
                 "children": [
                   "hierarchy"
                 ],
-                "height": 246.4250030517578,
+                "height": 493,
                 "type": "panel",
-                "width": 365.8500061035156
+                "width": 204
               },
               {
                 "active": 0,
@@ -28,41 +28,35 @@
                   "assets",
                   "cloud-function"
                 ],
-                "height": 458.7749938964844,
+                "height": 426,
                 "type": "panel",
-                "width": 365.8500061035156
+                "width": 204
               }
             ],
-            "height": 708.2000122070312,
+            "height": 922,
             "type": "dock-v",
-            "width": 365.8500061035156
+            "width": 204
+          },
+          {
+            "active": 0,
+            "children": [
+              "inspector",
+              "cocos-services"
+            ],
+            "height": 922,
+            "type": "panel",
+            "width": 304
           },
           {
             "children": [
               {
+                "active": 0,
                 "children": [
-                  {
-                    "active": 0,
-                    "children": [
-                      "scene"
-                    ],
-                    "height": 353.1000061035156,
-                    "type": "panel",
-                    "width": 463.8125
-                  },
-                  {
-                    "active": 0,
-                    "children": [
-                      "node-library"
-                    ],
-                    "height": 353.1000061035156,
-                    "type": "panel",
-                    "width": 317.875
-                  }
+                  "scene"
                 ],
-                "height": 353.1000061035156,
-                "type": "dock-h",
-                "width": 784.6875
+                "height": 653,
+                "type": "panel",
+                "width": 1390
               },
               {
                 "active": 0,
@@ -71,24 +65,14 @@
                   "timeline",
                   "game-window"
                 ],
-                "height": 352.1000061035156,
+                "height": 266,
                 "type": "panel",
-                "width": 784.6875
+                "width": 1390
               }
             ],
-            "height": 708.2000122070312,
+            "height": 922,
             "type": "dock-v",
-            "width": 784.6875
-          },
-          {
-            "active": 0,
-            "children": [
-              "inspector",
-              "cocos-services"
-            ],
-            "height": 708.2000122070312,
-            "type": "panel",
-            "width": 365.8500061035156
+            "width": 1390
           }
         ],
         "type": "dock-h"
@@ -97,19 +81,33 @@
         "hierarchy",
         "assets",
         "cloud-function",
+        "inspector",
+        "cocos-services",
         "scene",
-        "node-library",
         "console",
         "timeline",
-        "game-window",
-        "inspector",
-        "cocos-services"
+        "game-window"
       ]
     }
   },
-  "panels": {},
-  "panelLabelWidth": {
-    "inspector": null
+  "panels": {
+    "sprite-editor": {
+      "x": 702,
+      "y": 240,
+      "width": 516,
+      "height": 539
+    },
+    "preferences": {
+      "x": 672,
+      "y": 240,
+      "width": 600,
+      "height": 565
+    }
   },
-  "panelLabelWidth.inspector": null
+  "panelLabelWidth": {
+    "inspector": null,
+    "preferences": null
+  },
+  "panelLabelWidth.inspector": null,
+  "panelLabelWidth.preferences": null
 }
