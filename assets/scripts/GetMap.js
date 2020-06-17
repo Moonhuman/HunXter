@@ -165,7 +165,9 @@ cc.Class({
 					cell_js.inMonitor = 0;
 					cell_js.resetColor();
 					cell_js.routeId = null;
-					this.node.off("mousedown", this.chooseRoute, cell_js);
+					//
+					par.map[i][j].off("mousedown", this.chooseRoute, cell_js);
+					//this.node.off("mousedown", this.chooseRoute, cell_js);
 				}
 			}
 		}

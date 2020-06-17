@@ -42,12 +42,47 @@ cc.Class({
 		this.node.color = cc.color(255,255,255,255);
 	},
 	
-	stepOnCell: function(Person) {
-		if (this.kind == 0) //空白格
+	stepOnCell: function(person) {
+		
+		//获取person节点的组件
+		var person_js = person.getComponent('Person');
+		
+		if (this.kind == 0) {//空白格
+			cc.game.emit('stepOnCell-done');
 			return;
-		else if (this.kind == 1) //卡牌格
-			return; //还没写好卡牌，暂时先跳过
+		}
+		else if (this.kind == 1) {//卡牌格
+			var cardName = ['炸弹','精准导弹','地雷','庇护','天使的庇护','战神的祝福','虚弱','团队的力量',
+							'治愈','圣光普照','望远镜','眼睛','猛男的祝福','盗取','束缚','迷惑','拯救'];
+			var rand_val = Math.random();
+			if (rand_val < 0.5) {
+				//随机获得1张牌
+				var totCardNum = 17
+				var cardID = Math.floor(Math.random()*totCardNum);
+				console.log(cardID);
+				person_js.cards.push(cardID);
+				
+				//创建用来提示获得卡牌的精灵节点
+				var note = new cc.Node();
+				note.addComponent(cc.Sprite);
+				note.setPosition(0, 0);
+				note.parent = this.node.parent.parent;
+				var self = note;
+				cc.loader.loadRes('卡牌图片/'+cardName[cardID], cc.SpriteFrame, function (err, spriteFrame) {
+					self.getComponent(cc.Sprite).spriteFrame = spriteFrame;
+				});
+				//开启note节点的监听，点击后消失
+				note.on('mousedown', function ( event ) {
+					cc.game.emit('stepOnCell-done');
+					this.destroy();
+				}, note);
+			}
+			else{
+				cc.game.emit('stepOnCell-done');
+			}
+		}
 		else if (this.kind == 2) { //事件格
+			
 			//随机产生6个事件之一
 			var rand_event = Math.floor(Math.random()*6);
 			//创建用来提示获得触发事件的精灵节点
@@ -58,28 +93,43 @@ cc.Class({
 			var self = note, event_name;
 			if (rand_event == 0) { //陷阱
 				event_name = "陷阱";
+				person_js.useCardEnabled = 0; //本回合不可使用卡牌,下回合置1
+				//to do
+				//warning: 下回合记得改变
+				//warning: 下回合记得改变
+				//warning: 下回合记得改变
 			}	
 			else if (rand_event == 1) { //监狱
-				event_name = "监狱";
+				event_name = "监狱"; //下回合不可走
+				person_js.goEnabled = 0;
+				//to do
+				//warning: 下回合记得改变
+				//warning: 下回合记得改变
+				//warning: 下回合记得改变
 			}	
 			else if (rand_event == 2) { //恶魔
-				event_name = "恶魔";
+				event_name = "恶魔";  //损失一滴血量
+				person_js.blood--;
 			}	
 			else if (rand_event == 3) { //奥利给
 				event_name = "奥利给";
+				person_js.turn++; //获得回合
 			}	
 			else if (rand_event == 4) { //视野
-				event_name = "视野";
+				event_name = "视野";  //to do
 			}	
 			else if (rand_event == 5) { //天使
 				event_name = "天使";
+				person_js.blood = Math.floor(person_js.blood*1.5);
 			}	
-			cc.loader.loadRes(event_name, cc.SpriteFrame, function (err, spriteFrame) {
+			cc.loader.loadRes('事件图片/'+event_name, cc.SpriteFrame, function (err, spriteFrame) {
 				self.getComponent(cc.Sprite).spriteFrame = spriteFrame;
 			});
 			//开启note节点的监听，点击后消失
 			note.on('mousedown', function ( event ) {
+				cc.game.emit('stepOnCell-done');
 				this.destroy();
+				
 			}, note);
 			
 		}

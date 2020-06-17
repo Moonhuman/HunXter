@@ -18,9 +18,9 @@
                 "children": [
                   "hierarchy"
                 ],
-                "height": 493,
+                "height": 226.125,
                 "type": "panel",
-                "width": 204
+                "width": 485
               },
               {
                 "active": 0,
@@ -28,14 +28,14 @@
                   "assets",
                   "cloud-function"
                 ],
-                "height": 426,
+                "height": 690.359375,
                 "type": "panel",
-                "width": 204
+                "width": 485
               }
             ],
-            "height": 922,
+            "height": 919.5,
             "type": "dock-v",
-            "width": 204
+            "width": 485
           },
           {
             "active": 0,
@@ -43,7 +43,7 @@
               "inspector",
               "cocos-services"
             ],
-            "height": 922,
+            "height": 919.5,
             "type": "panel",
             "width": 304
           },
@@ -54,9 +54,9 @@
                 "children": [
                   "scene"
                 ],
-                "height": 653,
+                "height": 650.5,
                 "type": "panel",
-                "width": 1390
+                "width": 1109
               },
               {
                 "active": 0,
@@ -67,12 +67,12 @@
                 ],
                 "height": 266,
                 "type": "panel",
-                "width": 1390
+                "width": 1109
               }
             ],
-            "height": 922,
+            "height": 919.5,
             "type": "dock-v",
-            "width": 1390
+            "width": 1109
           }
         ],
         "type": "dock-h"

@@ -40,18 +40,16 @@ var person=cc.Class({
 		//var r=[cc.v2(100,100),cc.v2(100,100),cc.v2(100,100),cc.v2(100,100)];
 		//var actArr=new Array();
 		//console.log(route);
-		var p=cc.tween(this.avatar);
+		//var p=cc.tween(this.avatar);
 		for (var i=0;i<route.length;i++){
 			//p.to(0.01,position:route[i].getPosition()});
-			console.log(route[i].getComponent('Cell').mapx+','+route[i].getComponent('Cell').mapy);
+			//console.log(route[i].getComponent('Cell').mapx+','+route[i].getComponent('Cell').mapy);
 		}
 		this.avatar.setPosition(route[route.length-1].getPosition());
 		this.posX=route[route.length-1].getComponent('Cell').mapx;
 		this.posY=route[route.length-1].getComponent('Cell').mapy;
-		//p.start();
-		//console.log(actArr);
-		//var seq = cc.sequence(actArr);
 		
+		route[route.length-1].getComponent('Cell').stepOnCell(this.node);
 	
 	},
 	move2Pos:function(x,y){
@@ -69,6 +67,7 @@ var person=cc.Class({
 		this.avatar=node;
 	},
 	onLoad(){	
+		this.cards=new Array();
 		window.global.persons.push(this.node);
 		console.log(this.name+"onLoad");
 	},
