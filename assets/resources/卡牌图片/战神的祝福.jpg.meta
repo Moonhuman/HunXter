@@ -1,0 +1,36 @@
+{
+  "ver": "2.3.4",
+  "uuid": "f119b6a0-675b-4031-8785-f47a011756df",
+  "type": "sprite",
+  "wrapMode": "clamp",
+  "filterMode": "bilinear",
+  "premultiplyAlpha": false,
+  "genMipmaps": false,
+  "packable": true,
+  "width": 355,
+  "height": 508,
+  "platformSettings": {},
+  "subMetas": {
+    "战神的祝福": {
+      "ver": "1.0.4",
+      "uuid": "3efe1ea4-e713-4d0f-b7d2-27d467045302",
+      "rawTextureUuid": "f119b6a0-675b-4031-8785-f47a011756df",
+      "trimType": "auto",
+      "trimThreshold": 1,
+      "rotated": false,
+      "offsetX": 0,
+      "offsetY": 0,
+      "trimX": 0,
+      "trimY": 0,
+      "width": 355,
+      "height": 508,
+      "rawWidth": 355,
+      "rawHeight": 508,
+      "borderTop": 0,
+      "borderBottom": 0,
+      "borderLeft": 0,
+      "borderRight": 0,
+      "subMetas": {}
+    }
+  }
+}

@@ -1,6 +1,6 @@
 
 (function () {
-var scripts = [{"deps":{"./assets/scripts/GetMap":1,"./assets/scripts/Cell":3,"./assets/scripts/globalGame":4,"./assets/scripts/Person":2},"path":"preview-scripts/__qc_index__.js"},{"deps":{},"path":"preview-scripts/assets/scripts/GetMap.js"},{"deps":{"globalGame":4},"path":"preview-scripts/assets/scripts/Person.js"},{"deps":{},"path":"preview-scripts/assets/scripts/Cell.js"},{"deps":{},"path":"preview-scripts/assets/scripts/globalGame.js"}];
+var scripts = [{"deps":{"./assets/scripts/Person":2,"./assets/scripts/globalGame":4,"./assets/scripts/Cell":3,"./assets/scripts/GetMap":1},"path":"preview-scripts/__qc_index__.js"},{"deps":{},"path":"preview-scripts/assets/scripts/GetMap.js"},{"deps":{"globalGame":4},"path":"preview-scripts/assets/scripts/Person.js"},{"deps":{},"path":"preview-scripts/assets/scripts/Cell.js"},{"deps":{},"path":"preview-scripts/assets/scripts/globalGame.js"}];
 var entries = ["preview-scripts/__qc_index__.js"];
 var bundleScript = 'preview-scripts/__qc_bundle__.js';
 

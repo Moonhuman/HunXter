@@ -519,36 +519,6 @@
     "meta": 1592293254576,
     "relativePath": "resources\\事件格.png"
   },
-  "936bca9e-a0d6-45d3-97d1-73abe653ff09": {
-    "asset": 1592293221931,
-    "meta": 1592293254554,
-    "relativePath": "resources\\奥利给.jpg"
-  },
-  "beaab015-ec76-42da-93da-cdb279852945": {
-    "asset": 1592293221933,
-    "meta": 1592293254564,
-    "relativePath": "resources\\恶魔.jpg"
-  },
-  "7b091af9-9107-4367-9021-1471b3f50403": {
-    "asset": 1592293221938,
-    "meta": 1592293254578,
-    "relativePath": "resources\\视野.jpg"
-  },
-  "9cec98c7-c1cc-4b78-b340-f3b9dd43db53": {
-    "asset": 1592293221936,
-    "meta": 1592293254566,
-    "relativePath": "resources\\监狱.jpg"
-  },
-  "10a6b9b8-f095-43a2-a4d0-694da73f3509": {
-    "asset": 1592293221929,
-    "meta": 1592293254590,
-    "relativePath": "resources\\天使.jpg"
-  },
-  "36fa40e4-bd6c-4405-8f86-781ee98cf308": {
-    "asset": 1592293221939,
-    "meta": 1592293254593,
-    "relativePath": "resources\\陷阱.jpg"
-  },
   "9212678b-82ff-419d-b17f-1e90b68ec6da": {
     "asset": 1592375349979,
     "meta": 1592293405583,
@@ -584,24 +554,154 @@
     "meta": 1592293405893,
     "relativePath": "resources\\avatar\\人物6.png"
   },
-  "e8bc5df1-0d97-4f08-a2eb-7ff61ab727a3": {
-    "asset": 1592325409445,
-    "meta": 1592325411158,
-    "relativePath": "scripts\\GetMap.js"
+  "509fdcf0-0f24-44d9-9af2-a5bfffd3288a": {
+    "asset": 1592398288836,
+    "meta": 1592398345051,
+    "relativePath": "resources\\卡牌图片"
+  },
+  "bd8e3e3a-4cc1-4716-a0a2-c27627638743": {
+    "asset": 1592385114701,
+    "meta": 1592398345111,
+    "relativePath": "resources\\卡牌图片\\盗取.jpg"
+  },
+  "3fbb2d7d-a424-4e70-883b-7c36b053338e": {
+    "asset": 1592385067229,
+    "meta": 1592398345114,
+    "relativePath": "resources\\卡牌图片\\庇护.jpg"
+  },
+  "d3a1de94-27ca-4506-a045-6c7ca893eb89": {
+    "asset": 1592385160647,
+    "meta": 1592398345131,
+    "relativePath": "resources\\卡牌图片\\地雷.jpg"
+  },
+  "da4bfda9-6050-4c05-9ea4-3261d6a55af3": {
+    "asset": 1592385178265,
+    "meta": 1592398345133,
+    "relativePath": "resources\\卡牌图片\\精准导弹.jpg"
+  },
+  "f58f4153-75fb-4f4a-89df-88f872631a79": {
+    "asset": 1592385206211,
+    "meta": 1592398345169,
+    "relativePath": "resources\\卡牌图片\\迷惑.jpg"
+  },
+  "7baa5e17-5d23-4b1f-91bb-e619ff8ed9ba": {
+    "asset": 1592385191624,
+    "meta": 1592398345176,
+    "relativePath": "resources\\卡牌图片\\猛男的祝福.jpg"
+  },
+  "58f604c0-979a-4e83-ba7a-c150cf4b8cad": {
+    "asset": 1592385223662,
+    "meta": 1592398345195,
+    "relativePath": "resources\\卡牌图片\\圣光普照.jpg"
+  },
+  "fae20304-ad09-47d9-aa03-f9a2e1611090": {
+    "asset": 1592385238026,
+    "meta": 1592398345200,
+    "relativePath": "resources\\卡牌图片\\束缚.jpg"
+  },
+  "96a47a17-61f8-43ff-8f8c-d82b621a4ba1": {
+    "asset": 1592385250964,
+    "meta": 1592398345222,
+    "relativePath": "resources\\卡牌图片\\天使的庇护.jpg"
+  },
+  "e1864d0f-b8ea-46c4-97e9-843a47749cf5": {
+    "asset": 1592385267646,
+    "meta": 1592398345225,
+    "relativePath": "resources\\卡牌图片\\团队的力量.jpg"
+  },
+  "b92f8004-3608-47b9-851d-3281cfb8d49a": {
+    "asset": 1592385283767,
+    "meta": 1592398345243,
+    "relativePath": "resources\\卡牌图片\\望远镜.jpg"
+  },
+  "84b5103a-9861-4f7b-84c9-ad728f26982d": {
+    "asset": 1592385301458,
+    "meta": 1592398345246,
+    "relativePath": "resources\\卡牌图片\\虚弱.jpg"
+  },
+  "5f4402dc-d905-45f7-9d9a-7efa4904882e": {
+    "asset": 1592385347550,
+    "meta": 1592398345264,
+    "relativePath": "resources\\卡牌图片\\炸弹.jpg"
+  },
+  "18fbecdb-29e1-40b1-8024-fea044dc3124": {
+    "asset": 1592385319823,
+    "meta": 1592398345267,
+    "relativePath": "resources\\卡牌图片\\眼睛.jpg"
+  },
+  "f119b6a0-675b-4031-8785-f47a011756df": {
+    "asset": 1592385361739,
+    "meta": 1592398345283,
+    "relativePath": "resources\\卡牌图片\\战神的祝福.jpg"
+  },
+  "0692e864-874f-46d3-ba78-9c5608e62cbe": {
+    "asset": 1592385379527,
+    "meta": 1592398345286,
+    "relativePath": "resources\\卡牌图片\\拯救.jpg"
+  },
+  "8a8bd9b7-eed2-4899-b39f-cc3c27179ac5": {
+    "asset": 1592398288667,
+    "meta": 1592398345063,
+    "relativePath": "resources\\事件图片"
+  },
+  "936bca9e-a0d6-45d3-97d1-73abe653ff09": {
+    "asset": 1592375923000,
+    "meta": 1592398345311,
+    "relativePath": "resources\\事件图片\\奥利给.jpg"
+  },
+  "60fa5a4f-e413-40a3-83c5-0f16d665b95f": {
+    "asset": 1592385412689,
+    "meta": 1592398345313,
+    "relativePath": "resources\\卡牌图片\\治愈.jpg"
+  },
+  "beaab015-ec76-42da-93da-cdb279852945": {
+    "asset": 1592375923000,
+    "meta": 1592398345330,
+    "relativePath": "resources\\事件图片\\恶魔.jpg"
+  },
+  "9cec98c7-c1cc-4b78-b340-f3b9dd43db53": {
+    "asset": 1592375923000,
+    "meta": 1592398345334,
+    "relativePath": "resources\\事件图片\\监狱.jpg"
+  },
+  "7b091af9-9107-4367-9021-1471b3f50403": {
+    "asset": 1592375923000,
+    "meta": 1592398345350,
+    "relativePath": "resources\\事件图片\\视野.jpg"
+  },
+  "10a6b9b8-f095-43a2-a4d0-694da73f3509": {
+    "asset": 1592375923000,
+    "meta": 1592398345352,
+    "relativePath": "resources\\事件图片\\天使.jpg"
+  },
+  "36fa40e4-bd6c-4405-8f86-781ee98cf308": {
+    "asset": 1592375923000,
+    "meta": 1592398345367,
+    "relativePath": "resources\\事件图片\\陷阱.jpg"
   },
   "a088b971-a3d2-4399-ae2e-93f200e14488": {
-    "asset": 1592326589210,
-    "meta": 1592326612997,
+    "asset": 1592398649872,
+    "meta": 1592398660362,
     "relativePath": "scripts\\Cell.js"
   },
-  "1c04c7b0-2287-4c29-9990-85b0fb95ecce": {
-    "asset": 1592333757407,
-    "meta": 1592333761610,
-    "relativePath": "scripts\\globalGame.js"
+  "e8bc5df1-0d97-4f08-a2eb-7ff61ab727a3": {
+    "asset": 1592399345978,
+    "meta": 1592399398456,
+    "relativePath": "scripts\\GetMap.js"
+  },
+  "ca017e27-ab7e-412e-9d73-308bddc37a9d": {
+    "asset": 1592400383223,
+    "meta": 1592400568150,
+    "relativePath": "scripts.zip"
   },
   "c0d9c14f-b653-4cf1-ad48-66f4a68c45aa": {
-    "asset": 1592333843120,
-    "meta": 1592333844312,
+    "asset": 1592401375234,
+    "meta": 1592401376488,
     "relativePath": "scripts\\Person.js"
+  },
+  "1c04c7b0-2287-4c29-9990-85b0fb95ecce": {
+    "asset": 1592402285547,
+    "meta": 1592402287411,
+    "relativePath": "scripts\\globalGame.js"
   }
 }

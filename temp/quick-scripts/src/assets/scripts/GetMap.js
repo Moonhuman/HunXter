@@ -149,8 +149,9 @@ cc.Class({
         if (cell_js.inMonitor == 1) {
           cell_js.inMonitor = 0;
           cell_js.resetColor();
-          cell_js.routeId = null;
-          this.node.off("mousedown", this.chooseRoute, cell_js);
+          cell_js.routeId = null; //
+
+          par.map[i][j].off("mousedown", this.chooseRoute, cell_js); //this.node.off("mousedown", this.chooseRoute, cell_js);
         }
       }
     }

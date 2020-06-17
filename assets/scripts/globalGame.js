@@ -23,18 +23,21 @@ cc.Class({
 		//加载地图
 		this.nowStep=0;
 		this.node.on('update-state', function (msg) {
-			//console.log(typeof(this.nowStep));
-			this.nowStep=(this.nowStep+1)%3;
+			this.nowStep=(this.nowStep+1)%4;
 			this.isWait=false;
 			
 		},this);
-		cc.game.on('route-chosen', function(route) {//监听玩家选择了哪条路径
-			console.log('点击了',route);
-			this.nowProperty.moveByRoute(route);
-			this.node.emit('update-state', '1');//玩家移动完成，进入下一步操作
-			//玩家头像按照路径移动
+		cc.game.on('stepOnCell-done', function ( event ) {//触发结束
+			this.node.emit('update-state', '1');//更新状态
+			console.log("触发了特殊格子！");
 		},this);
-		//console.log(map.posEnable(map.map[0][0],3));
+		cc.game.on('route-chosen', function(route) {//监听玩家选择了哪条路径
+					console.log('点击了',route);
+					this.nowProperty.moveByRoute(route);
+					//this.node.emit('update-state', '1');//玩家移动完成，进入下一步操作
+					//玩家头像按照路径移动
+		},this);
+		
 		
 	},
 
@@ -57,37 +60,57 @@ cc.Class({
 
     update (dt) {
 		//判断当前回合是否结束
-		console.log("步骤：",this.nowStep);
+		
+		console.log("是否等待操作",this.isWait);
 		switch (this.nowStep){
 			case 0:{//初始化变量
 				if (this.isWait){//正在操作或等待操作
 					break;
 				}
-				console
+				console.log(this.nowPlayer.name);
+				console.log("当前步骤：",this.nowStep);
 				this.nowProperty=this.nowPlayer.getComponent('Person');//获得玩家属性集合
 				this.node.emit('update-state', '1');
-				 break;
+				
+				break;
 			}
 			case 1:{//玩家移动
 				if (this.isWait){//正在操作或等待操作
 					break;
 				}
-				console.log(this.isWait);
+				console.log("当前步骤：",this.nowStep);
+				
 				if (this.nowProperty.goEnabled){//判断玩家是否可以行走
 					var step=randomNum(1,6);//掷骰子，玩家步数
 					console.log("掷骰子:"+step);
 					console.log("当前起点:"+this.nowProperty.posX+","+this.nowProperty.posY);
-					this.mapObj.posEnable(this.mapObj.map[this.nowProperty.posX][this.nowProperty.posY],step);
 					this.isWait=true;
+					console.log(this.mapObj.posEnable(this.mapObj.map[this.nowProperty.posX][this.nowProperty.posY],step));
+					
+				}
+				else{
+					this.nowProperty.goEnabled=1;
+					this.node.emit('update-state', '1');
 				}
 				 break;
 			}
 			case 2:{
-				//切换下一个玩家
+				//完成了事件触发或者卡牌触发
+				if (this.isWait){//正在操作或等待操作
+					break;
+				}
+				console.log("当前步骤：",this.nowStep);
+				console.log("玩家出牌");
+				this.node.emit('update-state', '1');
+				break;
+			}
+			case 3:{
+				console.log("当前步骤：",this.nowStep);
+				console.log("切换角色");
 				this.index=(this.index+1)%4;
 				this.nowPlayer=window.global.persons[this.index];
 				this.node.emit('update-state', '1');
-				 break;
+				break;
 			}
 		}
 		//console.log(nowProperty.goEnabled);
