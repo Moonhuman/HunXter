@@ -93,6 +93,7 @@ cc.Class({
 
     start () {
 		//设置格子图片
+		
 		var self = this;
 		if (this.kind == 0) { //空白格
 			cc.loader.loadRes("cell", cc.SpriteFrame, function (err, spriteFrame) {

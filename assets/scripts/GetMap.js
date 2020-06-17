@@ -36,9 +36,7 @@ cc.Class({
         //     }
         // },
     },
-
     // LIFE-CYCLE CALLBACKS:
-	
 	GetCell: function() {
 		var map_matrix = [
 			[1,1,1,1,1,1,1,1,1,1,1],
@@ -210,18 +208,12 @@ cc.Class({
     onLoad () {
 		this.GetCell(); //构建cell矩阵即map
 		this.GetEdge(); //建边
+		console.log(this.name+"onLoad");
 	},
 
     start () {
-		cc.game.on('route-chosen', function(route) {
-			
-			// sequence(MoveTO())
-			// Person.runAction(seq);
-			// var destination = route[route.length-1];
-			// var cell_js = destination.getComponent("Cell");
-			// cell_js.stepOnCell(1);
-		});
-		this.posEnable(this.map[0][0], 5);
+		
+		//this.posEnable(this.map[0][0], 5);
 		
 		
     },

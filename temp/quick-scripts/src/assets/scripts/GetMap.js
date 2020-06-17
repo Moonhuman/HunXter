@@ -198,15 +198,10 @@ cc.Class({
     this.GetCell(); //构建cell矩阵即map
 
     this.GetEdge(); //建边
+
+    console.log(this.name + "onLoad");
   },
-  start: function start() {
-    cc.game.on('route-chosen', function (route) {// sequence(MoveTO())
-      // Person.runAction(seq);
-      // var destination = route[route.length-1];
-      // var cell_js = destination.getComponent("Cell");
-      // cell_js.stepOnCell(1);
-    });
-    this.posEnable(this.map[0][0], 5);
+  start: function start() {//this.posEnable(this.map[0][0], 5);
   } // update (dt) {},
 
 });
