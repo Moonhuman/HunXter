@@ -52,12 +52,16 @@ var person = cc.Class({
     //var r=[cc.v2(100,100),cc.v2(100,100),cc.v2(100,100),cc.v2(100,100)];
     //var actArr=new Array();
     //console.log(route);
-    //var p=cc.tween(this.avatar);
-    for (var i = 0; i < route.length; i++) {//p.to(0.01,position:route[i].getPosition()});
-      //console.log(route[i].getComponent('Cell').mapx+','+route[i].getComponent('Cell').mapy);
+    var p = cc.tween(this.avatar);
+
+    for (var i = 0; i < route.length; i++) {
+      p.to(0.1, {
+        position: cc.v2(route[i].x, route[i].y)
+      }); //console.log(route[i].getComponent('Cell').mapx+','+route[i].getComponent('Cell').mapy);
     }
 
-    this.avatar.setPosition(route[route.length - 1].getPosition());
+    p.start(); //this.avatar.setPosition(route[route.length-1].getPosition());
+
     this.posX = route[route.length - 1].getComponent('Cell').mapx;
     this.posY = route[route.length - 1].getComponent('Cell').mapy;
     route[route.length - 1].getComponent('Cell').stepOnCell(this.node);

@@ -694,14 +694,14 @@
     "meta": 1592400568150,
     "relativePath": "scripts.zip"
   },
-  "c0d9c14f-b653-4cf1-ad48-66f4a68c45aa": {
-    "asset": 1592401375234,
-    "meta": 1592401376488,
-    "relativePath": "scripts\\Person.js"
-  },
   "1c04c7b0-2287-4c29-9990-85b0fb95ecce": {
     "asset": 1592402285547,
     "meta": 1592402287411,
     "relativePath": "scripts\\globalGame.js"
+  },
+  "c0d9c14f-b653-4cf1-ad48-66f4a68c45aa": {
+    "asset": 1592404867045,
+    "meta": 1592404869665,
+    "relativePath": "scripts\\Person.js"
   }
 }
