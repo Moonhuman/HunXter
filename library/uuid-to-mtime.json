@@ -500,9 +500,9 @@
     "relativePath": "scripts"
   },
   "923d5e91-d427-4907-b38c-6911ae5240a8": {
-    "asset": 1592500704688,
-    "meta": 1592500704704,
-    "relativePath": "scene.fire"
+    "asset": 1592504600155,
+    "meta": 1592504600169,
+    "relativePath": "场景\\game.fire"
   },
   "7981a93b-4450-4497-b90f-debae54455e1": {
     "asset": 1592293221934,
@@ -709,9 +709,34 @@
     "meta": 1592474963496,
     "relativePath": "scripts\\GetMap.js"
   },
+  "c9c96099-105d-4bc8-b7d6-7c1d1b110235": {
+    "asset": 1592501293041,
+    "meta": 1592501293042,
+    "relativePath": "场景"
+  },
+  "02d141c5-c3bf-4543-8f7d-bb1daa042c16": {
+    "asset": 1592502178667,
+    "meta": 1592502178675,
+    "relativePath": "场景\\开始界面.fire"
+  },
+  "e9de42ac-526e-4f1a-9bcf-e8d5848dc03a": {
+    "asset": 1592502184516,
+    "meta": 1592502189550,
+    "relativePath": "scripts\\startUI.js"
+  },
+  "867c3bfa-df63-484f-b153-cbf9c13afd3a": {
+    "asset": 1592503385727,
+    "meta": 1592503385702,
+    "relativePath": "resources\\bgm"
+  },
+  "ba9570a4-828b-44c8-a953-daa102435263": {
+    "asset": 1592503229919,
+    "meta": 1592504419178,
+    "relativePath": "resources\\bgm\\天空之城钢琴曲.m4a"
+  },
   "1c04c7b0-2287-4c29-9990-85b0fb95ecce": {
-    "asset": 1592500895292,
-    "meta": 1592500895956,
+    "asset": 1592504708617,
+    "meta": 1592504717384,
     "relativePath": "scripts\\globalGame.js"
   }
 }

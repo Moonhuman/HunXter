@@ -3,6 +3,11 @@ window.global={
 	nowTurn:0,//当前回合数
 	isOver:false,
 	cardnode : null,
+	bgm:{
+		audio:null,
+		loop:null,
+		volume:null,
+	}
 };
 cc.Class({
     extends: cc.Component,
@@ -57,20 +62,9 @@ cc.Class({
 					//玩家头像按照路径移动
 		},this);
 		this.InitialCard();
-		
+		this.initBgm();
 	},
-	InitialCard: function() {
-		var cardName = ['炸弹','精准导弹','地雷','庇护','天使的庇护','战神的祝福','虚弱','团队的力量',
-							'治愈','圣光普照','望远镜','眼睛','猛男的祝福','盗取','束缚','迷惑','拯救'];
-		var totCardNum = 17;
-		window.global.cardnode = new Array();
-		for (var i = 0; i < totCardNum; i++) {
-			var node = new cc.Node(cardName[i]);
-			node.addComponent(cc.Sprite);
-			node.getComponent(cc.Sprite).spriteFrame = new cc.SpriteFrame(cc.url.raw('resources/卡牌图片/'+cardName[i]+'.jpg'));
-			window.global.cardnode.push(node);
-		}
-	},
+	
     start () {
 		//初始化人物
 		this.initPersons();
@@ -109,7 +103,7 @@ cc.Class({
 				if (this.nowProperty.goEnabled){//判断玩家是否可以行走
 					var step=randomNum(1,6);//掷骰子，玩家步数
 					
-					this.node.emit('send-Msg',"获得筛子点数"+step,this.nowProperty.nickname);
+					this.node.emit('send-Msg',"获得骰子点数"+step,this.nowProperty.nickname);
 					
 					this.isWait=true;
 					console.log(this.mapObj.posEnable(this.mapObj.map[this.nowProperty.posX][this.nowProperty.posY],step));
@@ -191,6 +185,24 @@ cc.Class({
 			console.log(text.getComponent(cc.Label));
 			text.setPosition(-100,-200);			
 		}
+	},
+	initBgm:function(){
+		cc.loader.loadRes('bgm/天空之城钢琴曲', cc.AudioClip, function (err, clip) {
+			var audioID = cc.audioEngine.play(clip, true, 0.5);
+		});
+	},
+	InitialCard: function() {
+		var cardName = ['炸弹','精准导弹','地雷','庇护','天使的庇护','战神的祝福','虚弱','团队的力量',
+							'治愈','圣光普照','望远镜','眼睛','猛男的祝福','盗取','束缚','迷惑','拯救'];
+		var totCardNum = 17;
+		window.global.cardnode = new Array();
+		for (var i = 0; i < totCardNum; i++) {
+			var node = new cc.Node(cardName[i]);
+			node.addComponent(cc.Sprite);
+			node.getComponent(cc.Sprite).spriteFrame = new cc.SpriteFrame(cc.url.raw('resources/卡牌图片/'+cardName[i]+'.jpg'));
+			window.global.cardnode.push(node);
+		}
+		this.initBgm();
 	},
 });
 
