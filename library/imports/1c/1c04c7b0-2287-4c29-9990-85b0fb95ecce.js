@@ -28,7 +28,8 @@ cc.Class({
     nowPlayer: null,
     nowProperty: null,
     isWait: false,
-    msgBoxConent: null
+    msgBoxConent: null,
+    time: 0
   },
   updateUI: function updateUI() {//更新人物血量
   },
@@ -38,10 +39,15 @@ cc.Class({
     this.msgContent = cc.find('Canvas/msgBox/view/content/item'); //console.log(msgContent.getComponent(cc.Label));
 
     this.node.on('send-Msg', function (event, poster) {
-      var name = '<color=#43CD80>' + poster + '</color>';
+      var timeStr = '';
+      if (parseInt(this.time / 60) < 10) timeStr += "0";
+      timeStr += parseInt(this.time / 60) + ":";
+      if (this.time - parseInt(this.time / 60) * 60 < 10) timeStr += "0";
+      timeStr += this.time - parseInt(this.time / 60) * 60;
+      var name = '<color=#43CD80>(' + timeStr + ')' + poster + '</color>';
 
       if (poster == '系统') {
-        name = '<color=#ff0000>' + poster + '</color>';
+        name = '<color=#ff0000>(' + timeStr + ')' + poster + '</color>';
       }
 
       this.msgContent.getComponent(cc.RichText).string += name + ": " + event + '<br/>'; //可能需要动态改变content大小
@@ -64,8 +70,26 @@ cc.Class({
       this.nowProperty.moveByRoute(route); //this.node.emit('update-state', '1');//玩家移动完成，进入下一步操作
       //玩家头像按照路径移动
     }, this);
+    cc.game.on('roll-dice-done', function (event) {
+      console.log('yyy');
+      var step = randomNum(1, 6); //掷骰子，玩家步数
+
+      this.node.emit('send-Msg', "获得骰子点数" + step, this.nowProperty.nickname);
+      console.log(this.mapObj.posEnable(this.mapObj.map[this.nowProperty.posX][this.nowProperty.posY], step));
+    }, this);
     this.InitialCard();
     this.initBgm();
+    cc.find('Canvas/time').getComponent(cc.Label).schedule(function () {
+      cc.find('Canvas').getComponent('globalGame').time += 1;
+      var time = cc.find('Canvas').getComponent('globalGame').time; //console.log(time);
+
+      this.string = "Time: ";
+      if (parseInt(time / 60) < 10) this.string += "0";
+      this.string += parseInt(time / 60) + ":";
+      if (time - parseInt(time / 60) * 60 < 10) this.string += "0";
+      this.string += time - parseInt(time / 60) * 60; //cc.find('Canvas').getComponent('globalGame').timeStr=this.string;
+    }, 1);
+    this.node.emit('send-Msg', '好戏开场了!', '系统');
   },
   start: function start() {
     //初始化人物
@@ -106,11 +130,13 @@ cc.Class({
 
           if (this.nowProperty.goEnabled) {
             //判断玩家是否可以行走
+            var tip = cc.find('Canvas/tipWin'); //tip.active=true;
+
             var step = randomNum(1, 6); //掷骰子，玩家步数
 
             this.node.emit('send-Msg', "获得骰子点数" + step, this.nowProperty.nickname);
-            this.isWait = true;
             console.log(this.mapObj.posEnable(this.mapObj.map[this.nowProperty.posX][this.nowProperty.posY], step));
+            this.isWait = true;
           } else {
             this.nowProperty.goEnabled = 1;
             this.node.emit('update-state', '1');
@@ -178,8 +204,8 @@ cc.Class({
       ctx.lineTo(60, -150);
       ctx.stroke();
       var text = cc.find("bloodBar/text", nowPerson);
-      text.getComponent(cc.Label).fontSize = 25;
-      console.log(text.getComponent(cc.Label));
+      text.getComponent(cc.Label).fontSize = 25; //console.log(text.getComponent(cc.Label));
+
       text.setPosition(-100, -150); //设置行动值
 
       ctx = cc.find("mobilityBar/bar", nowPerson).getComponent(cc.Graphics);
@@ -190,8 +216,8 @@ cc.Class({
       ctx.lineWidth = 10;
       ctx.stroke();
       text = cc.find("mobilityBar/text", nowPerson);
-      text.getComponent(cc.Label).fontSize = 25;
-      console.log(text.getComponent(cc.Label));
+      text.getComponent(cc.Label).fontSize = 25; //console.log(text.getComponent(cc.Label));
+
       text.setPosition(-100, -200);
     }
   },

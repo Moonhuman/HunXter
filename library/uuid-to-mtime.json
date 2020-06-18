@@ -500,8 +500,8 @@
     "relativePath": "scripts"
   },
   "923d5e91-d427-4907-b38c-6911ae5240a8": {
-    "asset": 1592504600155,
-    "meta": 1592504600169,
+    "asset": 1592508612824,
+    "meta": 1592508612837,
     "relativePath": "场景\\game.fire"
   },
   "7981a93b-4450-4497-b90f-debae54455e1": {
@@ -734,9 +734,14 @@
     "meta": 1592504419178,
     "relativePath": "resources\\bgm\\天空之城钢琴曲.m4a"
   },
+  "000f68e0-68ee-45af-aac1-16538214b0e3": {
+    "asset": 1592506855514,
+    "meta": 1592506856410,
+    "relativePath": "scripts\\tipWindow.js"
+  },
   "1c04c7b0-2287-4c29-9990-85b0fb95ecce": {
-    "asset": 1592504708617,
-    "meta": 1592504717384,
+    "asset": 1592508580194,
+    "meta": 1592508581556,
     "relativePath": "scripts\\globalGame.js"
   }
 }

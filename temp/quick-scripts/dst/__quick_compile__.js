@@ -1,6 +1,6 @@
 
 (function () {
-var scripts = [{"deps":{"./assets/scripts/globalGame":3,"./assets/scripts/GetMap":4,"./assets/scripts/startUI":6,"./assets/scripts/Cell":2,"./assets/scripts/Person":1},"path":"preview-scripts/__qc_index__.js"},{"deps":{"globalGame":3},"path":"preview-scripts/assets/scripts/Person.js"},{"deps":{},"path":"preview-scripts/assets/scripts/Cell.js"},{"deps":{},"path":"preview-scripts/assets/scripts/globalGame.js"},{"deps":{},"path":"preview-scripts/assets/scripts/GetMap.js"},{"deps":{},"path":"preview-scripts/assets/scripts/NewScript.js"},{"deps":{},"path":"preview-scripts/assets/scripts/startUI.js"}];
+var scripts = [{"deps":{"./assets/scripts/globalGame":3,"./assets/scripts/tipWindow":7,"./assets/scripts/Person":1,"./assets/scripts/startUI":6,"./assets/scripts/Cell":2,"./assets/scripts/GetMap":4},"path":"preview-scripts/__qc_index__.js"},{"deps":{"globalGame":3},"path":"preview-scripts/assets/scripts/Person.js"},{"deps":{},"path":"preview-scripts/assets/scripts/Cell.js"},{"deps":{},"path":"preview-scripts/assets/scripts/globalGame.js"},{"deps":{},"path":"preview-scripts/assets/scripts/GetMap.js"},{"deps":{},"path":"preview-scripts/assets/scripts/NewScript.js"},{"deps":{},"path":"preview-scripts/assets/scripts/startUI.js"},{"deps":{},"path":"preview-scripts/assets/scripts/tipWindow.js"}];
 var entries = ["preview-scripts/__qc_index__.js"];
 var bundleScript = 'preview-scripts/__qc_bundle__.js';
 
