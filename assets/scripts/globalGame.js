@@ -23,7 +23,12 @@ cc.Class({
 		msgBoxConent:null,
 		time:0,
     },
-
+	
+	end_card_btn_func:function() {
+		cc.game.emit('update-state', '1');
+		cc.find("Canvas/end_card_btn").active = false;
+	},
+	
     updateUI:function(){
 		//更新人物血量
 	},
@@ -55,13 +60,13 @@ cc.Class({
 			 
 		},this);
 			
-		this.node.on('update-state', function (msg) {
+		cc.game.on('update-state', function (msg) {
 			this.nowStep=(this.nowStep+1)%5;
 			this.isWait=false;
 			
 		},this);
 		cc.game.on('stepOnCell-done', function ( event ) {//触发结束
-			this.node.emit('update-state', '1');//更新状态
+			cc.game.emit('update-state', '1');//更新状态
 			//console.log("触发了特殊格子！");
 		},this);
 		cc.game.on('route-chosen', function(route) {//监听玩家选择了哪条路径
@@ -70,12 +75,9 @@ cc.Class({
 					//this.node.emit('update-state', '1');//玩家移动完成，进入下一步操作
 					//玩家头像按照路径移动
 		},this);
-		cc.game.on('roll-dice-done',function(event){
-			console.log('yyy');
-			var step=randomNum(1,6);//掷骰子，玩家步数
+		cc.game.on('roll-dice-done',function(step){
 			this.node.emit('send-Msg',"获得骰子点数"+step,this.nowProperty.nickname);
 			console.log(this.mapObj.posEnable(this.mapObj.map[this.nowProperty.posX][this.nowProperty.posY],step));
-					
 		},this);
 		this.InitialCard();
 		this.initBgm();
@@ -121,7 +123,7 @@ cc.Class({
 				//console.log(this.nowPlayer.name);
 				this.nowProperty=this.nowPlayer.getComponent('Person');//获得玩家属性集合
 				this.node.emit('send-Msg','轮到角色'+this.nowProperty.nickname,'系统');
-				this.node.emit('update-state', '1');
+				cc.game.emit('update-state', '1');
 				
 				break;
 			}
@@ -133,17 +135,12 @@ cc.Class({
 				
 				if (this.nowProperty.goEnabled){//判断玩家是否可以行走
 					var tip=cc.find('Canvas/tipWin');
-					//tip.active=true;
-					var step=randomNum(1,6);//掷骰子，玩家步数
-					this.node.emit('send-Msg',"获得骰子点数"+step,this.nowProperty.nickname);
-					console.log(this.mapObj.posEnable(this.mapObj.map[this.nowProperty.posX][this.nowProperty.posY],step));
+					tip.getComponent('tipWindow').startRollDice();
 					this.isWait=true;
-					
-					
 				}
 				else{
 					this.nowProperty.goEnabled=1;
-					this.node.emit('update-state', '1');
+					cc.game.emit('update-state', '1');
 				}
 				 break;
 			}
@@ -154,21 +151,19 @@ cc.Class({
 				}
 				console.log("当前步骤：",this.nowStep);
 				console.log("玩家出牌");
-				this.node.emit('update-state', '1');
+				cc.game.emit('update-state', '1');
 				break;
 			}
 			case 3: {
 				//等待玩家出牌并结束
 				if (this.nowProperty.useCardEnabled == 1) {
 					//可以出牌
-					var end_btn = new cc.Node();
-					end_btn.addComponent(cc.Button);
-					end_btn.parent = this.node;
-					console.log(end_btn);
-					this.node.emit('update-state', '1');
+					var btn = cc.find('Canvas/end_card_btn');
+					btn.active = true;
+					
 				}
 				else {
-					this.node.emit('update-state', '1');
+					cc.game.emit('update-state', '1');
 				}
 				break;
 			}
@@ -184,7 +179,7 @@ cc.Class({
 					this.nowPlayer=window.global.persons[this.index];
 				}
 				
-				this.node.emit('update-state', '1');
+				cc.game.emit('update-state', '1');
 				break;
 			}
 		}
@@ -249,6 +244,13 @@ cc.Class({
 			node.getComponent(cc.Sprite).spriteFrame = new cc.SpriteFrame(cc.url.raw('resources/卡牌图片/'+cardName[i]+'.jpg'));
 			window.global.cardnode.push(node);
 		}
+		//隐藏结束按钮
+		cc.find('Canvas/end_card_btn').active = false;
+		//隐藏选牌确定按钮
+		cc.find('Canvas/choose_card_confirm').active=false;
+		//隐藏选牌取消按钮
+		cc.find('Canvas/choose_card_cancel').active=false;
+		//初始化BGM
 		this.initBgm();
 	},
 });

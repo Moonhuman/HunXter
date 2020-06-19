@@ -27,10 +27,15 @@ cc.Class({
         deck:[cc.Integer],
         role: null,
     },
+    
     addCard:function(cardID){
         deck.push(cardID);
     },
-	
+	choose_cancel:function(){
+        
+		cc.find('Canvas/choose_card_confirm').active=false;
+        cc.find('Canvas/choose_card_cancel').active=false;        
+    },
     cardDetail:function(){
         var node=cc.instantiate(this);
         node.name="card_detail";
@@ -41,6 +46,15 @@ cc.Class({
     closeDetail:function(){
         cc.find("Canvas/card_detail").destroy();
     },
+    chooseCard:function(){
+        var deck=cc.find("Canvas/Deck").getComponent("Deck");
+        deck.closeDetail();
+        // deck.closeCards();
+        //显示确定/取消按钮
+		cc.find('Canvas/choose_card_confirm').active=true;
+        cc.find('Canvas/choose_card_cancel').active=true;
+        
+    },	
     showCards:function(){
         var isPlayCard=(cc.find("Canvas").getComponent("globalGame").nowStep==3);
         for (var i=0;i<this.deck.length;++i){
@@ -51,10 +65,14 @@ cc.Class({
             node.parent=this.node;
             node.on("mouseenter",this.cardDetail,node);
             node.on("mouseleave",this.closeDetail,node);
+            console.log("ispalycard:",isPlayCard);
+			if (isPlayCard==true){
+			    node.on("mousedown",this.chooseCard,node);
+			}
         }
     },
 	closeCards:function(){
-		var children=this.node.children;
+		var children=cc.find("Canvas/Deck").children;
 		for (var i=0;i<children.length;++i)
 			children[i].destroy();
 		this.node.off("mousedown",this.closeCards,this);
