@@ -38,7 +38,7 @@ cc.Class({
 		this.nowStep=0;
 		this.msgContent=cc.find('Canvas/msgBox/view/content/item');
 		//console.log(msgContent.getComponent(cc.Label));
-		this.node.on('send-Msg',function(event,poster){
+		cc.game.on('send-Msg',function(event,poster){
 			var timeStr='';
 			if (parseInt(this.time/60)<10)
 				timeStr+="0"
@@ -47,7 +47,7 @@ cc.Class({
 				timeStr+="0"
 			timeStr+=(this.time-parseInt(this.time/60)*60);
 			
-			var name='<color=#43CD80>('+timeStr+')'+poster+'</color>';
+			var name='<color=#43CD80>('+timeStr+')'+poster+'</color>';;
 			if (poster=='系统'){
 				name='<color=#ff0000>('+timeStr+')'+poster+'</color>';
 			}
@@ -67,7 +67,8 @@ cc.Class({
 		},this);
 		cc.game.on('stepOnCell-done', function ( event ) {//触发结束
 			cc.game.emit('update-state', '1');//更新状态
-			//console.log("触发了特殊格子！");
+			console.log(event);
+			cc.game.emit('send-Msg',event,this.nowProperty.nickname);
 		},this);
 		cc.game.on('route-chosen', function(route) {//监听玩家选择了哪条路径
 					//console.log('点击了',route);
@@ -76,7 +77,7 @@ cc.Class({
 					//玩家头像按照路径移动
 		},this);
 		cc.game.on('roll-dice-done',function(step){
-			this.node.emit('send-Msg',"获得骰子点数"+step,this.nowProperty.nickname);
+			cc.game.emit('send-Msg',"获得骰子点数"+step,this.nowProperty.nickname);
 			console.log(this.mapObj.posEnable(this.mapObj.map[this.nowProperty.posX][this.nowProperty.posY],step));
 		},this);
 		this.InitialCard();
@@ -95,7 +96,7 @@ cc.Class({
 			this.string+=(time-parseInt(time/60)*60);
 			//cc.find('Canvas').getComponent('globalGame').timeStr=this.string;
 		 }, 1);
-		 this.node.emit('send-Msg','好戏开场了!','系统');
+		 cc.game.emit('send-Msg','好戏开场了!','系统');
 	},
 	
     start () {
@@ -122,7 +123,7 @@ cc.Class({
 				//this.node.emit('send-Msg','进入回合'+window.global.nowTurn,'系统');
 				//console.log(this.nowPlayer.name);
 				this.nowProperty=this.nowPlayer.getComponent('Person');//获得玩家属性集合
-				this.node.emit('send-Msg','轮到角色'+this.nowProperty.nickname,'系统');
+				cc.game.emit('send-Msg','轮到角色'+this.nowProperty.nickname,'系统');
 				cc.game.emit('update-state', '1');
 				
 				break;
@@ -230,7 +231,7 @@ cc.Class({
 	},
 	initBgm:function(){
 		cc.loader.loadRes('bgm/天空之城钢琴曲', cc.AudioClip, function (err, clip) {
-			var audioID = cc.audioEngine.play(clip, true, 0.5);
+			var audioID = cc.audioEngine.play(clip, true, 0.1);
 		});
 	},
 	InitialCard: function() {
