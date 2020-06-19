@@ -11,6 +11,7 @@
                     function __define (exports, require, module) {
                         if (!nodeEnv) {__quick_compile_project__.registerModule(__filename, module);}
 require('./assets/scripts/Cell');
+require('./assets/scripts/Deck');
 require('./assets/scripts/GetMap');
 require('./assets/scripts/Person');
 require('./assets/scripts/globalGame');

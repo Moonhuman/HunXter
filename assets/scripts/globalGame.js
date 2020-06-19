@@ -56,7 +56,7 @@ cc.Class({
 		},this);
 			
 		this.node.on('update-state', function (msg) {
-			this.nowStep=(this.nowStep+1)%4;
+			this.nowStep=(this.nowStep+1)%5;
 			this.isWait=false;
 			
 		},this);
@@ -157,7 +157,22 @@ cc.Class({
 				this.node.emit('update-state', '1');
 				break;
 			}
-			case 3:{
+			case 3: {
+				//等待玩家出牌并结束
+				if (this.nowProperty.useCardEnabled == 1) {
+					//可以出牌
+					var end_btn = new cc.Node();
+					end_btn.addComponent(cc.Button);
+					end_btn.parent = this.node;
+					console.log(end_btn);
+					this.node.emit('update-state', '1');
+				}
+				else {
+					this.node.emit('update-state', '1');
+				}
+				break;
+			}
+			case 4:{ //这里原本是case:3
 				//console.log("当前步骤：",this.nowStep);
 				//当前玩家的回合数-1
 				this.nowProperty.turn-=1;
