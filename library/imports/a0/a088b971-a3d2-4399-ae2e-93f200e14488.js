@@ -41,11 +41,36 @@ cc.Class({
   },
   setColor: function setColor() {
     //设置cell的颜色为红色，表示可走
-    this.node.color = cc.Color.RED;
+    this.node.color = cc.color(102, 255, 102, 255);
   },
   resetColor: function resetColor() {
     //还原cell的颜色
     this.node.color = cc.color(255, 255, 255, 255);
+  },
+  chooseFromThree: function chooseFromThree(cardName, totCardNum) {
+    var cd = [];
+    cd[0] = Math.floor(Math.random() * totCardNum);
+    cd[1] = Math.floor(Math.random() * totCardNum);
+    cd[2] = Math.floor(Math.random() * totCardNum);
+    console.log(cd);
+
+    for (var i = 0; i < 3; i++) {
+      var node = cc.instantiate(window.global.cardnode[cd[i]]);
+      node.name = 'chooseFromThree' + i;
+      node.setPosition(-500 + 500 * i, 0);
+      node.cardID = cd[i];
+      node.on('mousedown', function (event) {
+        var person_js = cc.find('Canvas').getComponent('globalGame').nowPlayer.getComponent('Person');
+        console.log('得到卡牌:' + this.cardID);
+        person_js.cards.push(this.cardID);
+        cc.game.emit('stepOnCell-done');
+
+        for (var j = 0; j < 3; j++) {
+          cc.find('Canvas/chooseFromThree' + j).destroy();
+        }
+      }, node);
+      node.parent = this.node.parent.parent;
+    }
   },
   stepOnCell: function stepOnCell(person) {
     //获取person节点的组件
@@ -58,30 +83,26 @@ cc.Class({
     } else if (this.kind == 1) {
       //卡牌格
       var cardName = ['炸弹', '精准导弹', '地雷', '庇护', '天使的庇护', '战神的祝福', '虚弱', '团队的力量', '治愈', '圣光普照', '望远镜', '眼睛', '猛男的祝福', '盗取', '束缚', '迷惑', '拯救'];
+      var totCardNum = 17;
       var rand_val = Math.random();
+      console.log('rand_val' + rand_val);
 
       if (rand_val < 0.5) {
         //随机获得1张牌
-        var totCardNum = 17;
         var cardID = Math.floor(Math.random() * totCardNum);
-        console.log(cardID);
         person_js.cards.push(cardID); //创建用来提示获得卡牌的精灵节点
 
-        var note = new cc.Node();
-        note.addComponent(cc.Sprite);
-        note.setPosition(0, 0);
-        note.parent = this.node.parent.parent;
-        var self = note;
-        cc.loader.loadRes('卡牌图片/' + cardName[cardID], cc.SpriteFrame, function (err, spriteFrame) {
-          self.getComponent(cc.Sprite).spriteFrame = spriteFrame;
-        }); //开启note节点的监听，点击后消失
+        var node = cc.instantiate(window.global.cardnode[cardID]);
+        node.setPosition(0, 0); //开启note节点的监听，点击后消失
 
-        note.on('mousedown', function (event) {
+        node.on('mousedown', function (event) {
           cc.game.emit('stepOnCell-done');
           this.destroy();
-        }, note);
+        }, node);
+        node.parent = this.node.parent.parent;
       } else {
-        cc.game.emit('stepOnCell-done');
+        //三张中抽一张
+        this.chooseFromThree(cardName, totCardNum);
       }
     } else if (this.kind == 2) {
       //事件格
