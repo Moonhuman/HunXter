@@ -18,9 +18,9 @@
                 "children": [
                   "hierarchy"
                 ],
-                "height": 490.265625,
+                "height": 497.71875,
                 "type": "panel",
-                "width": 255.59375
+                "width": 258
               },
               {
                 "active": 0,
@@ -28,14 +28,14 @@
                   "assets",
                   "cloud-function"
                 ],
-                "height": 426.234375,
+                "height": 434.765625,
                 "type": "panel",
-                "width": 255.59375
+                "width": 258
               }
             ],
-            "height": 919.5,
+            "height": 935.5,
             "type": "dock-v",
-            "width": 255.59375
+            "width": 258
           },
           {
             "active": 0,
@@ -43,9 +43,9 @@
               "inspector",
               "cocos-services"
             ],
-            "height": 919.5,
+            "height": 935.5,
             "type": "panel",
-            "width": 304
+            "width": 307
           },
           {
             "children": [
@@ -54,9 +54,9 @@
                 "children": [
                   "scene"
                 ],
-                "height": 569.75,
+                "height": 579.6875,
                 "type": "panel",
-                "width": 1338.390625
+                "width": 1348.984375
               },
               {
                 "active": 0,
@@ -65,14 +65,14 @@
                   "timeline",
                   "game-window"
                 ],
-                "height": 346.75,
+                "height": 352.8125,
                 "type": "panel",
-                "width": 1338.390625
+                "width": 1348.984375
               }
             ],
-            "height": 919.5,
+            "height": 935.5,
             "type": "dock-v",
-            "width": 1338.390625
+            "width": 1348.984375
           }
         ],
         "type": "dock-h"
@@ -89,7 +89,7 @@
         "game-window"
       ]
     },
-    "window-1592558783815": {}
+    "worker": {}
   },
   "panels": {
     "sprite-editor": {

@@ -1,6 +1,6 @@
 {
   "ver": "1.0.15",
-  "uuid": "b5731417-f0e2-4f15-8611-5887aae91f1f",
+  "uuid": "28da757b-6bb4-4fec-90d4-d78f671292ed",
   "scaleFactor": 1,
   "boneCount": 0,
   "precomputeJointMatrix": false,
@@ -8,13 +8,12 @@
   "subMetas": {
     "buffer.bin": {
       "ver": "1.0.0",
-      "uuid": "21739e1b-642f-4e43-84d1-b1fb6aefb283",
-      "name": "buffer.bin",
+      "uuid": "9349f7a5-cf7e-44fa-b029-db69f3bf1aa8",
       "subMetas": {}
     },
     "root.mesh": {
       "ver": "1.0.1",
-      "uuid": "fb0850f3-d247-4865-a18a-4a3b2d95cd99",
+      "uuid": "7ab2f1b0-3fb4-422c-ae8e-b653633b94dd",
       "verts": 28,
       "tris": 12,
       "submeshes": 1,
@@ -36,12 +35,11 @@
         "y": 0.00261708674952388,
         "z": 0.00369723071344197
       },
-      "name": "root.mesh",
       "subMetas": {}
     },
     "x.prefab": {
       "ver": "1.2.7",
-      "uuid": "6181ccb2-0454-4d82-91b0-67ceb8b92302",
+      "uuid": "a9b42a10-f6d6-4999-a219-bfd282d731a2",
       "optimizationPolicy": "AUTO",
       "asyncLoadAssets": false,
       "readonly": true,
@@ -154,14 +152,12 @@
           "fileId": "d7118yAG5lKybkFOAh8koPL"
         }
       ],
-      "name": "x.prefab",
       "subMetas": {}
     },
     "Material_54.mtl": {
       "ver": "1.0.3",
-      "uuid": "f6db2635-f653-4367-a39e-7234239aea33",
+      "uuid": "80db62d9-fa72-43cf-b5f7-f35e03e4e808",
       "dataAsSubAsset": null,
-      "name": "Material_54.mtl",
       "subMetas": {}
     }
   }

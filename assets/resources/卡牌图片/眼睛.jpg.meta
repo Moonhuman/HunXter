@@ -1,6 +1,6 @@
 {
   "ver": "2.3.4",
-  "uuid": "18fbecdb-29e1-40b1-8024-fea044dc3124",
+  "uuid": "aacc1b47-25f1-403b-bb59-e392e70d392a",
   "type": "sprite",
   "wrapMode": "clamp",
   "filterMode": "bilinear",
@@ -13,7 +13,7 @@
   "subMetas": {
     "眼睛": {
       "ver": "1.0.4",
-      "uuid": "9a587b4c-7332-4452-8e06-847381ce25cc",
+      "uuid": "02977c21-a7bd-49d8-b8bc-de9aa557769d",
       "rawTextureUuid": "18fbecdb-29e1-40b1-8024-fea044dc3124",
       "trimType": "auto",
       "trimThreshold": 1,

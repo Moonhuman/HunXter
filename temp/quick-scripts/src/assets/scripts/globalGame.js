@@ -43,7 +43,6 @@ cc.Class({
     this.msgContent = cc.find('Canvas/msgBox/view/content/item'); //console.log(msgContent.getComponent(cc.Label));
 
     cc.game.on('send-Msg', function (event, poster) {
-      if (event == "") return;
       var timeStr = '';
       if (parseInt(this.time / 60) < 10) timeStr += "0";
       timeStr += parseInt(this.time / 60) + ":";
@@ -238,7 +237,7 @@ cc.Class({
     }
   },
   initBgm: function initBgm() {
-    cc.loader.loadRes('bgm/天空之城', cc.AudioClip, function (err, clip) {
+    cc.loader.loadRes('bgm/天空之城钢琴曲', cc.AudioClip, function (err, clip) {
       var audioID = cc.audioEngine.play(clip, true, 0.1);
     });
   },
@@ -250,7 +249,10 @@ cc.Class({
     for (var i = 0; i < totCardNum; i++) {
       var node = new cc.Node(cardName[i]);
       node.addComponent(cc.Sprite);
-      node.getComponent(cc.Sprite).spriteFrame = new cc.SpriteFrame(cc.url.raw('resources/卡牌图片/' + cardName[i] + '.jpg'));
+      node.cardName = cardName[i];
+      cc.loader.loadRes('卡牌图片/' + node.cardName, cc.SpriteFrame, function (err, spriteFrame) {
+        this.getComponent(cc.Sprite).spriteFrame = spriteFrame;
+      }.bind(node));
       window.global.cardnode.push(node);
     } //隐藏结束按钮
 
@@ -263,6 +265,6 @@ cc.Class({
 
     this.initBgm();
   }
-});
+}); //生成从minNum到maxNum的随机数
 
 cc._RF.pop();

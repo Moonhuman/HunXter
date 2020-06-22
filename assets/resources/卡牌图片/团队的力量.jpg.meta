@@ -1,6 +1,6 @@
 {
   "ver": "2.3.4",
-  "uuid": "e1864d0f-b8ea-46c4-97e9-843a47749cf5",
+  "uuid": "40c1df1f-adcd-4081-b883-43f3cc36c612",
   "type": "sprite",
   "wrapMode": "clamp",
   "filterMode": "bilinear",
@@ -13,7 +13,7 @@
   "subMetas": {
     "团队的力量": {
       "ver": "1.0.4",
-      "uuid": "a6855ff6-02a4-4a5b-a4f7-c107280d1862",
+      "uuid": "2dc0e87e-1361-46e9-aafe-77c4c1899af6",
       "rawTextureUuid": "e1864d0f-b8ea-46c4-97e9-843a47749cf5",
       "trimType": "auto",
       "trimThreshold": 1,

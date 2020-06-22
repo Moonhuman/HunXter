@@ -42,6 +42,12 @@ var person = cc.Class({
       }
     },
     //是否可以行走,1为可以行走
+    isDead: 0,
+    //是否已阵亡，0：活着，1：死了
+    shield: 0,
+    //可免疫一次伤害的护盾，0: 无, 1: 有
+    halfShield: 0,
+    //可减半一次伤害的护盾，可累积次数
     parter: null,
     avatar: null,
     posX: null,

@@ -1,6 +1,6 @@
 {
   "ver": "2.3.4",
-  "uuid": "7baa5e17-5d23-4b1f-91bb-e619ff8ed9ba",
+  "uuid": "f50a8d2a-c0e4-47cd-818e-b3808a48f5ac",
   "type": "sprite",
   "wrapMode": "clamp",
   "filterMode": "bilinear",
@@ -13,7 +13,7 @@
   "subMetas": {
     "猛男的祝福": {
       "ver": "1.0.4",
-      "uuid": "44ca1cea-e406-4c2d-a40f-0633296736be",
+      "uuid": "7243aa1b-6a99-4a39-aa5d-d1a95d8ea890",
       "rawTextureUuid": "7baa5e17-5d23-4b1f-91bb-e619ff8ed9ba",
       "trimType": "auto",
       "trimThreshold": 1,

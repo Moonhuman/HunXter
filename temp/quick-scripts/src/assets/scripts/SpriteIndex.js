@@ -47,7 +47,7 @@ cc.Class({
   next: function next() {
     this.index = randomNum(0, 5); //调用自身index属性，编号+1
   }
-}); //生成从minNum到maxNum的随机数
+});
 
 function randomNum(minNum, maxNum) {
   switch (arguments.length) {

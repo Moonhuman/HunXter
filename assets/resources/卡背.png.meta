@@ -1,6 +1,6 @@
 {
   "ver": "2.3.4",
-  "uuid": "b5942831-73bd-407e-9f08-7901f59d60db",
+  "uuid": "17144165-7d5d-45ef-bba2-b8b6c0f57fa4",
   "type": "sprite",
   "wrapMode": "clamp",
   "filterMode": "bilinear",
@@ -13,7 +13,7 @@
   "subMetas": {
     "卡背": {
       "ver": "1.0.4",
-      "uuid": "1b538a67-94f2-4f24-984d-818a5204f454",
+      "uuid": "45138155-9b7c-4fbb-ba8d-95a8384add64",
       "rawTextureUuid": "b5942831-73bd-407e-9f08-7901f59d60db",
       "trimType": "auto",
       "trimThreshold": 1,

@@ -1,6 +1,6 @@
 {
   "ver": "2.3.4",
-  "uuid": "60fa5a4f-e413-40a3-83c5-0f16d665b95f",
+  "uuid": "dc4eeb96-994f-44d8-8970-e600ca79f9d2",
   "type": "sprite",
   "wrapMode": "clamp",
   "filterMode": "bilinear",
@@ -13,7 +13,7 @@
   "subMetas": {
     "治愈": {
       "ver": "1.0.4",
-      "uuid": "bfbb4165-7a65-4917-a43f-bb9c311cb570",
+      "uuid": "e476a8cd-8824-480b-ba80-069a7781d515",
       "rawTextureUuid": "60fa5a4f-e413-40a3-83c5-0f16d665b95f",
       "trimType": "auto",
       "trimThreshold": 1,

@@ -1,6 +1,6 @@
 {
   "ver": "2.3.4",
-  "uuid": "10a6b9b8-f095-43a2-a4d0-694da73f3509",
+  "uuid": "444afc6d-6fa2-4be0-853c-dc6db713be75",
   "type": "sprite",
   "wrapMode": "clamp",
   "filterMode": "bilinear",
@@ -13,7 +13,7 @@
   "subMetas": {
     "天使": {
       "ver": "1.0.4",
-      "uuid": "3776c660-6061-4f67-ab3c-c2dae8508ca1",
+      "uuid": "e126ad1d-1b69-4895-84f9-a4e98402ebe1",
       "rawTextureUuid": "10a6b9b8-f095-43a2-a4d0-694da73f3509",
       "trimType": "auto",
       "trimThreshold": 1,

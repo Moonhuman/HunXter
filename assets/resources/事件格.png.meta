@@ -1,6 +1,6 @@
 {
   "ver": "2.3.4",
-  "uuid": "ff4725fa-e4dc-4edd-b38e-a582bbbd7fbe",
+  "uuid": "dbd7fdaa-933b-4766-9493-f40f049fbd6d",
   "type": "sprite",
   "wrapMode": "clamp",
   "filterMode": "bilinear",
@@ -13,7 +13,7 @@
   "subMetas": {
     "事件格": {
       "ver": "1.0.4",
-      "uuid": "2e75f4ff-8b35-4e6e-ac6b-1991b08281d0",
+      "uuid": "c1a84802-97e5-4c22-ba0e-d9605b0c2354",
       "rawTextureUuid": "ff4725fa-e4dc-4edd-b38e-a582bbbd7fbe",
       "trimType": "auto",
       "trimThreshold": 1,
