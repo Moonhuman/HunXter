@@ -726,7 +726,7 @@
   },
   "ba9570a4-828b-44c8-a953-daa102435263": {
     "asset": 1592526228669,
-    "meta": 1592556191295,
+    "meta": 1592559221017,
     "relativePath": "resources\\bgm\\天空之城钢琴曲.m4a"
   },
   "b5942831-73bd-407e-9f08-7901f59d60db": {
@@ -769,11 +769,6 @@
     "meta": 1592556191224,
     "relativePath": "resources\\骰子\\5.png"
   },
-  "4e961a30-8c21-41ab-a05b-4bfc41289375": {
-    "asset": 1592555364804,
-    "meta": 1592556191901,
-    "relativePath": "scripts\\SpriteIndex.js"
-  },
   "816ae009-20b1-41a5-96a0-6ad2f9138a6c": {
     "asset": 1592555329209,
     "meta": 1592556191228,
@@ -799,9 +794,19 @@
     "meta": 1592556901028,
     "relativePath": "scripts\\Cell.js"
   },
+  "8c248003-5ca4-488d-ba21-9f58010851e0": {
+    "asset": 1592559282199,
+    "meta": 1592559327311,
+    "relativePath": "resources\\bgm\\天空之城.mp3"
+  },
+  "4e961a30-8c21-41ab-a05b-4bfc41289375": {
+    "asset": 1592560341341,
+    "meta": 1592560343780,
+    "relativePath": "scripts\\SpriteIndex.js"
+  },
   "1c04c7b0-2287-4c29-9990-85b0fb95ecce": {
-    "asset": 1592557213813,
-    "meta": 1592557224198,
+    "asset": 1592560401033,
+    "meta": 1592560403603,
     "relativePath": "scripts\\globalGame.js"
   }
 }

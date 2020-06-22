@@ -45,8 +45,24 @@ cc.Class({
   *可以方便被cc.Button组件的事件调用
   */
   next: function next() {
-    this.index = (this.index + 1) % 6; //调用自身index属性，编号+1
+    this.index = randomNum(0, 5); //调用自身index属性，编号+1
   }
-});
+}); //生成从minNum到maxNum的随机数
+
+function randomNum(minNum, maxNum) {
+  switch (arguments.length) {
+    case 1:
+      return parseInt(Math.random() * minNum + 1, 10);
+      break;
+
+    case 2:
+      return parseInt(Math.random() * (maxNum - minNum + 1) + minNum, 10);
+      break;
+
+    default:
+      return 0;
+      break;
+  }
+}
 
 cc._RF.pop();
