@@ -27,13 +27,40 @@ cc.Class({
 	end_card_btn_func:function() {
 		cc.game.emit('update-state', '1');
 		cc.find("Canvas/end_card_btn").active = false;
+		window.global.card_end_btn_showed = 0;
 	},
-	
+	onKeyDown: function (event) {//键盘按下
+		console.log(event);
+        switch(event.keyCode) {
+            case 9:
+			{//按下tab
+				var tab=cc.find('Canvas/Tab');
+				tab.active=true;
+				tab.getComponent('tabWin').showTab();
+				//console.log('Press a key');
+                break;
+			}
+        }
+    },
+
+    onKeyUp: function (event) {//键盘释放
+        switch(event.keyCode) {
+            case 9:
+             {//释放tab
+				var tab=cc.find('Canvas/Tab');
+				tab.active=false;
+				//console.log('Press a key');
+                break;
+			}
+        }
+    },
     updateUI:function(){
 		//更新人物血量
 	},
 
     onLoad () {
+		cc.systemEvent.on(cc.SystemEvent.EventType.KEY_DOWN, this.onKeyDown, this);
+        cc.systemEvent.on(cc.SystemEvent.EventType.KEY_UP, this.onKeyUp, this);
 		//加载地图
 		this.nowStep=0;
 		this.msgContent=cc.find('Canvas/msgBox/view/content/item');
@@ -112,16 +139,23 @@ cc.Class({
     },
 
     update (dt) {
-		//判断当前回合是否结束
-		
-		console.log("是否等待操作",this.isWait);
+		//console.log("是否等待操作",this.isWait);
 		switch (this.nowStep){
 			case 0:{//初始化变量
 				if (this.isWait){//正在操作或等待操作
 					break;
 				}
-				//this.node.emit('send-Msg','进入回合'+window.global.nowTurn,'系统');
-				//console.log(this.nowPlayer.name);
+				if (this.index==0){
+					window.global.nowTurn+=1;
+				}
+				var buff=this.node.getComponent('Buff');
+				for (var i=0;i<buff.todoList.length;i++){
+					if (buff.todoList[i].endTurn==window.global.nowTurn){
+						if (buff.todoList[i].act()){
+							buff.todoList.splice(i,1);
+						}
+					}
+				}
 				this.nowProperty=this.nowPlayer.getComponent('Person');//获得玩家属性集合
 				cc.game.emit('send-Msg','轮到角色'+this.nowProperty.nickname,'系统');
 				cc.game.emit('update-state', '1');
@@ -159,8 +193,11 @@ cc.Class({
 				//等待玩家出牌并结束
 				if (this.nowProperty.useCardEnabled == 1) {
 					//可以出牌
-					var btn = cc.find('Canvas/end_card_btn');
-					btn.active = true;
+					if (window.global.card_end_btn_showed != 1) {
+						var btn = cc.find('Canvas/end_card_btn');
+						btn.active = true;
+						window.global.card_end_btn_showed = 1;
+					}
 					
 				}
 				else {

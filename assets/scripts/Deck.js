@@ -32,7 +32,7 @@ cc.Class({
             cc.find('Canvas/Deck').getComponent('Deck').showTips("行动值不足！");
         }
         else{
-            card.cardFunction[16](card);
+            card.cardFunction[cardID](card);
             cc.find('Canvas/Deck').getComponent('Deck').closeCards();
         }
         //关闭按钮
@@ -50,7 +50,6 @@ cc.Class({
         node.scaleX=0.8,node.scaleY=0.8;
         node.setPosition(0,50);
         node.parent=cc.find("Canvas");
-        
     },
     closeDetail:function(){
         var node=cc.find("Canvas/card_detail");
@@ -112,7 +111,7 @@ cc.Class({
 
     start () {
         this.node.on("mousedown",this.initDeck,this);
-
+	
     },
 
     // update (dt) {},

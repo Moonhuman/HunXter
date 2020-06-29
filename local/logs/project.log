@@ -1,465 +1,212 @@
-2020-06-22T00:42:58.011Z - normal: Load ~/.CocosCreator/settings.json
-2020-06-22T00:42:58.047Z - normal: Initializing Asset Database
-2020-06-22T00:42:58.050Z - normal: checking language setting...
-2020-06-22T00:42:58.050Z - normal: Language: zh
-2020-06-22T00:42:58.847Z - success: preview server running at http://localhost:7456
-2020-06-22T00:42:58.853Z - success: protocol editor-framework registered
-2020-06-22T00:42:58.853Z - success: protocol app registered
-2020-06-22T00:42:58.853Z - success: protocol theme registered
-2020-06-22T00:42:58.853Z - success: protocol packages registered
-2020-06-22T00:42:58.853Z - success: protocol uuid registerred
-2020-06-22T00:42:58.853Z - success: protocol db registerred
-2020-06-22T00:42:58.854Z - success: protocol thumbnail registerred
-2020-06-22T00:42:58.854Z - success: protocol unpack registerred
-2020-06-22T00:42:58.854Z - success: protocol disable-commonjs registerred
-2020-06-22T00:42:59.055Z - normal: connected!
-2020-06-22T00:42:59.059Z - normal: Check project D:\cocos2dx\HunXter
-2020-06-22T00:42:59.064Z - normal: Initializing project D:\cocos2dx\HunXter
-2020-06-22T00:42:59.093Z - success: adapters loaded
-2020-06-22T00:42:59.096Z - success: asset-db-debugger loaded
-2020-06-22T00:42:59.138Z - success: fb-audience-network loaded
-2020-06-22T00:42:59.158Z - success: fb-live-stream loaded
-2020-06-22T00:42:59.159Z - success: google-play-instant loaded
-2020-06-22T00:42:59.160Z - success: huawei-adapter loaded
-2020-06-22T00:42:59.160Z - success: jkw-adapter loaded
-2020-06-22T00:42:59.160Z - success: jsb-adapter loaded
-2020-06-22T00:42:59.161Z - success: oppo-adapter loaded
-2020-06-22T00:42:59.162Z - success: package-manager loaded
-2020-06-22T00:42:59.163Z - success: qtt-adapter loaded
-2020-06-22T00:42:59.164Z - success: runtime-dev-tools loaded
-2020-06-22T00:42:59.167Z - success: sdkbox loaded
-2020-06-22T00:42:59.168Z - success: ui-kit-preview-extra loaded
-2020-06-22T00:42:59.170Z - success: ui-kit-preview loaded
-2020-06-22T00:42:59.170Z - success: vivo-adapter loaded
-2020-06-22T00:42:59.203Z - success: alipay-minigame loaded
-2020-06-22T00:42:59.249Z - success: assets loaded
-2020-06-22T00:42:59.251Z - success: baidugame-opendata loaded
-2020-06-22T00:42:59.252Z - success: baidugame loaded
-2020-06-22T00:42:59.254Z - success: builder loaded
-2020-06-22T00:42:59.256Z - success: cloud-function loaded
-2020-06-22T00:42:59.366Z - success: cocos-services loaded
-2020-06-22T00:42:59.368Z - success: console loaded
-2020-06-22T00:42:59.369Z - success: curve-editor loaded
-2020-06-22T00:42:59.378Z - success: fb-instant-games loaded
-2020-06-22T00:42:59.380Z - success: game-window loaded
-2020-06-22T00:42:59.380Z - success: google-instant-games loaded
-2020-06-22T00:42:59.382Z - success: hierarchy loaded
-2020-06-22T00:42:59.384Z - success: huawei-runtime loaded
-2020-06-22T00:42:59.385Z - success: inspector loaded
-2020-06-22T00:42:59.442Z - success: cpk-publish loaded
-2020-06-22T00:42:59.443Z - success: keystore loaded
-2020-06-22T00:42:59.449Z - success: node-library loaded
-2020-06-22T00:42:59.449Z - success: open-recent-items loaded
-2020-06-22T00:42:59.451Z - success: oppo-runtime loaded
-2020-06-22T00:42:59.452Z - success: package-asset loaded
-2020-06-22T00:42:59.452Z - success: preferences loaded
-2020-06-22T00:42:59.453Z - success: project-importer loaded
-2020-06-22T00:42:59.454Z - success: project-settings loaded
-2020-06-22T00:42:59.465Z - success: qtt-runtime loaded
-2020-06-22T00:42:59.466Z - success: scene loaded
-2020-06-22T00:42:59.467Z - success: simulator-debugger loaded
-2020-06-22T00:42:59.467Z - success: sprite-editor loaded
-2020-06-22T00:42:59.488Z - success: store loaded
-2020-06-22T00:42:59.490Z - success: timeline loaded
-2020-06-22T00:42:59.492Z - success: vivo-runtime loaded
-2020-06-22T00:42:59.494Z - success: wechatgame-opendata loaded
-2020-06-22T00:42:59.496Z - success: wechatgame loaded
-2020-06-22T00:42:59.499Z - success: xiaomi-runtime loaded
-2020-06-22T00:42:59.651Z - success: im-plugin loaded
-2020-06-22T00:43:00.797Z - normal: Initializing Cocos2d
-2020-06-22T00:43:01.100Z - normal: Initializing engine extends
-2020-06-22T00:43:02.119Z - normal: Loading packages
-2020-06-22T00:43:02.122Z - normal: Watching packages
-2020-06-22T00:43:02.154Z - normal: Run Application
-2020-06-22T00:43:05.918Z - info: Cocos Service load base data!
-2020-06-22T00:43:06.891Z - error: The 'default' value of 'Person.nickname' should not be used with a 'get' function.
+2020-06-25T12:51:32.779Z - normal: Load ~/.CocosCreator/settings.json
+2020-06-25T12:51:32.814Z - normal: Initializing Asset Database
+2020-06-25T12:51:32.817Z - normal: checking language setting...
+2020-06-25T12:51:32.817Z - normal: Language: zh
+2020-06-25T12:51:33.630Z - success: preview server running at http://localhost:7456
+2020-06-25T12:51:33.635Z - success: protocol editor-framework registered
+2020-06-25T12:51:33.635Z - success: protocol app registered
+2020-06-25T12:51:33.635Z - success: protocol theme registered
+2020-06-25T12:51:33.636Z - success: protocol packages registered
+2020-06-25T12:51:33.636Z - success: protocol uuid registerred
+2020-06-25T12:51:33.636Z - success: protocol db registerred
+2020-06-25T12:51:33.636Z - success: protocol thumbnail registerred
+2020-06-25T12:51:33.636Z - success: protocol unpack registerred
+2020-06-25T12:51:33.636Z - success: protocol disable-commonjs registerred
+2020-06-25T12:51:33.802Z - normal: connected!
+2020-06-25T12:51:33.804Z - normal: Check project D:\cocos2dx\HunXter
+2020-06-25T12:51:33.808Z - normal: Initializing project D:\cocos2dx\HunXter
+2020-06-25T12:51:33.821Z - success: adapters loaded
+2020-06-25T12:51:33.824Z - success: asset-db-debugger loaded
+2020-06-25T12:51:33.868Z - success: fb-audience-network loaded
+2020-06-25T12:51:33.889Z - success: fb-live-stream loaded
+2020-06-25T12:51:33.890Z - success: google-play-instant loaded
+2020-06-25T12:51:33.891Z - success: huawei-adapter loaded
+2020-06-25T12:51:33.891Z - success: jkw-adapter loaded
+2020-06-25T12:51:33.891Z - success: jsb-adapter loaded
+2020-06-25T12:51:33.892Z - success: oppo-adapter loaded
+2020-06-25T12:51:33.894Z - success: package-manager loaded
+2020-06-25T12:51:33.894Z - success: qtt-adapter loaded
+2020-06-25T12:51:33.896Z - success: runtime-dev-tools loaded
+2020-06-25T12:51:33.899Z - success: sdkbox loaded
+2020-06-25T12:51:33.901Z - success: ui-kit-preview-extra loaded
+2020-06-25T12:51:33.902Z - success: ui-kit-preview loaded
+2020-06-25T12:51:33.902Z - success: vivo-adapter loaded
+2020-06-25T12:51:33.936Z - success: alipay-minigame loaded
+2020-06-25T12:51:33.983Z - success: assets loaded
+2020-06-25T12:51:33.985Z - success: baidugame-opendata loaded
+2020-06-25T12:51:33.987Z - success: baidugame loaded
+2020-06-25T12:51:33.988Z - success: builder loaded
+2020-06-25T12:51:33.991Z - success: cloud-function loaded
+2020-06-25T12:51:34.102Z - success: cocos-services loaded
+2020-06-25T12:51:34.104Z - success: console loaded
+2020-06-25T12:51:34.105Z - success: curve-editor loaded
+2020-06-25T12:51:34.115Z - success: fb-instant-games loaded
+2020-06-25T12:51:34.116Z - success: game-window loaded
+2020-06-25T12:51:34.117Z - success: google-instant-games loaded
+2020-06-25T12:51:34.119Z - success: hierarchy loaded
+2020-06-25T12:51:34.121Z - success: huawei-runtime loaded
+2020-06-25T12:51:34.123Z - success: inspector loaded
+2020-06-25T12:51:34.180Z - success: cpk-publish loaded
+2020-06-25T12:51:34.180Z - success: keystore loaded
+2020-06-25T12:51:34.187Z - success: node-library loaded
+2020-06-25T12:51:34.188Z - success: open-recent-items loaded
+2020-06-25T12:51:34.190Z - success: oppo-runtime loaded
+2020-06-25T12:51:34.191Z - success: package-asset loaded
+2020-06-25T12:51:34.191Z - success: preferences loaded
+2020-06-25T12:51:34.192Z - success: project-importer loaded
+2020-06-25T12:51:34.193Z - success: project-settings loaded
+2020-06-25T12:51:34.204Z - success: qtt-runtime loaded
+2020-06-25T12:51:34.206Z - success: scene loaded
+2020-06-25T12:51:34.206Z - success: simulator-debugger loaded
+2020-06-25T12:51:34.207Z - success: sprite-editor loaded
+2020-06-25T12:51:34.228Z - success: store loaded
+2020-06-25T12:51:34.229Z - success: timeline loaded
+2020-06-25T12:51:34.232Z - success: vivo-runtime loaded
+2020-06-25T12:51:34.234Z - success: wechatgame-opendata loaded
+2020-06-25T12:51:34.236Z - success: wechatgame loaded
+2020-06-25T12:51:34.239Z - success: xiaomi-runtime loaded
+2020-06-25T12:51:34.380Z - success: im-plugin loaded
+2020-06-25T12:51:35.708Z - normal: Initializing Cocos2d
+2020-06-25T12:51:36.019Z - normal: Initializing engine extends
+2020-06-25T12:51:37.296Z - normal: Loading packages
+2020-06-25T12:51:37.299Z - normal: Watching packages
+2020-06-25T12:51:37.335Z - normal: Run Application
+2020-06-25T12:51:37.696Z - info: Cocos Service load base data!
+2020-06-25T12:51:43.054Z - error: The 'default' value of 'Person.nickname' should not be used with a 'get' function.
     at Object.cc.errorID (D:\CocosDashboard\resources\.editors\Creator\2.3.4\resources\engine\bin\.cache\dev\cocos2d\core\CCDebug.js:257:6)
     at Object.exports.preprocessAttrs (D:\CocosDashboard\resources\.editors\Creator\2.3.4\resources\engine\bin\.cache\dev\cocos2d\core\platform\preprocess-class.js:317:16)
     at declareProperties (D:\CocosDashboard\resources\.editors\Creator\2.3.4\resources\engine\bin\.cache\dev\cocos2d\core\platform\CCClass.js:851:16)
     at Object.CCClass [as Class] (D:\CocosDashboard\resources\.editors\Creator\2.3.4\resources\engine\bin\.cache\dev\cocos2d\core\platform\CCClass.js:1001:5)
     at __define (D:\cocos2dx\HunXter\temp\quick-scripts\dst\assets\scripts\Person.js:26:17)
-    at D:\cocos2dx\HunXter\temp\quick-scripts\dst\assets\scripts\Person.js:106:25
-    at Object.<anonymous> (D:\cocos2dx\HunXter\temp\quick-scripts\dst\assets\scripts\Person.js:113:19)
-    at Object.<anonymous> (D:\cocos2dx\HunXter\temp\quick-scripts\dst\assets\scripts\Person.js:115:3)
+    at D:\cocos2dx\HunXter\temp\quick-scripts\dst\assets\scripts\Person.js:122:25
+    at Object.<anonymous> (D:\cocos2dx\HunXter\temp\quick-scripts\dst\assets\scripts\Person.js:129:19)
+    at Object.<anonymous> (D:\cocos2dx\HunXter\temp\quick-scripts\dst\assets\scripts\Person.js:131:3)
     at Module._compile (internal/modules/cjs/loader.js:839:30)
-2020-06-22T00:43:06.892Z - error: The 'default' value of 'Person.goEnabled' should not be used with a 'get' function.
+2020-06-25T12:51:43.055Z - error: The 'default' value of 'Person.goEnabled' should not be used with a 'get' function.
     at Object.cc.errorID (D:\CocosDashboard\resources\.editors\Creator\2.3.4\resources\engine\bin\.cache\dev\cocos2d\core\CCDebug.js:257:6)
     at Object.exports.preprocessAttrs (D:\CocosDashboard\resources\.editors\Creator\2.3.4\resources\engine\bin\.cache\dev\cocos2d\core\platform\preprocess-class.js:317:16)
     at declareProperties (D:\CocosDashboard\resources\.editors\Creator\2.3.4\resources\engine\bin\.cache\dev\cocos2d\core\platform\CCClass.js:851:16)
     at Object.CCClass [as Class] (D:\CocosDashboard\resources\.editors\Creator\2.3.4\resources\engine\bin\.cache\dev\cocos2d\core\platform\CCClass.js:1001:5)
     at __define (D:\cocos2dx\HunXter\temp\quick-scripts\dst\assets\scripts\Person.js:26:17)
-    at D:\cocos2dx\HunXter\temp\quick-scripts\dst\assets\scripts\Person.js:106:25
-    at Object.<anonymous> (D:\cocos2dx\HunXter\temp\quick-scripts\dst\assets\scripts\Person.js:113:19)
-    at Object.<anonymous> (D:\cocos2dx\HunXter\temp\quick-scripts\dst\assets\scripts\Person.js:115:3)
+    at D:\cocos2dx\HunXter\temp\quick-scripts\dst\assets\scripts\Person.js:122:25
+    at Object.<anonymous> (D:\cocos2dx\HunXter\temp\quick-scripts\dst\assets\scripts\Person.js:129:19)
+    at Object.<anonymous> (D:\cocos2dx\HunXter\temp\quick-scripts\dst\assets\scripts\Person.js:131:3)
     at Module._compile (internal/modules/cjs/loader.js:839:30)
-2020-06-22T00:43:06.895Z - warn: Modified global variable while loading common project scripts: global
+2020-06-25T12:51:43.059Z - warn: Modified global variable while loading common project scripts: global
 Before: [object global]
 After: [object Object]
-2020-06-22T00:57:29.586Z - error: The 'default' value of 'Person.nickname' should not be used with a 'get' function.
+2020-06-25T12:57:39.710Z - error: The 'default' value of 'Person.nickname' should not be used with a 'get' function.
     at Object.cc.errorID (D:\CocosDashboard\resources\.editors\Creator\2.3.4\resources\engine\bin\.cache\dev\cocos2d\core\CCDebug.js:257:6)
     at Object.exports.preprocessAttrs (D:\CocosDashboard\resources\.editors\Creator\2.3.4\resources\engine\bin\.cache\dev\cocos2d\core\platform\preprocess-class.js:317:16)
     at declareProperties (D:\CocosDashboard\resources\.editors\Creator\2.3.4\resources\engine\bin\.cache\dev\cocos2d\core\platform\CCClass.js:851:16)
     at Object.CCClass [as Class] (D:\CocosDashboard\resources\.editors\Creator\2.3.4\resources\engine\bin\.cache\dev\cocos2d\core\platform\CCClass.js:1001:5)
     at __define (D:\cocos2dx\HunXter\temp\quick-scripts\dst\assets\scripts\Person.js:26:17)
-    at D:\cocos2dx\HunXter\temp\quick-scripts\dst\assets\scripts\Person.js:110:25
-    at Object.<anonymous> (D:\cocos2dx\HunXter\temp\quick-scripts\dst\assets\scripts\Person.js:117:19)
-    at Object.<anonymous> (D:\cocos2dx\HunXter\temp\quick-scripts\dst\assets\scripts\Person.js:119:3)
+    at D:\cocos2dx\HunXter\temp\quick-scripts\dst\assets\scripts\Person.js:132:25
+    at Object.<anonymous> (D:\cocos2dx\HunXter\temp\quick-scripts\dst\assets\scripts\Person.js:139:19)
+    at Object.<anonymous> (D:\cocos2dx\HunXter\temp\quick-scripts\dst\assets\scripts\Person.js:141:3)
     at Module._compile (internal/modules/cjs/loader.js:839:30)
-2020-06-22T00:57:29.587Z - error: The 'default' value of 'Person.goEnabled' should not be used with a 'get' function.
+2020-06-25T12:57:39.710Z - error: The 'default' value of 'Person.goEnabled' should not be used with a 'get' function.
     at Object.cc.errorID (D:\CocosDashboard\resources\.editors\Creator\2.3.4\resources\engine\bin\.cache\dev\cocos2d\core\CCDebug.js:257:6)
     at Object.exports.preprocessAttrs (D:\CocosDashboard\resources\.editors\Creator\2.3.4\resources\engine\bin\.cache\dev\cocos2d\core\platform\preprocess-class.js:317:16)
     at declareProperties (D:\CocosDashboard\resources\.editors\Creator\2.3.4\resources\engine\bin\.cache\dev\cocos2d\core\platform\CCClass.js:851:16)
     at Object.CCClass [as Class] (D:\CocosDashboard\resources\.editors\Creator\2.3.4\resources\engine\bin\.cache\dev\cocos2d\core\platform\CCClass.js:1001:5)
     at __define (D:\cocos2dx\HunXter\temp\quick-scripts\dst\assets\scripts\Person.js:26:17)
-    at D:\cocos2dx\HunXter\temp\quick-scripts\dst\assets\scripts\Person.js:110:25
-    at Object.<anonymous> (D:\cocos2dx\HunXter\temp\quick-scripts\dst\assets\scripts\Person.js:117:19)
-    at Object.<anonymous> (D:\cocos2dx\HunXter\temp\quick-scripts\dst\assets\scripts\Person.js:119:3)
+    at D:\cocos2dx\HunXter\temp\quick-scripts\dst\assets\scripts\Person.js:132:25
+    at Object.<anonymous> (D:\cocos2dx\HunXter\temp\quick-scripts\dst\assets\scripts\Person.js:139:19)
+    at Object.<anonymous> (D:\cocos2dx\HunXter\temp\quick-scripts\dst\assets\scripts\Person.js:141:3)
     at Module._compile (internal/modules/cjs/loader.js:839:30)
-2020-06-22T00:57:29.593Z - warn: Modified global variable while loading common project scripts: global
+2020-06-25T12:57:39.717Z - warn: Modified global variable while loading common project scripts: global
 Before: [object global]
 After: [object Object]
-2020-06-22T01:04:02.715Z - error: The 'default' value of 'Person.nickname' should not be used with a 'get' function.
+2020-06-25T12:58:41.707Z - error: The 'default' value of 'Person.nickname' should not be used with a 'get' function.
     at Object.cc.errorID (D:\CocosDashboard\resources\.editors\Creator\2.3.4\resources\engine\bin\.cache\dev\cocos2d\core\CCDebug.js:257:6)
     at Object.exports.preprocessAttrs (D:\CocosDashboard\resources\.editors\Creator\2.3.4\resources\engine\bin\.cache\dev\cocos2d\core\platform\preprocess-class.js:317:16)
     at declareProperties (D:\CocosDashboard\resources\.editors\Creator\2.3.4\resources\engine\bin\.cache\dev\cocos2d\core\platform\CCClass.js:851:16)
     at Object.CCClass [as Class] (D:\CocosDashboard\resources\.editors\Creator\2.3.4\resources\engine\bin\.cache\dev\cocos2d\core\platform\CCClass.js:1001:5)
     at __define (D:\cocos2dx\HunXter\temp\quick-scripts\dst\assets\scripts\Person.js:26:17)
-    at D:\cocos2dx\HunXter\temp\quick-scripts\dst\assets\scripts\Person.js:110:25
-    at Object.<anonymous> (D:\cocos2dx\HunXter\temp\quick-scripts\dst\assets\scripts\Person.js:117:19)
-    at Object.<anonymous> (D:\cocos2dx\HunXter\temp\quick-scripts\dst\assets\scripts\Person.js:119:3)
+    at D:\cocos2dx\HunXter\temp\quick-scripts\dst\assets\scripts\Person.js:133:25
+    at Object.<anonymous> (D:\cocos2dx\HunXter\temp\quick-scripts\dst\assets\scripts\Person.js:140:19)
+    at Object.<anonymous> (D:\cocos2dx\HunXter\temp\quick-scripts\dst\assets\scripts\Person.js:142:3)
     at Module._compile (internal/modules/cjs/loader.js:839:30)
-2020-06-22T01:04:02.716Z - error: The 'default' value of 'Person.goEnabled' should not be used with a 'get' function.
+2020-06-25T12:58:41.708Z - error: The 'default' value of 'Person.goEnabled' should not be used with a 'get' function.
     at Object.cc.errorID (D:\CocosDashboard\resources\.editors\Creator\2.3.4\resources\engine\bin\.cache\dev\cocos2d\core\CCDebug.js:257:6)
     at Object.exports.preprocessAttrs (D:\CocosDashboard\resources\.editors\Creator\2.3.4\resources\engine\bin\.cache\dev\cocos2d\core\platform\preprocess-class.js:317:16)
     at declareProperties (D:\CocosDashboard\resources\.editors\Creator\2.3.4\resources\engine\bin\.cache\dev\cocos2d\core\platform\CCClass.js:851:16)
     at Object.CCClass [as Class] (D:\CocosDashboard\resources\.editors\Creator\2.3.4\resources\engine\bin\.cache\dev\cocos2d\core\platform\CCClass.js:1001:5)
     at __define (D:\cocos2dx\HunXter\temp\quick-scripts\dst\assets\scripts\Person.js:26:17)
-    at D:\cocos2dx\HunXter\temp\quick-scripts\dst\assets\scripts\Person.js:110:25
-    at Object.<anonymous> (D:\cocos2dx\HunXter\temp\quick-scripts\dst\assets\scripts\Person.js:117:19)
-    at Object.<anonymous> (D:\cocos2dx\HunXter\temp\quick-scripts\dst\assets\scripts\Person.js:119:3)
+    at D:\cocos2dx\HunXter\temp\quick-scripts\dst\assets\scripts\Person.js:133:25
+    at Object.<anonymous> (D:\cocos2dx\HunXter\temp\quick-scripts\dst\assets\scripts\Person.js:140:19)
+    at Object.<anonymous> (D:\cocos2dx\HunXter\temp\quick-scripts\dst\assets\scripts\Person.js:142:3)
     at Module._compile (internal/modules/cjs/loader.js:839:30)
-2020-06-22T01:04:02.728Z - warn: Modified global variable while loading common project scripts: global
+2020-06-25T12:58:41.717Z - warn: Modified global variable while loading common project scripts: global
 Before: [object global]
 After: [object Object]
-2020-06-22T01:20:25.734Z - error: The 'default' value of 'Person.nickname' should not be used with a 'get' function.
+2020-06-25T12:59:08.394Z - error: The 'default' value of 'Person.nickname' should not be used with a 'get' function.
     at Object.cc.errorID (D:\CocosDashboard\resources\.editors\Creator\2.3.4\resources\engine\bin\.cache\dev\cocos2d\core\CCDebug.js:257:6)
     at Object.exports.preprocessAttrs (D:\CocosDashboard\resources\.editors\Creator\2.3.4\resources\engine\bin\.cache\dev\cocos2d\core\platform\preprocess-class.js:317:16)
     at declareProperties (D:\CocosDashboard\resources\.editors\Creator\2.3.4\resources\engine\bin\.cache\dev\cocos2d\core\platform\CCClass.js:851:16)
     at Object.CCClass [as Class] (D:\CocosDashboard\resources\.editors\Creator\2.3.4\resources\engine\bin\.cache\dev\cocos2d\core\platform\CCClass.js:1001:5)
     at __define (D:\cocos2dx\HunXter\temp\quick-scripts\dst\assets\scripts\Person.js:26:17)
-    at D:\cocos2dx\HunXter\temp\quick-scripts\dst\assets\scripts\Person.js:110:25
-    at Object.<anonymous> (D:\cocos2dx\HunXter\temp\quick-scripts\dst\assets\scripts\Person.js:117:19)
-    at Object.<anonymous> (D:\cocos2dx\HunXter\temp\quick-scripts\dst\assets\scripts\Person.js:119:3)
+    at D:\cocos2dx\HunXter\temp\quick-scripts\dst\assets\scripts\Person.js:133:25
+    at Object.<anonymous> (D:\cocos2dx\HunXter\temp\quick-scripts\dst\assets\scripts\Person.js:140:19)
+    at Object.<anonymous> (D:\cocos2dx\HunXter\temp\quick-scripts\dst\assets\scripts\Person.js:142:3)
     at Module._compile (internal/modules/cjs/loader.js:839:30)
-2020-06-22T01:20:25.735Z - error: The 'default' value of 'Person.goEnabled' should not be used with a 'get' function.
+2020-06-25T12:59:08.395Z - error: The 'default' value of 'Person.goEnabled' should not be used with a 'get' function.
     at Object.cc.errorID (D:\CocosDashboard\resources\.editors\Creator\2.3.4\resources\engine\bin\.cache\dev\cocos2d\core\CCDebug.js:257:6)
     at Object.exports.preprocessAttrs (D:\CocosDashboard\resources\.editors\Creator\2.3.4\resources\engine\bin\.cache\dev\cocos2d\core\platform\preprocess-class.js:317:16)
     at declareProperties (D:\CocosDashboard\resources\.editors\Creator\2.3.4\resources\engine\bin\.cache\dev\cocos2d\core\platform\CCClass.js:851:16)
     at Object.CCClass [as Class] (D:\CocosDashboard\resources\.editors\Creator\2.3.4\resources\engine\bin\.cache\dev\cocos2d\core\platform\CCClass.js:1001:5)
     at __define (D:\cocos2dx\HunXter\temp\quick-scripts\dst\assets\scripts\Person.js:26:17)
-    at D:\cocos2dx\HunXter\temp\quick-scripts\dst\assets\scripts\Person.js:110:25
-    at Object.<anonymous> (D:\cocos2dx\HunXter\temp\quick-scripts\dst\assets\scripts\Person.js:117:19)
-    at Object.<anonymous> (D:\cocos2dx\HunXter\temp\quick-scripts\dst\assets\scripts\Person.js:119:3)
+    at D:\cocos2dx\HunXter\temp\quick-scripts\dst\assets\scripts\Person.js:133:25
+    at Object.<anonymous> (D:\cocos2dx\HunXter\temp\quick-scripts\dst\assets\scripts\Person.js:140:19)
+    at Object.<anonymous> (D:\cocos2dx\HunXter\temp\quick-scripts\dst\assets\scripts\Person.js:142:3)
     at Module._compile (internal/modules/cjs/loader.js:839:30)
-2020-06-22T01:20:25.741Z - warn: Modified global variable while loading common project scripts: global
+2020-06-25T12:59:08.406Z - warn: Modified global variable while loading common project scripts: global
 Before: [object global]
 After: [object Object]
-2020-06-22T01:21:23.673Z - error: The 'default' value of 'Person.nickname' should not be used with a 'get' function.
+2020-06-25T13:00:09.201Z - error: The 'default' value of 'Person.nickname' should not be used with a 'get' function.
     at Object.cc.errorID (D:\CocosDashboard\resources\.editors\Creator\2.3.4\resources\engine\bin\.cache\dev\cocos2d\core\CCDebug.js:257:6)
     at Object.exports.preprocessAttrs (D:\CocosDashboard\resources\.editors\Creator\2.3.4\resources\engine\bin\.cache\dev\cocos2d\core\platform\preprocess-class.js:317:16)
     at declareProperties (D:\CocosDashboard\resources\.editors\Creator\2.3.4\resources\engine\bin\.cache\dev\cocos2d\core\platform\CCClass.js:851:16)
     at Object.CCClass [as Class] (D:\CocosDashboard\resources\.editors\Creator\2.3.4\resources\engine\bin\.cache\dev\cocos2d\core\platform\CCClass.js:1001:5)
     at __define (D:\cocos2dx\HunXter\temp\quick-scripts\dst\assets\scripts\Person.js:26:17)
-    at D:\cocos2dx\HunXter\temp\quick-scripts\dst\assets\scripts\Person.js:110:25
-    at Object.<anonymous> (D:\cocos2dx\HunXter\temp\quick-scripts\dst\assets\scripts\Person.js:117:19)
-    at Object.<anonymous> (D:\cocos2dx\HunXter\temp\quick-scripts\dst\assets\scripts\Person.js:119:3)
+    at D:\cocos2dx\HunXter\temp\quick-scripts\dst\assets\scripts\Person.js:133:25
+    at Object.<anonymous> (D:\cocos2dx\HunXter\temp\quick-scripts\dst\assets\scripts\Person.js:140:19)
+    at Object.<anonymous> (D:\cocos2dx\HunXter\temp\quick-scripts\dst\assets\scripts\Person.js:142:3)
     at Module._compile (internal/modules/cjs/loader.js:839:30)
-2020-06-22T01:21:23.675Z - error: The 'default' value of 'Person.goEnabled' should not be used with a 'get' function.
+2020-06-25T13:00:09.201Z - error: The 'default' value of 'Person.goEnabled' should not be used with a 'get' function.
     at Object.cc.errorID (D:\CocosDashboard\resources\.editors\Creator\2.3.4\resources\engine\bin\.cache\dev\cocos2d\core\CCDebug.js:257:6)
     at Object.exports.preprocessAttrs (D:\CocosDashboard\resources\.editors\Creator\2.3.4\resources\engine\bin\.cache\dev\cocos2d\core\platform\preprocess-class.js:317:16)
     at declareProperties (D:\CocosDashboard\resources\.editors\Creator\2.3.4\resources\engine\bin\.cache\dev\cocos2d\core\platform\CCClass.js:851:16)
     at Object.CCClass [as Class] (D:\CocosDashboard\resources\.editors\Creator\2.3.4\resources\engine\bin\.cache\dev\cocos2d\core\platform\CCClass.js:1001:5)
     at __define (D:\cocos2dx\HunXter\temp\quick-scripts\dst\assets\scripts\Person.js:26:17)
-    at D:\cocos2dx\HunXter\temp\quick-scripts\dst\assets\scripts\Person.js:110:25
-    at Object.<anonymous> (D:\cocos2dx\HunXter\temp\quick-scripts\dst\assets\scripts\Person.js:117:19)
-    at Object.<anonymous> (D:\cocos2dx\HunXter\temp\quick-scripts\dst\assets\scripts\Person.js:119:3)
+    at D:\cocos2dx\HunXter\temp\quick-scripts\dst\assets\scripts\Person.js:133:25
+    at Object.<anonymous> (D:\cocos2dx\HunXter\temp\quick-scripts\dst\assets\scripts\Person.js:140:19)
+    at Object.<anonymous> (D:\cocos2dx\HunXter\temp\quick-scripts\dst\assets\scripts\Person.js:142:3)
     at Module._compile (internal/modules/cjs/loader.js:839:30)
-2020-06-22T01:21:23.685Z - warn: Modified global variable while loading common project scripts: global
+2020-06-25T13:00:09.204Z - warn: Modified global variable while loading common project scripts: global
 Before: [object global]
 After: [object Object]
-2020-06-22T01:21:50.057Z - error: The 'default' value of 'Person.nickname' should not be used with a 'get' function.
+2020-06-25T13:08:26.787Z - error: The 'default' value of 'Person.nickname' should not be used with a 'get' function.
     at Object.cc.errorID (D:\CocosDashboard\resources\.editors\Creator\2.3.4\resources\engine\bin\.cache\dev\cocos2d\core\CCDebug.js:257:6)
     at Object.exports.preprocessAttrs (D:\CocosDashboard\resources\.editors\Creator\2.3.4\resources\engine\bin\.cache\dev\cocos2d\core\platform\preprocess-class.js:317:16)
     at declareProperties (D:\CocosDashboard\resources\.editors\Creator\2.3.4\resources\engine\bin\.cache\dev\cocos2d\core\platform\CCClass.js:851:16)
     at Object.CCClass [as Class] (D:\CocosDashboard\resources\.editors\Creator\2.3.4\resources\engine\bin\.cache\dev\cocos2d\core\platform\CCClass.js:1001:5)
     at __define (D:\cocos2dx\HunXter\temp\quick-scripts\dst\assets\scripts\Person.js:26:17)
-    at D:\cocos2dx\HunXter\temp\quick-scripts\dst\assets\scripts\Person.js:110:25
-    at Object.<anonymous> (D:\cocos2dx\HunXter\temp\quick-scripts\dst\assets\scripts\Person.js:117:19)
-    at Object.<anonymous> (D:\cocos2dx\HunXter\temp\quick-scripts\dst\assets\scripts\Person.js:119:3)
+    at D:\cocos2dx\HunXter\temp\quick-scripts\dst\assets\scripts\Person.js:133:25
+    at Object.<anonymous> (D:\cocos2dx\HunXter\temp\quick-scripts\dst\assets\scripts\Person.js:140:19)
+    at Object.<anonymous> (D:\cocos2dx\HunXter\temp\quick-scripts\dst\assets\scripts\Person.js:142:3)
     at Module._compile (internal/modules/cjs/loader.js:839:30)
-2020-06-22T01:21:50.058Z - error: The 'default' value of 'Person.goEnabled' should not be used with a 'get' function.
+2020-06-25T13:08:26.788Z - error: The 'default' value of 'Person.goEnabled' should not be used with a 'get' function.
     at Object.cc.errorID (D:\CocosDashboard\resources\.editors\Creator\2.3.4\resources\engine\bin\.cache\dev\cocos2d\core\CCDebug.js:257:6)
     at Object.exports.preprocessAttrs (D:\CocosDashboard\resources\.editors\Creator\2.3.4\resources\engine\bin\.cache\dev\cocos2d\core\platform\preprocess-class.js:317:16)
     at declareProperties (D:\CocosDashboard\resources\.editors\Creator\2.3.4\resources\engine\bin\.cache\dev\cocos2d\core\platform\CCClass.js:851:16)
     at Object.CCClass [as Class] (D:\CocosDashboard\resources\.editors\Creator\2.3.4\resources\engine\bin\.cache\dev\cocos2d\core\platform\CCClass.js:1001:5)
     at __define (D:\cocos2dx\HunXter\temp\quick-scripts\dst\assets\scripts\Person.js:26:17)
-    at D:\cocos2dx\HunXter\temp\quick-scripts\dst\assets\scripts\Person.js:110:25
-    at Object.<anonymous> (D:\cocos2dx\HunXter\temp\quick-scripts\dst\assets\scripts\Person.js:117:19)
-    at Object.<anonymous> (D:\cocos2dx\HunXter\temp\quick-scripts\dst\assets\scripts\Person.js:119:3)
+    at D:\cocos2dx\HunXter\temp\quick-scripts\dst\assets\scripts\Person.js:133:25
+    at Object.<anonymous> (D:\cocos2dx\HunXter\temp\quick-scripts\dst\assets\scripts\Person.js:140:19)
+    at Object.<anonymous> (D:\cocos2dx\HunXter\temp\quick-scripts\dst\assets\scripts\Person.js:142:3)
     at Module._compile (internal/modules/cjs/loader.js:839:30)
-2020-06-22T01:21:50.059Z - warn: Modified global variable while loading common project scripts: global
-Before: [object global]
-After: [object Object]
-2020-06-22T01:25:40.767Z - error: The 'default' value of 'Person.nickname' should not be used with a 'get' function.
-    at Object.cc.errorID (D:\CocosDashboard\resources\.editors\Creator\2.3.4\resources\engine\bin\.cache\dev\cocos2d\core\CCDebug.js:257:6)
-    at Object.exports.preprocessAttrs (D:\CocosDashboard\resources\.editors\Creator\2.3.4\resources\engine\bin\.cache\dev\cocos2d\core\platform\preprocess-class.js:317:16)
-    at declareProperties (D:\CocosDashboard\resources\.editors\Creator\2.3.4\resources\engine\bin\.cache\dev\cocos2d\core\platform\CCClass.js:851:16)
-    at Object.CCClass [as Class] (D:\CocosDashboard\resources\.editors\Creator\2.3.4\resources\engine\bin\.cache\dev\cocos2d\core\platform\CCClass.js:1001:5)
-    at __define (D:\cocos2dx\HunXter\temp\quick-scripts\dst\assets\scripts\Person.js:26:17)
-    at D:\cocos2dx\HunXter\temp\quick-scripts\dst\assets\scripts\Person.js:110:25
-    at Object.<anonymous> (D:\cocos2dx\HunXter\temp\quick-scripts\dst\assets\scripts\Person.js:117:19)
-    at Object.<anonymous> (D:\cocos2dx\HunXter\temp\quick-scripts\dst\assets\scripts\Person.js:119:3)
-    at Module._compile (internal/modules/cjs/loader.js:839:30)
-2020-06-22T01:25:40.768Z - error: The 'default' value of 'Person.goEnabled' should not be used with a 'get' function.
-    at Object.cc.errorID (D:\CocosDashboard\resources\.editors\Creator\2.3.4\resources\engine\bin\.cache\dev\cocos2d\core\CCDebug.js:257:6)
-    at Object.exports.preprocessAttrs (D:\CocosDashboard\resources\.editors\Creator\2.3.4\resources\engine\bin\.cache\dev\cocos2d\core\platform\preprocess-class.js:317:16)
-    at declareProperties (D:\CocosDashboard\resources\.editors\Creator\2.3.4\resources\engine\bin\.cache\dev\cocos2d\core\platform\CCClass.js:851:16)
-    at Object.CCClass [as Class] (D:\CocosDashboard\resources\.editors\Creator\2.3.4\resources\engine\bin\.cache\dev\cocos2d\core\platform\CCClass.js:1001:5)
-    at __define (D:\cocos2dx\HunXter\temp\quick-scripts\dst\assets\scripts\Person.js:26:17)
-    at D:\cocos2dx\HunXter\temp\quick-scripts\dst\assets\scripts\Person.js:110:25
-    at Object.<anonymous> (D:\cocos2dx\HunXter\temp\quick-scripts\dst\assets\scripts\Person.js:117:19)
-    at Object.<anonymous> (D:\cocos2dx\HunXter\temp\quick-scripts\dst\assets\scripts\Person.js:119:3)
-    at Module._compile (internal/modules/cjs/loader.js:839:30)
-2020-06-22T01:25:40.778Z - warn: Modified global variable while loading common project scripts: global
-Before: [object global]
-After: [object Object]
-2020-06-22T01:28:00.465Z - error: The 'default' value of 'Person.nickname' should not be used with a 'get' function.
-    at Object.cc.errorID (D:\CocosDashboard\resources\.editors\Creator\2.3.4\resources\engine\bin\.cache\dev\cocos2d\core\CCDebug.js:257:6)
-    at Object.exports.preprocessAttrs (D:\CocosDashboard\resources\.editors\Creator\2.3.4\resources\engine\bin\.cache\dev\cocos2d\core\platform\preprocess-class.js:317:16)
-    at declareProperties (D:\CocosDashboard\resources\.editors\Creator\2.3.4\resources\engine\bin\.cache\dev\cocos2d\core\platform\CCClass.js:851:16)
-    at Object.CCClass [as Class] (D:\CocosDashboard\resources\.editors\Creator\2.3.4\resources\engine\bin\.cache\dev\cocos2d\core\platform\CCClass.js:1001:5)
-    at __define (D:\cocos2dx\HunXter\temp\quick-scripts\dst\assets\scripts\Person.js:26:17)
-    at D:\cocos2dx\HunXter\temp\quick-scripts\dst\assets\scripts\Person.js:110:25
-    at Object.<anonymous> (D:\cocos2dx\HunXter\temp\quick-scripts\dst\assets\scripts\Person.js:117:19)
-    at Object.<anonymous> (D:\cocos2dx\HunXter\temp\quick-scripts\dst\assets\scripts\Person.js:119:3)
-    at Module._compile (internal/modules/cjs/loader.js:839:30)
-2020-06-22T01:28:00.465Z - error: The 'default' value of 'Person.goEnabled' should not be used with a 'get' function.
-    at Object.cc.errorID (D:\CocosDashboard\resources\.editors\Creator\2.3.4\resources\engine\bin\.cache\dev\cocos2d\core\CCDebug.js:257:6)
-    at Object.exports.preprocessAttrs (D:\CocosDashboard\resources\.editors\Creator\2.3.4\resources\engine\bin\.cache\dev\cocos2d\core\platform\preprocess-class.js:317:16)
-    at declareProperties (D:\CocosDashboard\resources\.editors\Creator\2.3.4\resources\engine\bin\.cache\dev\cocos2d\core\platform\CCClass.js:851:16)
-    at Object.CCClass [as Class] (D:\CocosDashboard\resources\.editors\Creator\2.3.4\resources\engine\bin\.cache\dev\cocos2d\core\platform\CCClass.js:1001:5)
-    at __define (D:\cocos2dx\HunXter\temp\quick-scripts\dst\assets\scripts\Person.js:26:17)
-    at D:\cocos2dx\HunXter\temp\quick-scripts\dst\assets\scripts\Person.js:110:25
-    at Object.<anonymous> (D:\cocos2dx\HunXter\temp\quick-scripts\dst\assets\scripts\Person.js:117:19)
-    at Object.<anonymous> (D:\cocos2dx\HunXter\temp\quick-scripts\dst\assets\scripts\Person.js:119:3)
-    at Module._compile (internal/modules/cjs/loader.js:839:30)
-2020-06-22T01:28:00.469Z - warn: Modified global variable while loading common project scripts: global
-Before: [object global]
-After: [object Object]
-2020-06-22T01:28:35.153Z - error: The 'default' value of 'Person.nickname' should not be used with a 'get' function.
-    at Object.cc.errorID (D:\CocosDashboard\resources\.editors\Creator\2.3.4\resources\engine\bin\.cache\dev\cocos2d\core\CCDebug.js:257:6)
-    at Object.exports.preprocessAttrs (D:\CocosDashboard\resources\.editors\Creator\2.3.4\resources\engine\bin\.cache\dev\cocos2d\core\platform\preprocess-class.js:317:16)
-    at declareProperties (D:\CocosDashboard\resources\.editors\Creator\2.3.4\resources\engine\bin\.cache\dev\cocos2d\core\platform\CCClass.js:851:16)
-    at Object.CCClass [as Class] (D:\CocosDashboard\resources\.editors\Creator\2.3.4\resources\engine\bin\.cache\dev\cocos2d\core\platform\CCClass.js:1001:5)
-    at __define (D:\cocos2dx\HunXter\temp\quick-scripts\dst\assets\scripts\Person.js:26:17)
-    at D:\cocos2dx\HunXter\temp\quick-scripts\dst\assets\scripts\Person.js:110:25
-    at Object.<anonymous> (D:\cocos2dx\HunXter\temp\quick-scripts\dst\assets\scripts\Person.js:117:19)
-    at Object.<anonymous> (D:\cocos2dx\HunXter\temp\quick-scripts\dst\assets\scripts\Person.js:119:3)
-    at Module._compile (internal/modules/cjs/loader.js:839:30)
-2020-06-22T01:28:35.154Z - error: The 'default' value of 'Person.goEnabled' should not be used with a 'get' function.
-    at Object.cc.errorID (D:\CocosDashboard\resources\.editors\Creator\2.3.4\resources\engine\bin\.cache\dev\cocos2d\core\CCDebug.js:257:6)
-    at Object.exports.preprocessAttrs (D:\CocosDashboard\resources\.editors\Creator\2.3.4\resources\engine\bin\.cache\dev\cocos2d\core\platform\preprocess-class.js:317:16)
-    at declareProperties (D:\CocosDashboard\resources\.editors\Creator\2.3.4\resources\engine\bin\.cache\dev\cocos2d\core\platform\CCClass.js:851:16)
-    at Object.CCClass [as Class] (D:\CocosDashboard\resources\.editors\Creator\2.3.4\resources\engine\bin\.cache\dev\cocos2d\core\platform\CCClass.js:1001:5)
-    at __define (D:\cocos2dx\HunXter\temp\quick-scripts\dst\assets\scripts\Person.js:26:17)
-    at D:\cocos2dx\HunXter\temp\quick-scripts\dst\assets\scripts\Person.js:110:25
-    at Object.<anonymous> (D:\cocos2dx\HunXter\temp\quick-scripts\dst\assets\scripts\Person.js:117:19)
-    at Object.<anonymous> (D:\cocos2dx\HunXter\temp\quick-scripts\dst\assets\scripts\Person.js:119:3)
-    at Module._compile (internal/modules/cjs/loader.js:839:30)
-2020-06-22T01:28:35.155Z - warn: Modified global variable while loading common project scripts: global
-Before: [object global]
-After: [object Object]
-2020-06-22T01:29:34.916Z - error: The 'default' value of 'Person.nickname' should not be used with a 'get' function.
-    at Object.cc.errorID (D:\CocosDashboard\resources\.editors\Creator\2.3.4\resources\engine\bin\.cache\dev\cocos2d\core\CCDebug.js:257:6)
-    at Object.exports.preprocessAttrs (D:\CocosDashboard\resources\.editors\Creator\2.3.4\resources\engine\bin\.cache\dev\cocos2d\core\platform\preprocess-class.js:317:16)
-    at declareProperties (D:\CocosDashboard\resources\.editors\Creator\2.3.4\resources\engine\bin\.cache\dev\cocos2d\core\platform\CCClass.js:851:16)
-    at Object.CCClass [as Class] (D:\CocosDashboard\resources\.editors\Creator\2.3.4\resources\engine\bin\.cache\dev\cocos2d\core\platform\CCClass.js:1001:5)
-    at __define (D:\cocos2dx\HunXter\temp\quick-scripts\dst\assets\scripts\Person.js:26:17)
-    at D:\cocos2dx\HunXter\temp\quick-scripts\dst\assets\scripts\Person.js:110:25
-    at Object.<anonymous> (D:\cocos2dx\HunXter\temp\quick-scripts\dst\assets\scripts\Person.js:117:19)
-    at Object.<anonymous> (D:\cocos2dx\HunXter\temp\quick-scripts\dst\assets\scripts\Person.js:119:3)
-    at Module._compile (internal/modules/cjs/loader.js:839:30)
-2020-06-22T01:29:34.916Z - error: The 'default' value of 'Person.goEnabled' should not be used with a 'get' function.
-    at Object.cc.errorID (D:\CocosDashboard\resources\.editors\Creator\2.3.4\resources\engine\bin\.cache\dev\cocos2d\core\CCDebug.js:257:6)
-    at Object.exports.preprocessAttrs (D:\CocosDashboard\resources\.editors\Creator\2.3.4\resources\engine\bin\.cache\dev\cocos2d\core\platform\preprocess-class.js:317:16)
-    at declareProperties (D:\CocosDashboard\resources\.editors\Creator\2.3.4\resources\engine\bin\.cache\dev\cocos2d\core\platform\CCClass.js:851:16)
-    at Object.CCClass [as Class] (D:\CocosDashboard\resources\.editors\Creator\2.3.4\resources\engine\bin\.cache\dev\cocos2d\core\platform\CCClass.js:1001:5)
-    at __define (D:\cocos2dx\HunXter\temp\quick-scripts\dst\assets\scripts\Person.js:26:17)
-    at D:\cocos2dx\HunXter\temp\quick-scripts\dst\assets\scripts\Person.js:110:25
-    at Object.<anonymous> (D:\cocos2dx\HunXter\temp\quick-scripts\dst\assets\scripts\Person.js:117:19)
-    at Object.<anonymous> (D:\cocos2dx\HunXter\temp\quick-scripts\dst\assets\scripts\Person.js:119:3)
-    at Module._compile (internal/modules/cjs/loader.js:839:30)
-2020-06-22T01:29:34.918Z - warn: Modified global variable while loading common project scripts: global
-Before: [object global]
-After: [object Object]
-2020-06-22T01:47:09.232Z - error: The 'default' value of 'Person.nickname' should not be used with a 'get' function.
-    at Object.cc.errorID (D:\CocosDashboard\resources\.editors\Creator\2.3.4\resources\engine\bin\.cache\dev\cocos2d\core\CCDebug.js:257:6)
-    at Object.exports.preprocessAttrs (D:\CocosDashboard\resources\.editors\Creator\2.3.4\resources\engine\bin\.cache\dev\cocos2d\core\platform\preprocess-class.js:317:16)
-    at declareProperties (D:\CocosDashboard\resources\.editors\Creator\2.3.4\resources\engine\bin\.cache\dev\cocos2d\core\platform\CCClass.js:851:16)
-    at Object.CCClass [as Class] (D:\CocosDashboard\resources\.editors\Creator\2.3.4\resources\engine\bin\.cache\dev\cocos2d\core\platform\CCClass.js:1001:5)
-    at __define (D:\cocos2dx\HunXter\temp\quick-scripts\dst\assets\scripts\Person.js:26:17)
-    at D:\cocos2dx\HunXter\temp\quick-scripts\dst\assets\scripts\Person.js:110:25
-    at Object.<anonymous> (D:\cocos2dx\HunXter\temp\quick-scripts\dst\assets\scripts\Person.js:117:19)
-    at Object.<anonymous> (D:\cocos2dx\HunXter\temp\quick-scripts\dst\assets\scripts\Person.js:119:3)
-    at Module._compile (internal/modules/cjs/loader.js:839:30)
-2020-06-22T01:47:09.235Z - error: The 'default' value of 'Person.goEnabled' should not be used with a 'get' function.
-    at Object.cc.errorID (D:\CocosDashboard\resources\.editors\Creator\2.3.4\resources\engine\bin\.cache\dev\cocos2d\core\CCDebug.js:257:6)
-    at Object.exports.preprocessAttrs (D:\CocosDashboard\resources\.editors\Creator\2.3.4\resources\engine\bin\.cache\dev\cocos2d\core\platform\preprocess-class.js:317:16)
-    at declareProperties (D:\CocosDashboard\resources\.editors\Creator\2.3.4\resources\engine\bin\.cache\dev\cocos2d\core\platform\CCClass.js:851:16)
-    at Object.CCClass [as Class] (D:\CocosDashboard\resources\.editors\Creator\2.3.4\resources\engine\bin\.cache\dev\cocos2d\core\platform\CCClass.js:1001:5)
-    at __define (D:\cocos2dx\HunXter\temp\quick-scripts\dst\assets\scripts\Person.js:26:17)
-    at D:\cocos2dx\HunXter\temp\quick-scripts\dst\assets\scripts\Person.js:110:25
-    at Object.<anonymous> (D:\cocos2dx\HunXter\temp\quick-scripts\dst\assets\scripts\Person.js:117:19)
-    at Object.<anonymous> (D:\cocos2dx\HunXter\temp\quick-scripts\dst\assets\scripts\Person.js:119:3)
-    at Module._compile (internal/modules/cjs/loader.js:839:30)
-2020-06-22T01:47:09.236Z - warn: Modified global variable while loading common project scripts: global
-Before: [object global]
-After: [object Object]
-2020-06-22T02:19:51.709Z - error: The 'default' value of 'Person.nickname' should not be used with a 'get' function.
-    at Object.cc.errorID (D:\CocosDashboard\resources\.editors\Creator\2.3.4\resources\engine\bin\.cache\dev\cocos2d\core\CCDebug.js:257:6)
-    at Object.exports.preprocessAttrs (D:\CocosDashboard\resources\.editors\Creator\2.3.4\resources\engine\bin\.cache\dev\cocos2d\core\platform\preprocess-class.js:317:16)
-    at declareProperties (D:\CocosDashboard\resources\.editors\Creator\2.3.4\resources\engine\bin\.cache\dev\cocos2d\core\platform\CCClass.js:851:16)
-    at Object.CCClass [as Class] (D:\CocosDashboard\resources\.editors\Creator\2.3.4\resources\engine\bin\.cache\dev\cocos2d\core\platform\CCClass.js:1001:5)
-    at __define (D:\cocos2dx\HunXter\temp\quick-scripts\dst\assets\scripts\Person.js:26:17)
-    at D:\cocos2dx\HunXter\temp\quick-scripts\dst\assets\scripts\Person.js:110:25
-    at Object.<anonymous> (D:\cocos2dx\HunXter\temp\quick-scripts\dst\assets\scripts\Person.js:117:19)
-    at Object.<anonymous> (D:\cocos2dx\HunXter\temp\quick-scripts\dst\assets\scripts\Person.js:119:3)
-    at Module._compile (internal/modules/cjs/loader.js:839:30)
-2020-06-22T02:19:51.709Z - error: The 'default' value of 'Person.goEnabled' should not be used with a 'get' function.
-    at Object.cc.errorID (D:\CocosDashboard\resources\.editors\Creator\2.3.4\resources\engine\bin\.cache\dev\cocos2d\core\CCDebug.js:257:6)
-    at Object.exports.preprocessAttrs (D:\CocosDashboard\resources\.editors\Creator\2.3.4\resources\engine\bin\.cache\dev\cocos2d\core\platform\preprocess-class.js:317:16)
-    at declareProperties (D:\CocosDashboard\resources\.editors\Creator\2.3.4\resources\engine\bin\.cache\dev\cocos2d\core\platform\CCClass.js:851:16)
-    at Object.CCClass [as Class] (D:\CocosDashboard\resources\.editors\Creator\2.3.4\resources\engine\bin\.cache\dev\cocos2d\core\platform\CCClass.js:1001:5)
-    at __define (D:\cocos2dx\HunXter\temp\quick-scripts\dst\assets\scripts\Person.js:26:17)
-    at D:\cocos2dx\HunXter\temp\quick-scripts\dst\assets\scripts\Person.js:110:25
-    at Object.<anonymous> (D:\cocos2dx\HunXter\temp\quick-scripts\dst\assets\scripts\Person.js:117:19)
-    at Object.<anonymous> (D:\cocos2dx\HunXter\temp\quick-scripts\dst\assets\scripts\Person.js:119:3)
-    at Module._compile (internal/modules/cjs/loader.js:839:30)
-2020-06-22T02:19:51.714Z - warn: Modified global variable while loading common project scripts: global
-Before: [object global]
-After: [object Object]
-2020-06-22T02:20:37.069Z - error: The 'default' value of 'Person.nickname' should not be used with a 'get' function.
-    at Object.cc.errorID (D:\CocosDashboard\resources\.editors\Creator\2.3.4\resources\engine\bin\.cache\dev\cocos2d\core\CCDebug.js:257:6)
-    at Object.exports.preprocessAttrs (D:\CocosDashboard\resources\.editors\Creator\2.3.4\resources\engine\bin\.cache\dev\cocos2d\core\platform\preprocess-class.js:317:16)
-    at declareProperties (D:\CocosDashboard\resources\.editors\Creator\2.3.4\resources\engine\bin\.cache\dev\cocos2d\core\platform\CCClass.js:851:16)
-    at Object.CCClass [as Class] (D:\CocosDashboard\resources\.editors\Creator\2.3.4\resources\engine\bin\.cache\dev\cocos2d\core\platform\CCClass.js:1001:5)
-    at __define (D:\cocos2dx\HunXter\temp\quick-scripts\dst\assets\scripts\Person.js:26:17)
-    at D:\cocos2dx\HunXter\temp\quick-scripts\dst\assets\scripts\Person.js:110:25
-    at Object.<anonymous> (D:\cocos2dx\HunXter\temp\quick-scripts\dst\assets\scripts\Person.js:117:19)
-    at Object.<anonymous> (D:\cocos2dx\HunXter\temp\quick-scripts\dst\assets\scripts\Person.js:119:3)
-    at Module._compile (internal/modules/cjs/loader.js:839:30)
-2020-06-22T02:20:37.070Z - error: The 'default' value of 'Person.goEnabled' should not be used with a 'get' function.
-    at Object.cc.errorID (D:\CocosDashboard\resources\.editors\Creator\2.3.4\resources\engine\bin\.cache\dev\cocos2d\core\CCDebug.js:257:6)
-    at Object.exports.preprocessAttrs (D:\CocosDashboard\resources\.editors\Creator\2.3.4\resources\engine\bin\.cache\dev\cocos2d\core\platform\preprocess-class.js:317:16)
-    at declareProperties (D:\CocosDashboard\resources\.editors\Creator\2.3.4\resources\engine\bin\.cache\dev\cocos2d\core\platform\CCClass.js:851:16)
-    at Object.CCClass [as Class] (D:\CocosDashboard\resources\.editors\Creator\2.3.4\resources\engine\bin\.cache\dev\cocos2d\core\platform\CCClass.js:1001:5)
-    at __define (D:\cocos2dx\HunXter\temp\quick-scripts\dst\assets\scripts\Person.js:26:17)
-    at D:\cocos2dx\HunXter\temp\quick-scripts\dst\assets\scripts\Person.js:110:25
-    at Object.<anonymous> (D:\cocos2dx\HunXter\temp\quick-scripts\dst\assets\scripts\Person.js:117:19)
-    at Object.<anonymous> (D:\cocos2dx\HunXter\temp\quick-scripts\dst\assets\scripts\Person.js:119:3)
-    at Module._compile (internal/modules/cjs/loader.js:839:30)
-2020-06-22T02:20:37.070Z - warn: Modified global variable while loading common project scripts: global
-Before: [object global]
-After: [object Object]
-2020-06-22T02:21:20.520Z - error: The 'default' value of 'Person.nickname' should not be used with a 'get' function.
-    at Object.cc.errorID (D:\CocosDashboard\resources\.editors\Creator\2.3.4\resources\engine\bin\.cache\dev\cocos2d\core\CCDebug.js:257:6)
-    at Object.exports.preprocessAttrs (D:\CocosDashboard\resources\.editors\Creator\2.3.4\resources\engine\bin\.cache\dev\cocos2d\core\platform\preprocess-class.js:317:16)
-    at declareProperties (D:\CocosDashboard\resources\.editors\Creator\2.3.4\resources\engine\bin\.cache\dev\cocos2d\core\platform\CCClass.js:851:16)
-    at Object.CCClass [as Class] (D:\CocosDashboard\resources\.editors\Creator\2.3.4\resources\engine\bin\.cache\dev\cocos2d\core\platform\CCClass.js:1001:5)
-    at __define (D:\cocos2dx\HunXter\temp\quick-scripts\dst\assets\scripts\Person.js:26:17)
-    at D:\cocos2dx\HunXter\temp\quick-scripts\dst\assets\scripts\Person.js:110:25
-    at Object.<anonymous> (D:\cocos2dx\HunXter\temp\quick-scripts\dst\assets\scripts\Person.js:117:19)
-    at Object.<anonymous> (D:\cocos2dx\HunXter\temp\quick-scripts\dst\assets\scripts\Person.js:119:3)
-    at Module._compile (internal/modules/cjs/loader.js:839:30)
-2020-06-22T02:21:20.525Z - error: The 'default' value of 'Person.goEnabled' should not be used with a 'get' function.
-    at Object.cc.errorID (D:\CocosDashboard\resources\.editors\Creator\2.3.4\resources\engine\bin\.cache\dev\cocos2d\core\CCDebug.js:257:6)
-    at Object.exports.preprocessAttrs (D:\CocosDashboard\resources\.editors\Creator\2.3.4\resources\engine\bin\.cache\dev\cocos2d\core\platform\preprocess-class.js:317:16)
-    at declareProperties (D:\CocosDashboard\resources\.editors\Creator\2.3.4\resources\engine\bin\.cache\dev\cocos2d\core\platform\CCClass.js:851:16)
-    at Object.CCClass [as Class] (D:\CocosDashboard\resources\.editors\Creator\2.3.4\resources\engine\bin\.cache\dev\cocos2d\core\platform\CCClass.js:1001:5)
-    at __define (D:\cocos2dx\HunXter\temp\quick-scripts\dst\assets\scripts\Person.js:26:17)
-    at D:\cocos2dx\HunXter\temp\quick-scripts\dst\assets\scripts\Person.js:110:25
-    at Object.<anonymous> (D:\cocos2dx\HunXter\temp\quick-scripts\dst\assets\scripts\Person.js:117:19)
-    at Object.<anonymous> (D:\cocos2dx\HunXter\temp\quick-scripts\dst\assets\scripts\Person.js:119:3)
-    at Module._compile (internal/modules/cjs/loader.js:839:30)
-2020-06-22T02:21:20.539Z - warn: Modified global variable while loading common project scripts: global
-Before: [object global]
-After: [object Object]
-2020-06-22T02:48:16.558Z - error: The 'default' value of 'Person.nickname' should not be used with a 'get' function.
-    at Object.cc.errorID (D:\CocosDashboard\resources\.editors\Creator\2.3.4\resources\engine\bin\.cache\dev\cocos2d\core\CCDebug.js:257:6)
-    at Object.exports.preprocessAttrs (D:\CocosDashboard\resources\.editors\Creator\2.3.4\resources\engine\bin\.cache\dev\cocos2d\core\platform\preprocess-class.js:317:16)
-    at declareProperties (D:\CocosDashboard\resources\.editors\Creator\2.3.4\resources\engine\bin\.cache\dev\cocos2d\core\platform\CCClass.js:851:16)
-    at Object.CCClass [as Class] (D:\CocosDashboard\resources\.editors\Creator\2.3.4\resources\engine\bin\.cache\dev\cocos2d\core\platform\CCClass.js:1001:5)
-    at __define (D:\cocos2dx\HunXter\temp\quick-scripts\dst\assets\scripts\Person.js:26:17)
-    at D:\cocos2dx\HunXter\temp\quick-scripts\dst\assets\scripts\Person.js:112:25
-    at Object.<anonymous> (D:\cocos2dx\HunXter\temp\quick-scripts\dst\assets\scripts\Person.js:119:19)
-    at Object.<anonymous> (D:\cocos2dx\HunXter\temp\quick-scripts\dst\assets\scripts\Person.js:121:3)
-    at Module._compile (internal/modules/cjs/loader.js:839:30)
-2020-06-22T02:48:16.559Z - error: The 'default' value of 'Person.goEnabled' should not be used with a 'get' function.
-    at Object.cc.errorID (D:\CocosDashboard\resources\.editors\Creator\2.3.4\resources\engine\bin\.cache\dev\cocos2d\core\CCDebug.js:257:6)
-    at Object.exports.preprocessAttrs (D:\CocosDashboard\resources\.editors\Creator\2.3.4\resources\engine\bin\.cache\dev\cocos2d\core\platform\preprocess-class.js:317:16)
-    at declareProperties (D:\CocosDashboard\resources\.editors\Creator\2.3.4\resources\engine\bin\.cache\dev\cocos2d\core\platform\CCClass.js:851:16)
-    at Object.CCClass [as Class] (D:\CocosDashboard\resources\.editors\Creator\2.3.4\resources\engine\bin\.cache\dev\cocos2d\core\platform\CCClass.js:1001:5)
-    at __define (D:\cocos2dx\HunXter\temp\quick-scripts\dst\assets\scripts\Person.js:26:17)
-    at D:\cocos2dx\HunXter\temp\quick-scripts\dst\assets\scripts\Person.js:112:25
-    at Object.<anonymous> (D:\cocos2dx\HunXter\temp\quick-scripts\dst\assets\scripts\Person.js:119:19)
-    at Object.<anonymous> (D:\cocos2dx\HunXter\temp\quick-scripts\dst\assets\scripts\Person.js:121:3)
-    at Module._compile (internal/modules/cjs/loader.js:839:30)
-2020-06-22T02:48:16.568Z - warn: Modified global variable while loading common project scripts: global
-Before: [object global]
-After: [object Object]
-2020-06-22T03:02:42.716Z - error: The 'default' value of 'Person.nickname' should not be used with a 'get' function.
-    at Object.cc.errorID (D:\CocosDashboard\resources\.editors\Creator\2.3.4\resources\engine\bin\.cache\dev\cocos2d\core\CCDebug.js:257:6)
-    at Object.exports.preprocessAttrs (D:\CocosDashboard\resources\.editors\Creator\2.3.4\resources\engine\bin\.cache\dev\cocos2d\core\platform\preprocess-class.js:317:16)
-    at declareProperties (D:\CocosDashboard\resources\.editors\Creator\2.3.4\resources\engine\bin\.cache\dev\cocos2d\core\platform\CCClass.js:851:16)
-    at Object.CCClass [as Class] (D:\CocosDashboard\resources\.editors\Creator\2.3.4\resources\engine\bin\.cache\dev\cocos2d\core\platform\CCClass.js:1001:5)
-    at __define (D:\cocos2dx\HunXter\temp\quick-scripts\dst\assets\scripts\Person.js:26:17)
-    at D:\cocos2dx\HunXter\temp\quick-scripts\dst\assets\scripts\Person.js:112:25
-    at Object.<anonymous> (D:\cocos2dx\HunXter\temp\quick-scripts\dst\assets\scripts\Person.js:119:19)
-    at Object.<anonymous> (D:\cocos2dx\HunXter\temp\quick-scripts\dst\assets\scripts\Person.js:121:3)
-    at Module._compile (internal/modules/cjs/loader.js:839:30)
-2020-06-22T03:02:42.716Z - error: The 'default' value of 'Person.goEnabled' should not be used with a 'get' function.
-    at Object.cc.errorID (D:\CocosDashboard\resources\.editors\Creator\2.3.4\resources\engine\bin\.cache\dev\cocos2d\core\CCDebug.js:257:6)
-    at Object.exports.preprocessAttrs (D:\CocosDashboard\resources\.editors\Creator\2.3.4\resources\engine\bin\.cache\dev\cocos2d\core\platform\preprocess-class.js:317:16)
-    at declareProperties (D:\CocosDashboard\resources\.editors\Creator\2.3.4\resources\engine\bin\.cache\dev\cocos2d\core\platform\CCClass.js:851:16)
-    at Object.CCClass [as Class] (D:\CocosDashboard\resources\.editors\Creator\2.3.4\resources\engine\bin\.cache\dev\cocos2d\core\platform\CCClass.js:1001:5)
-    at __define (D:\cocos2dx\HunXter\temp\quick-scripts\dst\assets\scripts\Person.js:26:17)
-    at D:\cocos2dx\HunXter\temp\quick-scripts\dst\assets\scripts\Person.js:112:25
-    at Object.<anonymous> (D:\cocos2dx\HunXter\temp\quick-scripts\dst\assets\scripts\Person.js:119:19)
-    at Object.<anonymous> (D:\cocos2dx\HunXter\temp\quick-scripts\dst\assets\scripts\Person.js:121:3)
-    at Module._compile (internal/modules/cjs/loader.js:839:30)
-2020-06-22T03:02:42.720Z - warn: Modified global variable while loading common project scripts: global
-Before: [object global]
-After: [object Object]
-2020-06-22T03:02:59.013Z - error: The 'default' value of 'Person.nickname' should not be used with a 'get' function.
-    at Object.cc.errorID (D:\CocosDashboard\resources\.editors\Creator\2.3.4\resources\engine\bin\.cache\dev\cocos2d\core\CCDebug.js:257:6)
-    at Object.exports.preprocessAttrs (D:\CocosDashboard\resources\.editors\Creator\2.3.4\resources\engine\bin\.cache\dev\cocos2d\core\platform\preprocess-class.js:317:16)
-    at declareProperties (D:\CocosDashboard\resources\.editors\Creator\2.3.4\resources\engine\bin\.cache\dev\cocos2d\core\platform\CCClass.js:851:16)
-    at Object.CCClass [as Class] (D:\CocosDashboard\resources\.editors\Creator\2.3.4\resources\engine\bin\.cache\dev\cocos2d\core\platform\CCClass.js:1001:5)
-    at __define (D:\cocos2dx\HunXter\temp\quick-scripts\dst\assets\scripts\Person.js:26:17)
-    at D:\cocos2dx\HunXter\temp\quick-scripts\dst\assets\scripts\Person.js:112:25
-    at Object.<anonymous> (D:\cocos2dx\HunXter\temp\quick-scripts\dst\assets\scripts\Person.js:119:19)
-    at Object.<anonymous> (D:\cocos2dx\HunXter\temp\quick-scripts\dst\assets\scripts\Person.js:121:3)
-    at Module._compile (internal/modules/cjs/loader.js:839:30)
-2020-06-22T03:02:59.014Z - error: The 'default' value of 'Person.goEnabled' should not be used with a 'get' function.
-    at Object.cc.errorID (D:\CocosDashboard\resources\.editors\Creator\2.3.4\resources\engine\bin\.cache\dev\cocos2d\core\CCDebug.js:257:6)
-    at Object.exports.preprocessAttrs (D:\CocosDashboard\resources\.editors\Creator\2.3.4\resources\engine\bin\.cache\dev\cocos2d\core\platform\preprocess-class.js:317:16)
-    at declareProperties (D:\CocosDashboard\resources\.editors\Creator\2.3.4\resources\engine\bin\.cache\dev\cocos2d\core\platform\CCClass.js:851:16)
-    at Object.CCClass [as Class] (D:\CocosDashboard\resources\.editors\Creator\2.3.4\resources\engine\bin\.cache\dev\cocos2d\core\platform\CCClass.js:1001:5)
-    at __define (D:\cocos2dx\HunXter\temp\quick-scripts\dst\assets\scripts\Person.js:26:17)
-    at D:\cocos2dx\HunXter\temp\quick-scripts\dst\assets\scripts\Person.js:112:25
-    at Object.<anonymous> (D:\cocos2dx\HunXter\temp\quick-scripts\dst\assets\scripts\Person.js:119:19)
-    at Object.<anonymous> (D:\cocos2dx\HunXter\temp\quick-scripts\dst\assets\scripts\Person.js:121:3)
-    at Module._compile (internal/modules/cjs/loader.js:839:30)
-2020-06-22T03:02:59.016Z - warn: Modified global variable while loading common project scripts: global
+2020-06-25T13:08:26.793Z - warn: Modified global variable while loading common project scripts: global
 Before: [object global]
 After: [object Object]

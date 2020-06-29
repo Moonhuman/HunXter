@@ -1,6 +1,6 @@
 {
   "ver": "2.3.4",
-  "uuid": "d19b8a65-ad79-432f-b5b6-cf79fb8d52b0",
+  "uuid": "da4bfda9-6050-4c05-9ea4-3261d6a55af3",
   "type": "sprite",
   "wrapMode": "clamp",
   "filterMode": "bilinear",
@@ -13,7 +13,7 @@
   "subMetas": {
     "精准导弹": {
       "ver": "1.0.4",
-      "uuid": "37ecacb4-376a-412f-b812-5557420b8fb1",
+      "uuid": "3b13632f-cbfe-41a1-8177-89997c284f4b",
       "rawTextureUuid": "da4bfda9-6050-4c05-9ea4-3261d6a55af3",
       "trimType": "auto",
       "trimThreshold": 1,

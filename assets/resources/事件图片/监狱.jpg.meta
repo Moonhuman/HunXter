@@ -1,6 +1,6 @@
 {
   "ver": "2.3.4",
-  "uuid": "80461f25-688d-4064-af7b-ba6efbea6452",
+  "uuid": "9cec98c7-c1cc-4b78-b340-f3b9dd43db53",
   "type": "sprite",
   "wrapMode": "clamp",
   "filterMode": "bilinear",
@@ -13,7 +13,7 @@
   "subMetas": {
     "监狱": {
       "ver": "1.0.4",
-      "uuid": "a109270a-2ae9-47b2-a26b-f2955efb6353",
+      "uuid": "5d2e6dec-7a7e-4093-a9b7-610489b7c9d7",
       "rawTextureUuid": "9cec98c7-c1cc-4b78-b340-f3b9dd43db53",
       "trimType": "auto",
       "trimThreshold": 1,

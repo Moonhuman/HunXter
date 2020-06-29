@@ -1,0 +1,28 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "团队的力量",
+    "texture": "e1864d0f-b8ea-46c4-97e9-843a47749cf5",
+    "atlas": "",
+    "rect": [
+      0,
+      0,
+      355,
+      508
+    ],
+    "offset": [
+      0,
+      0
+    ],
+    "originalSize": [
+      355,
+      508
+    ],
+    "capInsets": [
+      0,
+      0,
+      0,
+      0
+    ]
+  }
+}

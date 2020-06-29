@@ -1,6 +1,6 @@
 {
   "ver": "2.3.4",
-  "uuid": "be5a8abc-2057-4bec-8db7-e71b01155793",
+  "uuid": "7981a93b-4450-4497-b90f-debae54455e1",
   "type": "sprite",
   "wrapMode": "clamp",
   "filterMode": "bilinear",
@@ -13,7 +13,7 @@
   "subMetas": {
     "抽卡格": {
       "ver": "1.0.4",
-      "uuid": "4a5e7530-0f61-42c1-a98f-cd9fd040aa3b",
+      "uuid": "9e65df64-b167-4437-80b9-0e456233b91b",
       "rawTextureUuid": "7981a93b-4450-4497-b90f-debae54455e1",
       "trimType": "auto",
       "trimThreshold": 1,

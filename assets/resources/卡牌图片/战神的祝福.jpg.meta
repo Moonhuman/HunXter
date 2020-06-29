@@ -1,6 +1,6 @@
 {
   "ver": "2.3.4",
-  "uuid": "0fda6b45-d361-4633-a2b9-686399c1f195",
+  "uuid": "f119b6a0-675b-4031-8785-f47a011756df",
   "type": "sprite",
   "wrapMode": "clamp",
   "filterMode": "bilinear",
@@ -13,7 +13,7 @@
   "subMetas": {
     "战神的祝福": {
       "ver": "1.0.4",
-      "uuid": "50d30683-c96a-4721-afef-29e45ef20742",
+      "uuid": "3efe1ea4-e713-4d0f-b7d2-27d467045302",
       "rawTextureUuid": "f119b6a0-675b-4031-8785-f47a011756df",
       "trimType": "auto",
       "trimThreshold": 1,

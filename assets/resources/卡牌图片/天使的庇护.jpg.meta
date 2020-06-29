@@ -1,6 +1,6 @@
 {
   "ver": "2.3.4",
-  "uuid": "9cdcf972-b56b-405b-8db1-001657ca01b6",
+  "uuid": "96a47a17-61f8-43ff-8f8c-d82b621a4ba1",
   "type": "sprite",
   "wrapMode": "clamp",
   "filterMode": "bilinear",
@@ -13,7 +13,7 @@
   "subMetas": {
     "天使的庇护": {
       "ver": "1.0.4",
-      "uuid": "68a07b35-8939-4fe1-bf7f-4f92a811b21a",
+      "uuid": "2e4251ed-772e-43d4-b4eb-d6aee045256d",
       "rawTextureUuid": "96a47a17-61f8-43ff-8f8c-d82b621a4ba1",
       "trimType": "auto",
       "trimThreshold": 1,

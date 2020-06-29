@@ -1,8 +1,0 @@
-//
-// Prefix header for all source files of the 'HunXter-master' target in the 'HunXter-master' project
-//
-
-#ifdef __OBJC__
-	#import <Foundation/Foundation.h>
-	#import <UIKit/UIKit.h>
-#endif

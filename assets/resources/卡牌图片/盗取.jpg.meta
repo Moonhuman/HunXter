@@ -1,6 +1,6 @@
 {
   "ver": "2.3.4",
-  "uuid": "e5598699-4919-4cc2-a66a-905ac2d3b47e",
+  "uuid": "bd8e3e3a-4cc1-4716-a0a2-c27627638743",
   "type": "sprite",
   "wrapMode": "clamp",
   "filterMode": "bilinear",
@@ -13,7 +13,7 @@
   "subMetas": {
     "盗取": {
       "ver": "1.0.4",
-      "uuid": "9ca3682c-d222-4d76-8310-b83a2edfb784",
+      "uuid": "8b6833ae-08b4-4947-9817-47462f620e49",
       "rawTextureUuid": "bd8e3e3a-4cc1-4716-a0a2-c27627638743",
       "trimType": "auto",
       "trimThreshold": 1,

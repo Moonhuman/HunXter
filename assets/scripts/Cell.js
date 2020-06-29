@@ -15,25 +15,10 @@ cc.Class({
 		inMonitor: 0, //用来判断是否处于监听中的标记
 		routeID: null, //记录这个cell是map中哪条route的终点，即在routes中的下标
 		
-        // foo: {
-        //     // ATTRIBUTES:
-        //     default: null,        // The default value will be used only when the component attaching
-        //                           // to a node for the first time
-        //     type: cc.SpriteFrame, // optional, default is typeof default
-        //     serializable: true,   // optional, default is true
-        // },
-        // bar: {
-        //     get () {
-        //         return this._bar;
-        //     },
-        //     set (value) {
-        //         this._bar = value;
-        //     }
-        // },
     },
 	
 	setColor: function() {
-		//设置cell的颜色为红色，表示可走
+		//设置cell的颜色为绿色，表示可走
 		this.node.color = cc.color(102,255,102,255);
 	},
 	
@@ -132,10 +117,35 @@ cc.Class({
 		}, note);
 	},
 	
+	specialJudge: function(role) {
+		if (this.haveMine == 1) {
+			role.exposed = 1;
+			role.blood -= this.mineAttack;
+			if (role.blood <= 0)
+				role.isDead = 1;
+			console.log('****', this.mineAttack);
+			var buff=cc.find('Canvas').getComponent('Buff');
+			buff.todoList.push({
+				endTurn:window.global.nowTurn+1,
+				person:role,
+				act:function(){
+					if (this.person != cc.find('Canvas').getComponent('globalGame').nowProperty)
+						return false;
+					this.person.exposed = 0;
+					return true;
+				}
+			});
+			
+			this.haveMine = 0;
+		}
+	},
+	
 	stepOnCell: function(person) {
 		
 		//获取person节点的组件
 		var person_js = person.getComponent('Person');
+		
+		this.specialJudge(person_js);
 		
 		if (this.kind == 0) {//空白格
 			cc.game.emit('stepOnCell-done', ''); //发送空串

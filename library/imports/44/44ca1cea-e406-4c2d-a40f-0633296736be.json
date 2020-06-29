@@ -1,0 +1,28 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "猛男的祝福",
+    "texture": "7baa5e17-5d23-4b1f-91bb-e619ff8ed9ba",
+    "atlas": "",
+    "rect": [
+      0,
+      0,
+      355,
+      508
+    ],
+    "offset": [
+      0,
+      0
+    ],
+    "originalSize": [
+      355,
+      508
+    ],
+    "capInsets": [
+      0,
+      0,
+      0,
+      0
+    ]
+  }
+}

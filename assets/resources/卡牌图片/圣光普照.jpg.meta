@@ -1,6 +1,6 @@
 {
   "ver": "2.3.4",
-  "uuid": "9975043a-6a05-427d-b068-fa34350a1c3f",
+  "uuid": "58f604c0-979a-4e83-ba7a-c150cf4b8cad",
   "type": "sprite",
   "wrapMode": "clamp",
   "filterMode": "bilinear",
@@ -13,7 +13,7 @@
   "subMetas": {
     "圣光普照": {
       "ver": "1.0.4",
-      "uuid": "d55eb981-ddef-40c5-9e64-1cb35f1de419",
+      "uuid": "c8e19a98-7c2d-4d82-b961-68edcf5c80e1",
       "rawTextureUuid": "58f604c0-979a-4e83-ba7a-c150cf4b8cad",
       "trimType": "auto",
       "trimThreshold": 1,
