@@ -85,8 +85,8 @@
     "relativePath": "scripts"
   },
   "923d5e91-d427-4907-b38c-6911ae5240a8": {
-    "asset": 1593750681971,
-    "meta": 1593750681989,
+    "asset": 1593751696011,
+    "meta": 1593751696068,
     "relativePath": "场景\\game.fire"
   },
   "7981a93b-4450-4497-b90f-debae54455e1": {
@@ -829,14 +829,19 @@
     "meta": 1593749983000,
     "relativePath": "scripts\\Person.js"
   },
-  "1c04c7b0-2287-4c29-9990-85b0fb95ecce": {
-    "asset": 1593750795507,
-    "meta": 1593750797061,
-    "relativePath": "scripts\\globalGame.js"
-  },
   "e9de42ac-526e-4f1a-9bcf-e8d5848dc03a": {
     "asset": 1593750816861,
     "meta": 1593750817806,
     "relativePath": "scripts\\startUI.js"
+  },
+  "1c04c7b0-2287-4c29-9990-85b0fb95ecce": {
+    "asset": 1593752663431,
+    "meta": 1593752664335,
+    "relativePath": "scripts\\globalGame.js"
+  },
+  "3ac8137b-e339-4ac0-82ae-bee72d6a39ed": {
+    "asset": 1593753181329,
+    "meta": 1593753213189,
+    "relativePath": "scripts\\menu.js"
   }
 }

@@ -20,7 +20,7 @@
                 ],
                 "height": 368.796875,
                 "type": "panel",
-                "width": 204
+                "width": 407
               },
               {
                 "active": 0,
@@ -30,12 +30,12 @@
                 ],
                 "height": 563.703125,
                 "type": "panel",
-                "width": 204
+                "width": 407
               }
             ],
             "height": 935.5,
             "type": "dock-v",
-            "width": 204
+            "width": 407
           },
           {
             "active": 0,
@@ -45,7 +45,7 @@
             ],
             "height": 935.5,
             "type": "panel",
-            "width": 335
+            "width": 304
           },
           {
             "children": [
@@ -56,7 +56,7 @@
                 ],
                 "height": 666.5,
                 "type": "panel",
-                "width": 1375
+                "width": 1202.984375
               },
               {
                 "active": 0,
@@ -67,12 +67,12 @@
                 ],
                 "height": 266,
                 "type": "panel",
-                "width": 1375
+                "width": 1202.984375
               }
             ],
             "height": 935.5,
             "type": "dock-v",
-            "width": 1375
+            "width": 1202.984375
           }
         ],
         "type": "dock-h"

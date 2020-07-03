@@ -296,9 +296,9 @@ cc.Class({
 		}
 	},
 	initBgm:function(){
-		cc.loader.loadRes('bgm/天空之城钢琴曲', cc.AudioClip, function (err, clip) {
-			var audioID = cc.audioEngine.play(clip, true, 0.1);
-		});
+		//cc.loader.loadRes('bgm/天空之城钢琴曲', cc.AudioClip, function (err, clip) {
+		//	var audioID = cc.audioEngine.play(clip, true, 0.1);
+		//});
 	},
 	InitialCard: function() {
 		var cardName = ['炸弹','精准导弹','地雷','庇护','天使的庇护','战神的祝福','虚弱','团队的力量',
@@ -326,9 +326,9 @@ cc.Class({
 	},
 	openMenu:function(){
 		
-		cc.game.end();
-		console.log('开始游戏');
-		cc.director.loadScene("开始界面");
+		//cc.game.pause();
+		var menu=cc.find('Canvas/Menu');
+		menu.active=true;
 		
 	}
 });
