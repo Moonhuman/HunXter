@@ -18,9 +18,9 @@
                 "children": [
                   "hierarchy"
                 ],
-                "height": 367.796875,
+                "height": 368.796875,
                 "type": "panel",
-                "width": 335
+                "width": 204
               },
               {
                 "active": 0,
@@ -28,14 +28,14 @@
                   "assets",
                   "cloud-function"
                 ],
-                "height": 564.703125,
+                "height": 563.703125,
                 "type": "panel",
-                "width": 335
+                "width": 204
               }
             ],
             "height": 935.5,
             "type": "dock-v",
-            "width": 335
+            "width": 204
           },
           {
             "active": 0,
@@ -45,7 +45,7 @@
             ],
             "height": 935.5,
             "type": "panel",
-            "width": 307
+            "width": 335
           },
           {
             "children": [
@@ -54,9 +54,9 @@
                 "children": [
                   "scene"
                 ],
-                "height": 467.75,
+                "height": 666.5,
                 "type": "panel",
-                "width": 1272
+                "width": 1375
               },
               {
                 "active": 0,
@@ -65,14 +65,14 @@
                   "timeline",
                   "game-window"
                 ],
-                "height": 464.75,
+                "height": 266,
                 "type": "panel",
-                "width": 1272
+                "width": 1375
               }
             ],
             "height": 935.5,
             "type": "dock-v",
-            "width": 1272
+            "width": 1375
           }
         ],
         "type": "dock-h"
@@ -88,8 +88,7 @@
         "timeline",
         "game-window"
       ]
-    },
-    "worker": {}
+    }
   },
   "panels": {
     "sprite-editor": {

@@ -27,6 +27,7 @@ cc.Class({
     cc.director.loadScene("game");
   },
   exitGame: function exitGame() {
+    cc.game.end();
     console.log('退出游戏');
   } // update (dt) {},
 

@@ -236,8 +236,8 @@ cc.Class({
 
     this.routes = routes; //将得到的多条路径保存
 
-    this.openMonitor(routes); //对每条路径的终点开启监听
-
+    if (cc.find('Canvas').getComponent('globalGame').nowPlayer.name == 'Person1') this.openMonitor(routes); //对每条路径的终点开启监听
+    else cc.find('Canvas').getComponent('AI').aiMove(routes);
     return routes;
   },
   onLoad: function onLoad() {

@@ -73,7 +73,7 @@ cc.Class({
 		
 		if (this.cnt == 16) {
 			this.cnt -= 5;
-			var person = cc.find('Canvas').getComponent('globalGame').nowProperty;
+			var person = cc.find('Canvas/Persons/Person1').getComponent('Person');
 			var dis = this.map.BfsDis(person.posX, person.posY);
 			for (var i = 0; i < 11; i++) {
 				for (var j = 0; j < 11; j++) {
@@ -115,6 +115,18 @@ cc.Class({
 				this.mistArr[enemy1.posX][enemy1.posY].active = false;
 			if (enemy2.isDead == 0 && enemy2.exposed == 1)
 				this.mistArr[enemy2.posX][enemy2.posY].active = false;
+			
+			var ps2 = cc.find('Canvas/Persons/Person2').getComponent('Person');
+			var ps4 = cc.find('Canvas/Persons/Person4').getComponent('Person');
+			if (this.mistArr[ps2.posX][ps2.posY].active == true && ps2.exposed != 1)
+				ps2.avatar.opacity = 0;
+			else
+				ps2.avatar.opacity = 255;
+			if (this.mistArr[ps4.posX][ps4.posY].active == true && ps4.exposed != 1)
+				ps4.avatar.opacity = 0;
+			else
+				ps4.avatar.opacity = 255;
+			
 		}
 		
 	},

@@ -45,9 +45,12 @@ var person=cc.Class({
 		//var r=[cc.v2(100,100),cc.v2(100,100),cc.v2(100,100),cc.v2(100,100)];
 		//var actArr=new Array();
 		//console.log(route);
+		// if (this.node.name == 'Person2' || this.node.name == 'Person4')
+			// this.avatar.opacity = 0;
 		var p=cc.tween(this.avatar);
 		for (var i=0;i<route.length-1;i++){
 			p.to(0.2,{position:cc.v2(route[i].x,route[i].y)});
+			Positionchecked(route[i].x,route[i].y,this.node);
 			var tmp = new Array();
 			tmp.push(route[i].getComponent('Cell').mapx);
 			tmp.push(route[i].getComponent('Cell').mapy);
@@ -56,8 +59,7 @@ var person=cc.Class({
 				this[2].posX=this[0];
 				this[2].posY=this[1];
 			}, tmp);
-			//Positionchecked(route[i].x,route[i].y,this.node);
-			//console.log(route[i].getComponent('Cell').mapx+','+route[i].getComponent('Cell').mapy);
+			
 		}
 		p.to(0.2,{position:cc.v2(route[route.length-1].x,route[route.length-1].y)});
 		var tmp = new Array();
@@ -69,6 +71,10 @@ var person=cc.Class({
 			this[2].posX=this[0];
 			this[2].posY=this[1];
 			this[3].getComponent('Cell').stepOnCell(this[2].node);
+			
+			// if (this[2].node.name == 'Person2' || this[2].node.name == 'Person4')
+				// this[2].avatar.opacity = 255;
+			
 		},tmp);
 		p.start();
 		//this.avatar.setPosition(route[route.length-1].getPosition());
@@ -84,11 +90,8 @@ var person=cc.Class({
 		var mapObj=cc.find('Canvas/map').getComponent('GetMap');
 		var pos=mapObj.map[x][y].getPosition();
 		this.avatar.setPosition(pos);
-		//console.log(pos);
-		//console.log(this.nowPos);
 	},
 	bindAvatar:function(node){
-		//console.log(node);
 		this.avatar=node;
 	},
 	onLoad(){	
@@ -106,12 +109,11 @@ var person=cc.Class({
 		
 	},
 });
-
 function Positionchecked(x,y,nowPerson){
 	//一次遍历人物列表上位置，检查是否有其他人，有则计算伤害。
 	var persons=window.global.persons;
 	for (var i=0;i<persons.length;i++){
-		if (nowPerson!=persons[i] && x==persons[i].posX &&  y==persons[i].posY){
+		if (nowPerson!=persons[i] && nowPerson.parter!=person[i] && x==persons[i].posX &&  y==persons[i].posY){
 			//计算伤害
 			if (persons[i].isDead==1)//当前位置玩家已死亡,不需要计算伤害
 			{

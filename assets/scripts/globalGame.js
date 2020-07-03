@@ -29,6 +29,10 @@ cc.Class({
 		cc.find("Canvas/end_card_btn").active = false;
 		window.global.card_end_btn_showed = 0;
 	},
+	
+    updateUI:function(){
+		//更新人物血量
+	},
 	onKeyDown: function (event) {//键盘按下
 		console.log(event);
         switch(event.keyCode) {
@@ -37,7 +41,7 @@ cc.Class({
 				var tab=cc.find('Canvas/Tab');
 				tab.active=true;
 				tab.getComponent('tabWin').showTab();
-				//console.log('Press a key');
+			
                 break;
 			}
         }
@@ -54,10 +58,6 @@ cc.Class({
 			}
         }
     },
-    updateUI:function(){
-		//更新人物血量
-	},
-
     onLoad () {
 		cc.systemEvent.on(cc.SystemEvent.EventType.KEY_DOWN, this.onKeyDown, this);
         cc.systemEvent.on(cc.SystemEvent.EventType.KEY_UP, this.onKeyUp, this);
@@ -66,6 +66,9 @@ cc.Class({
 		this.msgContent=cc.find('Canvas/msgBox/view/content/item');
 		//console.log(msgContent.getComponent(cc.Label));
 		cc.game.on('send-Msg',function(event,poster){
+			if (event==''){
+				return ;
+			}
 			var timeStr='';
 			if (parseInt(this.time/60)<10)
 				timeStr+="0"
@@ -139,7 +142,9 @@ cc.Class({
     },
 
     update (dt) {
-		//console.log("是否等待操作",this.isWait);
+		//判断当前回合是否结束
+		
+		console.log("是否等待操作",this.isWait);
 		switch (this.nowStep){
 			case 0:{//初始化变量
 				if (this.isWait){//正在操作或等待操作
@@ -147,6 +152,14 @@ cc.Class({
 				}
 				if (this.index==0){
 					window.global.nowTurn+=1;
+					
+					for (var i=0;i<window.global.persons.length;i++){
+						var property=window.global.persons[i].getComponent('Person');
+						if (property.isDead==0){
+							property.mobility+=2;
+						}
+					}
+					
 				}
 				var buff=this.node.getComponent('Buff');
 				for (var i=0;i<buff.todoList.length;i++){
@@ -156,6 +169,7 @@ cc.Class({
 						}
 					}
 				}
+				
 				this.nowProperty=this.nowPlayer.getComponent('Person');//获得玩家属性集合
 				cc.game.emit('send-Msg','轮到角色'+this.nowProperty.nickname,'系统');
 				cc.game.emit('update-state', '1');
@@ -170,7 +184,13 @@ cc.Class({
 				
 				if (this.nowProperty.goEnabled){//判断玩家是否可以行走
 					var tip=cc.find('Canvas/tipWin');
-					tip.getComponent('tipWindow').startRollDice();
+					if (this.nowProperty.nickname=='老叟')
+						tip.getComponent('tipWindow').startRollDice();
+					else{
+						var dice=cc.find('Canvas/tipWin/dice').getComponent('SpriteIndex');
+						dice.next();
+						cc.game.emit('roll-dice-done',dice.index+1);
+					}
 					this.isWait=true;
 				}
 				else{
@@ -193,14 +213,23 @@ cc.Class({
 				//等待玩家出牌并结束
 				if (this.nowProperty.useCardEnabled == 1) {
 					//可以出牌
-					if (window.global.card_end_btn_showed != 1) {
-						var btn = cc.find('Canvas/end_card_btn');
-						btn.active = true;
-						window.global.card_end_btn_showed = 1;
+					if (this.nowPlayer.name == 'Person1') {
+						if (window.global.card_end_btn_showed != 1) {
+							var btn = cc.find('Canvas/end_card_btn');
+							btn.active = true;
+							window.global.card_end_btn_showed = 1;
+						}
+					}
+					else {
+						
+							cc.find('Canvas').getComponent('AI').aiUseCard(this.nowProperty);
+							cc.game.emit('update-state', '1');
+						
 					}
 					
 				}
 				else {
+					this.nowProperty.useCardEnabled = 1;
 					cc.game.emit('update-state', '1');
 				}
 				break;
@@ -295,6 +324,13 @@ cc.Class({
 		//初始化BGM
 		this.initBgm();
 	},
+	openMenu:function(){
+		
+		cc.game.end();
+		console.log('开始游戏');
+		cc.director.loadScene("开始界面");
+		
+	}
 });
 
 

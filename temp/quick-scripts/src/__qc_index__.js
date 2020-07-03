@@ -1,4 +1,5 @@
 
+require('./assets/scripts/AI');
 require('./assets/scripts/Buff');
 require('./assets/scripts/Card');
 require('./assets/scripts/Cell');

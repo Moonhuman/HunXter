@@ -10,7 +10,7 @@
                     };
                     function __define (exports, require, module) {
                         if (!nodeEnv) {__quick_compile_project__.registerModule(__filename, module);}"use strict";
-cc._RF.push(module, 'abe8cdpJbpEaqV6KstFP9T4', 'tabWin');
+cc._RF.push(module, '6f195TiZgdPzLEHQoxzdiTT', 'tabWin');
 // scripts/tabWin.js
 
 "use strict";

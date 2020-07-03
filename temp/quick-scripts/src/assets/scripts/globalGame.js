@@ -36,6 +36,8 @@ cc.Class({
     cc.find("Canvas/end_card_btn").active = false;
     window.global.card_end_btn_showed = 0;
   },
+  updateUI: function updateUI() {//更新人物血量
+  },
   onKeyDown: function onKeyDown(event) {
     //键盘按下
     console.log(event);
@@ -46,8 +48,7 @@ cc.Class({
           //按下tab
           var tab = cc.find('Canvas/Tab');
           tab.active = true;
-          tab.getComponent('tabWin').showTab(); //console.log('Press a key');
-
+          tab.getComponent('tabWin').showTab();
           break;
         }
     }
@@ -65,8 +66,6 @@ cc.Class({
         }
     }
   },
-  updateUI: function updateUI() {//更新人物血量
-  },
   onLoad: function onLoad() {
     cc.systemEvent.on(cc.SystemEvent.EventType.KEY_DOWN, this.onKeyDown, this);
     cc.systemEvent.on(cc.SystemEvent.EventType.KEY_UP, this.onKeyUp, this); //加载地图
@@ -75,6 +74,10 @@ cc.Class({
     this.msgContent = cc.find('Canvas/msgBox/view/content/item'); //console.log(msgContent.getComponent(cc.Label));
 
     cc.game.on('send-Msg', function (event, poster) {
+      if (event == '') {
+        return;
+      }
+
       var timeStr = '';
       if (parseInt(this.time / 60) < 10) timeStr += "0";
       timeStr += parseInt(this.time / 60) + ":";
@@ -135,7 +138,9 @@ cc.Class({
     this.nowPlayer = window.global.persons[this.index];
   },
   update: function update(dt) {
-    //console.log("是否等待操作",this.isWait);
+    //判断当前回合是否结束
+    console.log("是否等待操作", this.isWait);
+
     switch (this.nowStep) {
       case 0:
         {
@@ -147,6 +152,14 @@ cc.Class({
 
           if (this.index == 0) {
             window.global.nowTurn += 1;
+
+            for (var i = 0; i < window.global.persons.length; i++) {
+              var property = window.global.persons[i].getComponent('Person');
+
+              if (property.isDead == 0) {
+                property.mobility += 2;
+              }
+            }
           }
 
           var buff = this.node.getComponent('Buff');
@@ -177,7 +190,11 @@ cc.Class({
           if (this.nowProperty.goEnabled) {
             //判断玩家是否可以行走
             var tip = cc.find('Canvas/tipWin');
-            tip.getComponent('tipWindow').startRollDice();
+            if (this.nowProperty.nickname == '老叟') tip.getComponent('tipWindow').startRollDice();else {
+              var dice = cc.find('Canvas/tipWin/dice').getComponent('SpriteIndex');
+              dice.next();
+              cc.game.emit('roll-dice-done', dice.index + 1);
+            }
             this.isWait = true;
           } else {
             this.nowProperty.goEnabled = 1;
@@ -206,12 +223,18 @@ cc.Class({
           //等待玩家出牌并结束
           if (this.nowProperty.useCardEnabled == 1) {
             //可以出牌
-            if (window.global.card_end_btn_showed != 1) {
-              var btn = cc.find('Canvas/end_card_btn');
-              btn.active = true;
-              window.global.card_end_btn_showed = 1;
+            if (this.nowPlayer.name == 'Person1') {
+              if (window.global.card_end_btn_showed != 1) {
+                var btn = cc.find('Canvas/end_card_btn');
+                btn.active = true;
+                window.global.card_end_btn_showed = 1;
+              }
+            } else {
+              cc.find('Canvas').getComponent('AI').aiUseCard(this.nowProperty);
+              cc.game.emit('update-state', '1');
             }
           } else {
+            this.nowProperty.useCardEnabled = 1;
             cc.game.emit('update-state', '1');
           }
 
@@ -309,6 +332,11 @@ cc.Class({
     cc.find('Canvas/choose_card_cancel').active = false; //初始化BGM
 
     this.initBgm();
+  },
+  openMenu: function openMenu() {
+    cc.game.end();
+    console.log('开始游戏');
+    cc.director.loadScene("开始界面");
   }
 }); //生成从minNum到maxNum的随机数
 

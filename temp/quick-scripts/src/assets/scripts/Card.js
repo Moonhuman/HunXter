@@ -404,8 +404,7 @@ cc.Class({
     cc.find('Canvas/Deck').getComponent('Deck').removeCard(16);
   },
   onLoad: function onLoad() {
-    this.cardCost = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]; //[4,3,2,3,3,4,4,5,2,3,3,3,3,3,4,4,5];
-
+    this.cardCost = [4, 3, 2, 3, 3, 4, 4, 5, 2, 3, 3, 3, 3, 3, 4, 4, 5];
     this.cardFunction = new Array();
     this.cardFunction[0] = this.boom_0;
     this.cardFunction[1] = this.missile_1;

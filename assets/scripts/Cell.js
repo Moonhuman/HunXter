@@ -31,16 +31,20 @@ cc.Class({
 		//随机获得1张牌
 		var cardID = Math.floor(Math.random()*totCardNum);
 		person_js.cards.push(cardID);
+		if (person_js.node.name == 'Person1') {
 		//创建用来提示获得卡牌的精灵节点
-		var node = cc.instantiate(window.global.cardnode[cardID]);
-		node.setPosition(0, 0);
-		//开启note节点的监听，点击后消失
-		node.msg = '获得卡牌:'+cardName[cardID];
-		node.on('mousedown', function ( event ) {
-			cc.game.emit('stepOnCell-done', this.msg);
-			this.destroy();
-		}, node);
-		node.parent = this.node.parent.parent;
+			var node = cc.instantiate(window.global.cardnode[cardID]);
+			node.setPosition(0, 0);
+			//开启note节点的监听，点击后消失
+			node.msg = '获得卡牌:'+cardName[cardID];
+			node.on('mousedown', function ( event ) {
+				cc.game.emit('stepOnCell-done', this.msg);
+				this.destroy();
+			}, node);
+			node.parent = this.node.parent.parent;
+		}
+		else
+			cc.game.emit('stepOnCell-done', '获得卡牌:'+cardName[cardID]);
 	},
 	
 	chooseFromThree: function(cardName, totCardNum) {
@@ -49,26 +53,30 @@ cc.Class({
 		cd[1] = Math.floor(Math.random()*totCardNum);
 		cd[2] = Math.floor(Math.random()*totCardNum);
 		
-		console.log(cd);
-
-		for (var i = 0; i < 3; i++) {
-			var node = cc.instantiate(window.global.cardnode[cd[i]]);
-			node.name = 'chooseFromThree'+i;
-			node.setPosition(-500+500*i, 0);
-			node.cardID = cd[i];
-			node.msg = '获得卡牌:'+cardName[cd[i]];
-			node.on('mousedown', function(event) {
-				var person_js = cc.find('Canvas').getComponent('globalGame').nowPlayer.getComponent('Person');
-				console.log('得到卡牌:'+this.cardID);
-				person_js.cards.push(this.cardID);
-				cc.game.emit('stepOnCell-done', this.msg);
-				for (var j = 0; j < 3; j++) {
-					cc.find('Canvas/chooseFromThree'+j).destroy();
-				}
-			}, node)
-			node.parent = this.node.parent.parent;
+		if (cc.find('Canvas').getComponent('globalGame').nowPlayer.name == 'Person1') {
+			for (var i = 0; i < 3; i++) {
+				var node = cc.instantiate(window.global.cardnode[cd[i]]);
+				node.name = 'chooseFromThree'+i;
+				node.setPosition(-500+500*i, 0);
+				node.cardID = cd[i];
+				node.msg = '获得卡牌:'+cardName[cd[i]];
+				node.on('mousedown', function(event) {
+					var person_js = cc.find('Canvas').getComponent('globalGame').nowPlayer.getComponent('Person');
+					console.log('得到卡牌:'+this.cardID);
+					person_js.cards.push(this.cardID);
+					cc.game.emit('stepOnCell-done', this.msg);
+					for (var j = 0; j < 3; j++) {
+						cc.find('Canvas/chooseFromThree'+j).destroy();
+					}
+				}, node)
+				node.parent = this.node.parent.parent;
+			}
 		}
-		
+		else {
+			var index = Math.floor(Math.random()*3);
+			cc.find('Canvas').getComponent('globalGame').nowProperty.cards.push(cd[index]);
+			cc.game.emit('stepOnCell-done', '获得卡牌:'+cardName[cd[index]]);
+		}
 	},
 	
 	eventAction: function(person_js) {
@@ -105,16 +113,20 @@ cc.Class({
 			event_name = "天使";
 			person_js.blood = Math.floor(person_js.blood*1.5);
 		}
-		cc.loader.loadRes('事件图片/'+event_name, cc.SpriteFrame, function (err, spriteFrame) {
-			self.getComponent(cc.Sprite).spriteFrame = spriteFrame;
-		});
-		//开启note节点的监听，点击后消失
-		note.msg = '触发事件:'+event_name;
-		note.on('mousedown', function ( event ) {
-			cc.game.emit('stepOnCell-done', this.msg);
-			this.destroy();
-			
-		}, note);
+		if (person_js.node.name == 'Person1') {
+			cc.loader.loadRes('事件图片/'+event_name, cc.SpriteFrame, function (err, spriteFrame) {
+				self.getComponent(cc.Sprite).spriteFrame = spriteFrame;
+			});
+			//开启note节点的监听，点击后消失
+			note.msg = '触发事件:'+event_name;
+			note.on('mousedown', function ( event ) {
+				cc.game.emit('stepOnCell-done', this.msg);
+				this.destroy();
+				
+			}, note);
+		}
+		else
+			cc.game.emit('stepOnCell-done', '触发事件:'+event_name);
 	},
 	
 	specialJudge: function(role) {
