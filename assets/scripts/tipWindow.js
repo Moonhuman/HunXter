@@ -12,6 +12,9 @@ cc.Class({
         title:null,
 		content:null,//内容
 		btnOk:null,//确认按钮
+		framesIndex:null,
+		count:0,
+		callback:null,
     },
 
     // LIFE-CYCLE CALLBACKS:
@@ -21,16 +24,24 @@ cc.Class({
 		this.content=this.node.getChildByName('content');
 		this.btnOk=this.node.getChildByName('okBtn');
 		this.node.active = false;
+		this.framesIndex=this.node.getChildByName('dice').getComponent('SpriteIndex');
+		
 	},
 
     start () {
-
+		
+		
     },
 	hiddenMyself:function(){
-		console.log('xxx');
-		console.log(this.node);
-		this.node.actice=false;
-		this.node.emit('roll-dice-done','1');
+		
+		this.node.active=false;
+		cc.game.emit('roll-dice-done',this.framesIndex.index+1);
 	},
-    // update (dt) {},
+	startRollDice: function(){
+			this.node.active =true;
+			this.framesIndex.schedule(function(){
+				 this.next();
+			},0.05,20,0);
+	},
+    //update (dt) {},
 });

@@ -20,21 +20,7 @@ cc.Class({
 		},
 		map: null, //二维地图
 		adj: null, //存边，adj[i][j]是一个数组，数组中每个是与map[i][j]相连的map坐标
-        // foo: {
-        //     // ATTRIBUTES:
-        //     default: null,        // The default value will be used only when the component attaching
-        //                           // to a node for the first time
-        //     type: cc.SpriteFrame, // optional, default is typeof default
-        //     serializable: true,   // optional, default is true
-        // },
-        // bar: {
-        //     get () {
-        //         return this._bar;
-        //     },
-        //     set (value) {
-        //         this._bar = value;
-        //     }
-        // },
+		signal: null,
     },
     // LIFE-CYCLE CALLBACKS:
 	GetCell: function() {
@@ -116,6 +102,31 @@ cc.Class({
 		}
 	},
 	
+	BfsDis: function(sx, sy) {
+		var dis = new Array();
+		for (var i = 0; i < 11; i++) {
+			dis[i] = new Array();
+			for (var j = 0; j < 11; j++)
+				dis[i][j] = -1;
+		}
+		q = [];
+		q.push([sx, sy]);
+		dis[sx][sy] = 0;
+		while (q.length != 0) {
+			var f = q[0];
+			q.shift();
+			var x = f[0], y = f[1];
+			for (var i = 0; i < this.adj[x][y].length; i++) {
+				var nx = this.adj[x][y][i][0], ny = this.adj[x][y][i][1];
+				if (dis[nx][ny] != -1)
+					continue;
+				dis[nx][ny] = dis[x][y]+1;
+				q.push([nx, ny]);
+			}
+		}
+		return dis;
+	},
+	
 	DfsForRoute: function(nowpos, num, vis, routes, route) {
 		/*
 			nowpos为当前搜索到的cell，num为剩余步数
@@ -155,6 +166,7 @@ cc.Class({
 		}
 		*/
 		
+		var mist = cc.find('Canvas/mist').getComponent('Mist');
 		//关闭所有节点的监听
 		for (var i = 0; i < 11; i++) {
 			for (var j = 0; j < 11; j++) {
@@ -165,9 +177,8 @@ cc.Class({
 					cell_js.inMonitor = 0;
 					cell_js.resetColor();
 					cell_js.routeId = null;
-					//
 					par.map[i][j].off("mousedown", this.chooseRoute, cell_js);
-					//this.node.off("mousedown", this.chooseRoute, cell_js);
+					mist.mistArr[i][j].color = cc.color(255, 255, 255, 255);
 				}
 			}
 		}
@@ -177,9 +188,34 @@ cc.Class({
 		*/
 		cc.game.emit('route-chosen', route);
 	},
+	FX: function() {
+		//这里面的this是cell
+		console.log(this.getComponent('Cell').mapx, this.getComponent('Cell').mapy);
+		var map = cc.find('Canvas/map').getComponent('GetMap');
+		cc.game.emit(this.parent.getComponent('GetMap').signal, this.getComponent('Cell').mapx, this.getComponent('Cell').mapy);
+		for (var i = 0; i < 11; i++) {
+			for (var j = 0; j < 11; j++) {
+				if (map.map[i][j] == null)
+					continue;
+				map.map[i][j].off('mousedown', map.FX, map.map[i][j]);
+			}
+		}
+	},
+	
+	openAllMonitor: function(sig) {
+		this.signal=sig;
+		for (var i = 0; i < 11; i++) {
+			for (var j = 0; j < 11; j++) {
+				if (this.map[i][j] == null)
+					continue;
+				this.map[i][j].on('mousedown', this.FX, this.map[i][j]);
+			}
+		}
+	},
 	
 	openMonitor: function(routes) {
 		//对每条路径的终点开启监听
+		var mist = cc.find('Canvas/mist').getComponent('Mist');
 		for (var i = 0; i < routes.length; i++) {
 			var cell = routes[i][routes[i].length-1];
 			var cell_js = cell.getComponent("Cell");
@@ -187,8 +223,11 @@ cc.Class({
 			cell_js.setColor();
 			cell_js.routeId = i;
 			cell.on("mousedown", this.chooseRoute, cell_js);
+			mist.mistArr[cell_js.mapx][cell_js.mapy].color = cc.color(102,255,102,255);
 		}
 	},
+	
+	
 	
 	posEnable: function(nowpos, num) {
 		//nowpos为cell类型的node, num为可移动步数
@@ -203,7 +242,10 @@ cc.Class({
 		var routes = [];
 		this.DfsForRoute(nowpos, num, vis, routes, []); //搜索路径
 		this.routes = routes; //将得到的多条路径保存
-		this.openMonitor(routes); //对每条路径的终点开启监听
+		if (cc.find('Canvas').getComponent('globalGame').nowPlayer.name == 'Person1')
+			this.openMonitor(routes); //对每条路径的终点开启监听
+		else
+			cc.find('Canvas').getComponent('AI').aiMove(routes);
 		return routes;
 	},
 	

@@ -31,20 +31,60 @@ cc.Class({
     msgBoxConent: null,
     time: 0
   },
+  end_card_btn_func: function end_card_btn_func() {
+    cc.game.emit('update-state', '1');
+    cc.find("Canvas/end_card_btn").active = false;
+    window.global.card_end_btn_showed = 0;
+  },
   updateUI: function updateUI() {//更新人物血量
   },
+  onKeyDown: function onKeyDown(event) {
+    //键盘按下
+    console.log(event);
+
+    switch (event.keyCode) {
+      case 9:
+        {
+          //按下tab
+          var tab = cc.find('Canvas/Tab');
+          tab.active = true;
+          tab.getComponent('tabWin').showTab();
+          break;
+        }
+    }
+  },
+  onKeyUp: function onKeyUp(event) {
+    //键盘释放
+    switch (event.keyCode) {
+      case 9:
+        {
+          //释放tab
+          var tab = cc.find('Canvas/Tab');
+          tab.active = false; //console.log('Press a key');
+
+          break;
+        }
+    }
+  },
   onLoad: function onLoad() {
-    //加载地图
+    cc.systemEvent.on(cc.SystemEvent.EventType.KEY_DOWN, this.onKeyDown, this);
+    cc.systemEvent.on(cc.SystemEvent.EventType.KEY_UP, this.onKeyUp, this); //加载地图
+
     this.nowStep = 0;
     this.msgContent = cc.find('Canvas/msgBox/view/content/item'); //console.log(msgContent.getComponent(cc.Label));
 
-    this.node.on('send-Msg', function (event, poster) {
+    cc.game.on('send-Msg', function (event, poster) {
+      if (event == '') {
+        return;
+      }
+
       var timeStr = '';
       if (parseInt(this.time / 60) < 10) timeStr += "0";
       timeStr += parseInt(this.time / 60) + ":";
       if (this.time - parseInt(this.time / 60) * 60 < 10) timeStr += "0";
       timeStr += this.time - parseInt(this.time / 60) * 60;
       var name = '<color=#43CD80>(' + timeStr + ')' + poster + '</color>';
+      ;
 
       if (poster == '系统') {
         name = '<color=#ff0000>(' + timeStr + ')' + poster + '</color>';
@@ -55,14 +95,16 @@ cc.Class({
       cc.find('Canvas/msgBox/view/content').height = this.msgContent.height + 10;
       cc.find('Canvas/msgBox').getComponent(cc.ScrollView).scrollToBottom(0.1); //console.log('Label',this.msgContent.height);
     }, this);
-    this.node.on('update-state', function (msg) {
-      this.nowStep = (this.nowStep + 1) % 4;
+    cc.game.on('update-state', function (msg) {
+      this.nowStep = (this.nowStep + 1) % 5;
       this.isWait = false;
     }, this);
     cc.game.on('stepOnCell-done', function (event) {
       //触发结束
-      this.node.emit('update-state', '1'); //更新状态
-      //console.log("触发了特殊格子！");
+      cc.game.emit('update-state', '1'); //更新状态
+
+      console.log(event);
+      cc.game.emit('send-Msg', event, this.nowProperty.nickname);
     }, this);
     cc.game.on('route-chosen', function (route) {
       //监听玩家选择了哪条路径
@@ -70,11 +112,8 @@ cc.Class({
       this.nowProperty.moveByRoute(route); //this.node.emit('update-state', '1');//玩家移动完成，进入下一步操作
       //玩家头像按照路径移动
     }, this);
-    cc.game.on('roll-dice-done', function (event) {
-      console.log('yyy');
-      var step = randomNum(1, 6); //掷骰子，玩家步数
-
-      this.node.emit('send-Msg', "获得骰子点数" + step, this.nowProperty.nickname);
+    cc.game.on('roll-dice-done', function (step) {
+      cc.game.emit('send-Msg', "获得骰子点数" + step, this.nowProperty.nickname);
       console.log(this.mapObj.posEnable(this.mapObj.map[this.nowProperty.posX][this.nowProperty.posY], step));
     }, this);
     this.InitialCard();
@@ -89,7 +128,7 @@ cc.Class({
       if (time - parseInt(time / 60) * 60 < 10) this.string += "0";
       this.string += time - parseInt(time / 60) * 60; //cc.find('Canvas').getComponent('globalGame').timeStr=this.string;
     }, 1);
-    this.node.emit('send-Msg', '好戏开场了!', '系统');
+    cc.game.emit('send-Msg', '好戏开场了!', '系统');
   },
   start: function start() {
     //初始化人物
@@ -109,14 +148,34 @@ cc.Class({
           if (this.isWait) {
             //正在操作或等待操作
             break;
-          } //this.node.emit('send-Msg','进入回合'+window.global.nowTurn,'系统');
-          //console.log(this.nowPlayer.name);
+          }
 
+          if (this.index == 0) {
+            window.global.nowTurn += 1;
+
+            for (var i = 0; i < window.global.persons.length; i++) {
+              var property = window.global.persons[i].getComponent('Person');
+
+              if (property.isDead == 0) {
+                property.mobility += 2;
+              }
+            }
+          }
+
+          var buff = this.node.getComponent('Buff');
+
+          for (var i = 0; i < buff.todoList.length; i++) {
+            if (buff.todoList[i].endTurn == window.global.nowTurn) {
+              if (buff.todoList[i].act()) {
+                buff.todoList.splice(i, 1);
+              }
+            }
+          }
 
           this.nowProperty = this.nowPlayer.getComponent('Person'); //获得玩家属性集合
 
-          this.node.emit('send-Msg', '轮到角色' + this.nowProperty.nickname, '系统');
-          this.node.emit('update-state', '1');
+          cc.game.emit('send-Msg', '轮到角色' + this.nowProperty.nickname, '系统');
+          cc.game.emit('update-state', '1');
           break;
         }
 
@@ -130,16 +189,16 @@ cc.Class({
 
           if (this.nowProperty.goEnabled) {
             //判断玩家是否可以行走
-            var tip = cc.find('Canvas/tipWin'); //tip.active=true;
-
-            var step = randomNum(1, 6); //掷骰子，玩家步数
-
-            this.node.emit('send-Msg', "获得骰子点数" + step, this.nowProperty.nickname);
-            console.log(this.mapObj.posEnable(this.mapObj.map[this.nowProperty.posX][this.nowProperty.posY], step));
+            var tip = cc.find('Canvas/tipWin');
+            if (this.nowProperty.nickname == '老叟') tip.getComponent('tipWindow').startRollDice();else {
+              var dice = cc.find('Canvas/tipWin/dice').getComponent('SpriteIndex');
+              dice.next();
+              cc.game.emit('roll-dice-done', dice.index + 1);
+            }
             this.isWait = true;
           } else {
             this.nowProperty.goEnabled = 1;
-            this.node.emit('update-state', '1');
+            cc.game.emit('update-state', '1');
           }
 
           break;
@@ -155,12 +214,36 @@ cc.Class({
 
           console.log("当前步骤：", this.nowStep);
           console.log("玩家出牌");
-          this.node.emit('update-state', '1');
+          cc.game.emit('update-state', '1');
           break;
         }
 
       case 3:
         {
+          //等待玩家出牌并结束
+          if (this.nowProperty.useCardEnabled == 1) {
+            //可以出牌
+            if (this.nowPlayer.name == 'Person1') {
+              if (window.global.card_end_btn_showed != 1) {
+                var btn = cc.find('Canvas/end_card_btn');
+                btn.active = true;
+                window.global.card_end_btn_showed = 1;
+              }
+            } else {
+              cc.find('Canvas').getComponent('AI').aiUseCard(this.nowProperty);
+              cc.game.emit('update-state', '1');
+            }
+          } else {
+            this.nowProperty.useCardEnabled = 1;
+            cc.game.emit('update-state', '1');
+          }
+
+          break;
+        }
+
+      case 4:
+        {
+          //这里原本是case:3
           //console.log("当前步骤：",this.nowStep);
           //当前玩家的回合数-1
           this.nowProperty.turn -= 1;
@@ -173,7 +256,7 @@ cc.Class({
               this.nowPlayer = window.global.persons[this.index];
             }
 
-          this.node.emit('update-state', '1');
+          cc.game.emit('update-state', '1');
           break;
         }
     }
@@ -223,7 +306,7 @@ cc.Class({
   },
   initBgm: function initBgm() {
     cc.loader.loadRes('bgm/天空之城钢琴曲', cc.AudioClip, function (err, clip) {
-      var audioID = cc.audioEngine.play(clip, true, 0.5);
+      var audioID = cc.audioEngine.play(clip, true, 0.1);
     });
   },
   InitialCard: function InitialCard() {
@@ -234,28 +317,27 @@ cc.Class({
     for (var i = 0; i < totCardNum; i++) {
       var node = new cc.Node(cardName[i]);
       node.addComponent(cc.Sprite);
-      node.getComponent(cc.Sprite).spriteFrame = new cc.SpriteFrame(cc.url.raw('resources/卡牌图片/' + cardName[i] + '.jpg'));
+      node.cardName = cardName[i];
+      cc.loader.loadRes('卡牌图片/' + node.cardName, cc.SpriteFrame, function (err, spriteFrame) {
+        this.getComponent(cc.Sprite).spriteFrame = spriteFrame;
+      }.bind(node));
       window.global.cardnode.push(node);
-    }
+    } //隐藏结束按钮
+
+
+    cc.find('Canvas/end_card_btn').active = false; //隐藏选牌确定按钮
+
+    cc.find('Canvas/choose_card_confirm').active = false; //隐藏选牌取消按钮
+
+    cc.find('Canvas/choose_card_cancel').active = false; //初始化BGM
 
     this.initBgm();
+  },
+  openMenu: function openMenu() {
+    cc.game.end();
+    console.log('开始游戏');
+    cc.director.loadScene("开始界面");
   }
 }); //生成从minNum到maxNum的随机数
-
-function randomNum(minNum, maxNum) {
-  switch (arguments.length) {
-    case 1:
-      return parseInt(Math.random() * minNum + 1, 10);
-      break;
-
-    case 2:
-      return parseInt(Math.random() * (maxNum - minNum + 1) + minNum, 10);
-      break;
-
-    default:
-      return 0;
-      break;
-  }
-}
 
 cc._RF.pop();

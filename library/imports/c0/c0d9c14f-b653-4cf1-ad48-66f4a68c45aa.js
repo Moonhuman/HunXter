@@ -42,6 +42,15 @@ var person = cc.Class({
       }
     },
     //是否可以行走,1为可以行走
+    isDead: 0,
+    //是否已阵亡，0：活着，1：死了
+    shield: 0,
+    //可免疫一次伤害的护盾，0: 无, 1: 有
+    halfShield: 0,
+    //可减半一次伤害的护盾，可累积次数
+    sight: 2,
+    //视野大小，默认值为2
+    eyes: null,
     parter: null,
     avatar: null,
     posX: null,
@@ -52,19 +61,40 @@ var person = cc.Class({
     //var r=[cc.v2(100,100),cc.v2(100,100),cc.v2(100,100),cc.v2(100,100)];
     //var actArr=new Array();
     //console.log(route);
+    // if (this.node.name == 'Person2' || this.node.name == 'Person4')
+    // this.avatar.opacity = 0;
     var p = cc.tween(this.avatar);
 
-    for (var i = 0; i < route.length; i++) {
-      p.to(0.1, {
+    for (var i = 0; i < route.length - 1; i++) {
+      p.to(0.2, {
         position: cc.v2(route[i].x, route[i].y)
-      }); //console.log(route[i].getComponent('Cell').mapx+','+route[i].getComponent('Cell').mapy);
+      });
+      Positionchecked(route[i].x, route[i].y, this.node);
+      var tmp = new Array();
+      tmp.push(route[i].getComponent('Cell').mapx);
+      tmp.push(route[i].getComponent('Cell').mapy);
+      tmp.push(cc.find('Canvas').getComponent('globalGame').nowProperty);
+      p.call(function () {
+        this[2].posX = this[0];
+        this[2].posY = this[1];
+      }, tmp);
     }
 
+    p.to(0.2, {
+      position: cc.v2(route[route.length - 1].x, route[route.length - 1].y)
+    });
+    var tmp = new Array();
+    tmp.push(route[route.length - 1].getComponent('Cell').mapx);
+    tmp.push(route[route.length - 1].getComponent('Cell').mapy);
+    tmp.push(cc.find('Canvas').getComponent('globalGame').nowProperty);
+    tmp.push(route[route.length - 1]);
+    p.call(function () {
+      this[2].posX = this[0];
+      this[2].posY = this[1];
+      this[3].getComponent('Cell').stepOnCell(this[2].node); // if (this[2].node.name == 'Person2' || this[2].node.name == 'Person4')
+      // this[2].avatar.opacity = 255;
+    }, tmp);
     p.start(); //this.avatar.setPosition(route[route.length-1].getPosition());
-
-    this.posX = route[route.length - 1].getComponent('Cell').mapx;
-    this.posY = route[route.length - 1].getComponent('Cell').mapy;
-    route[route.length - 1].getComponent('Cell').stepOnCell(this.node);
   },
   move2Pos: function move2Pos(x, y) {
     this.posX = x;
@@ -72,15 +102,14 @@ var person = cc.Class({
 
     var mapObj = cc.find('Canvas/map').getComponent('GetMap');
     var pos = mapObj.map[x][y].getPosition();
-    this.avatar.setPosition(pos); //console.log(pos);
-    //console.log(this.nowPos);
+    this.avatar.setPosition(pos);
   },
   bindAvatar: function bindAvatar(node) {
-    //console.log(node);
     this.avatar = node;
   },
   onLoad: function onLoad() {
     this.cards = new Array();
+    this.eyes = new Array();
     window.global.persons.push(this.node);
     console.log(this.name + "onLoad");
   },
@@ -88,5 +117,31 @@ var person = cc.Class({
   },
   update: function update(dt) {}
 });
+
+function Positionchecked(x, y, nowPerson) {
+  //一次遍历人物列表上位置，检查是否有其他人，有则计算伤害。
+  var persons = window.global.persons;
+
+  for (var i = 0; i < persons.length; i++) {
+    if (nowPerson != persons[i] && nowPerson.parter != person[i] && x == persons[i].posX && y == persons[i].posY) {
+      //计算伤害
+      if (persons[i].isDead == 1) //当前位置玩家已死亡,不需要计算伤害
+        {
+          break;
+        }
+
+      var attack = persons[i].attack;
+
+      if (nowPerson.shield == 1) {
+        attack = 0;
+      } else if (nowPerson.halfShield > 0) {
+        nowPerson.halfShield -= 1;
+        attack = Math.round(attack / 2); //四舍五入
+      }
+
+      nowPerson.blood -= attack;
+    }
+  }
+}
 
 cc._RF.pop();

@@ -2,6 +2,6 @@
   "__type__": "cc.AudioClip",
   "_name": "天空之城钢琴曲",
   "_objFlags": 0,
-  "_native": ".m4a",
-  "loadMode": 1
+  "_native": ".mp3",
+  "loadMode": 0
 }
